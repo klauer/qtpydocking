@@ -1036,8 +1036,9 @@ class DockContainerWidget(QFrame):
         if not testing:
             self.d._visible_dock_area_count = -1
 
-            # invalidate the dock area count
+            # invalidate the dock area count and clear the area cache
             self.d.dock_areas.clear()
+            self.d.last_added_area_cache.clear()
 
         if is_floating:
             logger.debug('Restore floating widget')
