@@ -946,6 +946,11 @@ class DockContainerWidget(QFrame):
         area.setParent(None)
         hide_empty_parent_splitters(splitter)
 
+        # Remove this area from cached areas
+        for _area, _widget in list(self.d.last_added_area_cache.items()):
+            if _widget is splitter:
+                self.d.last_added_area_cache[_area] = None
+
         # If splitter has more than 1 widgets, we are finished and can leave
         if splitter.count() > 1:
             return emit_and_exit()
