@@ -6,7 +6,7 @@ from qtpy.QtGui import QContextMenuEvent, QCursor, QFontMetrics, QIcon, QMouseEv
 from qtpy.QtWidgets import (QBoxLayout, QFrame, QLabel, QMenu, QSizePolicy,
                             QStyle, QWidget, QPushButton)
 
-from .util import create_transparent_pixmap, start_drag_distance
+from .util import make_icon_pair, start_drag_distance
 from .enums import DragState, DockFlags, DockWidgetArea, DockWidgetFeature
 from .eliding_label import ElidingLabel
 
@@ -62,13 +62,10 @@ class DockWidgetTabPrivate:
         self.close_button.setObjectName("tabCloseButton")
 
         # The standard icons do does not look good on high DPI screens
-        style = self.public.style()
-        close_icon = style.standardIcon(QStyle.SP_TitleBarCloseButton)
-        normal_pixmap = style.standardPixmap(QStyle.SP_TitleBarCloseButton, None,
-                                             self.close_button)
-        disabled_pixmap = create_transparent_pixmap(normal_pixmap, 0.25)
-        close_icon.addPixmap(disabled_pixmap, QIcon.Disabled)
-        self.close_button.setIcon(close_icon)
+        make_icon_pair(self.public.style(), parent=self.close_button,
+                       standard_pixmap=QStyle.SP_TitleBarCloseButton,
+                       transparent_role=QIcon.Disabled)
+
         self.close_button.setSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
         self.close_button.setVisible(False)
         self.close_button.setToolTip("Close Tab")

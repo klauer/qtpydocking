@@ -1,7 +1,7 @@
 from typing import Optional
 
 from qtpy.QtCore import Qt
-from qtpy.QtGui import QPainter, QPixmap
+from qtpy.QtGui import QPainter, QPixmap, QIcon
 from qtpy.QtWidgets import QApplication
 from qtpy import QT_VERSION
 
@@ -66,6 +66,22 @@ def create_transparent_pixmap(source: QPixmap, opacity: float) -> QPixmap:
     painter.setOpacity(opacity)
     painter.drawPixmap(0, 0, source)
     return transparent_pixmap
+
+
+def make_icon_pair(style, parent, standard_pixmap,
+                   transparent_role=QIcon.Disabled, *,
+                   transparency=0.25):
+    '''
+    Using a standard pixmap (e.g., close button), create two pixmaps and set
+    parent icon
+    '''
+    icon = QIcon()
+    normal_pixmap = style.standardPixmap(standard_pixmap, None, parent)
+    icon.addPixmap(create_transparent_pixmap(normal_pixmap, transparency),
+                   transparent_role)
+    icon.addPixmap(normal_pixmap, QIcon.Normal)
+    parent.setIcon(icon)
+    return icon
 
 
 def hide_empty_parent_splitters(splitter: DockSplitter):
