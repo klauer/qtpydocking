@@ -4,11 +4,11 @@ import pathlib
 from typing import TYPE_CHECKING, Dict, List
 
 from qtpy.QtCore import (QByteArray, QSettings, QXmlStreamReader,
-                         QXmlStreamWriter, Signal)
+                         QXmlStreamWriter, Signal, qCompress, qUncompress)
 from qtpy.QtGui import QIcon
 from qtpy.QtWidgets import QAction, QMainWindow, QMenu, QWidget
 
-from .enums import InsertionOrder, DockFlags, DockWidgetArea, XmlMode, OverlayMode
+from .enums import InsertionOrder, DockFlags, DockWidgetArea, OverlayMode
 
 from .dock_container_widget import DockContainerWidget
 from .dock_overlay import DockOverlay
@@ -427,7 +427,6 @@ class DockManager(DockContainerWidget):
         '''
         self._mgr.config_flags = flags
 
-
     def add_dock_widget(
             self, area: DockWidgetArea,
             dock_widget: 'DockWidget',
@@ -576,19 +575,16 @@ class DockManager(DockContainerWidget):
         '''
         return 0
 
-    def save_state(self, xml_mode: XmlMode = XmlMode.auto_format,
-                   version: int = 0) -> QByteArray:
+    def save_state(self, version: int = 0) -> QByteArray:
         '''
         Saves the current state of the dockmanger and all its dock widgets into
-        the returned QByteArray. The XmlMode enables / disables the auto
-        formatting for the XmlStreamWriter. If auto formatting is enabled, the
-        output is intended and line wrapped. The XmlMode
-        XmlAutoFormattingDisabled is better if you would like to have a more
-        compact XML output - i.e. for storage in ini files.
+        the returned QByteArray.
+
+        See also `config_flags`, which allow for auto-formatting and compression
+        of the resulting XML file.
 
         Parameters
         ----------
-        xml_mode : XmlMode
         version : int
 
         Returns
@@ -597,7 +593,8 @@ class DockManager(DockContainerWidget):
         '''
         xmldata = QByteArray()
         stream = QXmlStreamWriter(xmldata)
-        stream.setAutoFormatting(XmlMode.auto_format == xml_mode)
+        stream.setAutoFormatting(
+            DockFlags.xml_auto_formatting in self._mgr.config_flags)
         stream.writeStartDocument()
         stream.writeStartElement("QtAdvancedDockingSystem")
         stream.writeAttribute("Version", str(version))
@@ -610,7 +607,10 @@ class DockManager(DockContainerWidget):
 
         stream.writeEndElement()
         stream.writeEndDocument()
-        return xmldata
+
+        return (qCompress(xmldata, 9)
+                if DockFlags.xml_compression in self._mgr.config_flags
+                else xmldata)
 
     def restore_state(self, state: QByteArray, version: int = 0) -> bool:
         '''
@@ -628,6 +628,9 @@ class DockManager(DockContainerWidget):
         -------
         value : bool
         '''
+        if not state.startsWith(b'<?xml'):
+            state = qUncompress(state)
+
         # Prevent multiple calls as long as state is not restore. This may
         # happen, if QApplication.processEvents() is called somewhere
         if self._mgr.restoring_state:

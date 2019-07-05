@@ -12,7 +12,6 @@ from .enums import OverlayMode
 from .enums import WidgetState
 from .enums import ToggleViewActionMode
 from .enums import InsertionOrder
-from .enums import XmlMode
 
 from . import util
 
@@ -58,6 +57,5 @@ __all__ = [
     'WidgetState',
     'ToggleViewActionMode',
     'InsertionOrder',
-    'XmlMode',
     'examples'
 ]

@@ -197,3 +197,11 @@ def test_smoke_floating(qtbot, manager: qtpydocking.DockManager):
     floating.dock_widgets()
 
     floating.deleteLater()
+
+
+def test_smoke_xml_settings(qtbot, manager: qtpydocking.DockManager):
+    manager.set_config_flags(qtpydocking.DockFlags.xml_compression)
+    manager.restore_state(manager.save_state())
+
+    manager.set_config_flags(qtpydocking.DockFlags.xml_auto_formatting)
+    manager.restore_state(manager.save_state())

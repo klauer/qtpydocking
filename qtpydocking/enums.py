@@ -55,11 +55,6 @@ class InsertionOrder(enum.Enum):
     by_spelling = enum.auto()
 
 
-class XmlMode(enum.Enum):
-    no_auto_format = enum.auto()
-    auto_format = enum.auto()
-
-
 class DockFlags(enum.IntFlag):
     '''
     These global configuration flags configure some global dock manager
@@ -74,10 +69,18 @@ class DockFlags(enum.IntFlag):
     dock_area_close_button_closes_tab = 0x04
     # See QSplitter.setOpaqueResize() documentation
     opaque_splitter_resize = 0x08
+    # If enabled, the XML writer automatically adds line-breaks and indentation
+    # to empty sections between elements (ignorable whitespace).
+    xml_auto_formatting = 0x10
+    # If enabled, the XML output will be compressed and is not human readable
+    # anymore
+    xml_compression = 0x20
     # the default configuration
     default_config = (active_tab_has_close_button
                       | dock_area_has_close_button
-                      | opaque_splitter_resize)
+                      | opaque_splitter_resize
+                      | xml_auto_formatting
+                      )
 
 
 class OverlayMode(enum.Enum):
