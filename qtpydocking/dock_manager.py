@@ -474,7 +474,10 @@ class DockManager(DockContainerWidget):
         if area_widget is not None:
             return self.add_dock_widget(DockWidgetArea.center,
                                         dockwidget, area_widget)
-        return self.add_dock_widget(area, dockwidget, area_widget)
+
+        opened_areas = self.opened_dock_areas()
+        return self.add_dock_widget(area, dockwidget,
+                                    opened_areas[-1] if opened_areas else None)
 
     def add_dock_widget_tab_to_area(self, dockwidget: 'DockWidget',
                                     dock_area_widget: 'DockAreaWidget'
