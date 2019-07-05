@@ -1184,6 +1184,18 @@ class DockContainerWidget(QFrame):
             return self.d.dock_widget_into_dock_area(area, dockwidget, dock_area_widget)
         return self.d.dock_widget_into_container(area, dockwidget)
 
+    def remove_dock_widget(self, widget: 'DockWidget'):
+        '''
+        Removes a given DockWidget
+
+        Parameters
+        ----------
+        widget : DockWidget
+        '''
+        area = widget.dock_area_widget()
+        if area is not None:
+            area.remove_dock_widget(widget)
+
     def z_order_index(self) -> int:
         '''
         Returns the current zOrderIndex

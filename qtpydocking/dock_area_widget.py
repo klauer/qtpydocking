@@ -267,11 +267,13 @@ class DockAreaWidget(QFrame):
         tab_widget = dock_widget.tab_widget()
         tab_widget.hide()
         self.d.tab_bar().remove_tab(tab_widget)
+        dock_container = self.dock_container()
         if next_open_dock_widget is not None:
             self.set_current_dock_widget(next_open_dock_widget)
-        elif self.d.contents_layout.is_empty():
+        elif (self.d.contents_layout.is_empty() and
+                  dock_container.dock_area_count() > 1):
             logger.debug('Dock Area empty')
-            self.dock_container().remove_dock_area(self)
+            dock_container.remove_dock_area(self)
             self.deleteLater()
         else:
             # if contents layout is not empty but there are no more open dock
@@ -281,12 +283,11 @@ class DockAreaWidget(QFrame):
 
         self.d.update_close_button_state()
         self.update_title_bar_visibility()
-        top_level_dock_widget = self.dock_container().top_level_dock_widget()
+        top_level_dock_widget = dock_container.top_level_dock_widget()
         if top_level_dock_widget is not None:
             top_level_dock_widget.emit_top_level_changed(True)
 
         if DEBUG_LEVEL > 0:
-            dock_container = self.dock_container()
             dock_container.dump_layout()
 
     def toggle_dock_widget_view(self, dock_widget: 'DockWidget', open_: bool):

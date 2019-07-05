@@ -520,6 +520,17 @@ class DockManager(DockContainerWidget):
         '''
         return dict(self._mgr.dock_widgets_map)
 
+    def remove_dock_widget(self, widget: 'DockWidget'):
+        '''
+        Removes a given DockWidget
+
+        Parameters
+        ----------
+        widget : DockWidget
+        '''
+        self._mgr.dock_widgets_map.pop(widget.objectName())
+        super().remove_dock_widget(widget)
+
     def dock_containers(self) -> list:
         '''
         Returns the list of all active and visible dock containers
