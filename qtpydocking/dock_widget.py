@@ -375,11 +375,16 @@ class DockWidget(QFrame):
         widget : QWidget
         insert_mode : InsertMode
         '''
-        if isinstance(widget, QScrollArea) or InsertMode.force_no_scroll_area != insert_mode:
+        scroll_area = isinstance(widget, QScrollArea)
+        if scroll_area or InsertMode.force_no_scroll_area == insert_mode:
+            self.d.layout.addWidget(widget)
+            if scroll_area:
+                viewport = widget.viewport()
+                if viewport is not None:
+                    viewport.setProperty('dockWidgetContent', True)
+        else:
             self.d.setup_scroll_area()
             self.d.scroll_area.setWidget(widget)
-        else:
-            self.d.layout.addWidget(widget)
 
         self.d.widget = widget
         self.d.widget.setProperty("dockWidgetContent", True)
