@@ -389,6 +389,17 @@ class DockWidget(QFrame):
         self.d.widget = widget
         self.d.widget.setProperty("dockWidgetContent", True)
 
+    def take_widget(self):
+        '''
+        Remove the widget from the dock, giving ownership back to the caller
+        '''
+        d = self.d
+        d.scroll_area.takeWidget()
+        widget = self.d.widget
+        d.layout.removeWidget(widget)
+        widget.setParent(None)
+        return widget
+
     def widget(self) -> QWidget:
         '''
         Returns the widget for the dock widget. This function returns None if
