@@ -1,3 +1,5 @@
+import os
+
 from qtpy.QtCore import QSize, Qt, Signal
 from qtpy.QtGui import QMouseEvent, QResizeEvent
 from qtpy.QtWidgets import QLabel, QWidget
@@ -63,7 +65,12 @@ class ElidingLabel(QLabel):
         parent : QWidget
         flags : Qt.WindowFlags
         '''
-        super().__init__(text, parent=parent, flags=flags)
+        api = os.environ['QT_API']
+        if api == 'pyside2':
+            kwarg = {'f': flags}
+        else:
+            kwarg = {'flags': flags}
+        super().__init__(text, parent=parent, **kwarg)
         self.d = ElidingLabelPrivate(self)
 
         if text:

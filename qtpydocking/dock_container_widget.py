@@ -1,4 +1,5 @@
 import logging
+import os
 from typing import TYPE_CHECKING, List, Dict, Tuple, Optional
 
 from qtpy.QtCore import (QByteArray, QEvent, QPoint, QXmlStreamReader,
@@ -227,8 +228,14 @@ class DockContainerWidgetPrivate:
         insert_param = dock_area_insert_parameters(area)
         floating_dock_container = floating_widget.dock_container()
 
-        new_dock_areas = floating_dock_container.findChildren(
-            DockAreaWidget, '', Qt.FindChildrenRecursively)
+        api = os.environ['QT_API']
+        if api == 'pyside2':
+            new_dock_areas = floating_dock_container.findChildren(
+                DockAreaWidget, '')
+        else:
+            new_dock_areas = floating_dock_container.findChildren(
+                DockAreaWidget, '', Qt.FindChildrenRecursively)
+
         single_dropped_dock_widget = floating_dock_container.top_level_dock_widget()
         single_dock_widget = self.public.top_level_dock_widget()
         splitter = self.root_splitter
@@ -287,8 +294,15 @@ class DockContainerWidgetPrivate:
             return
 
         insert_param = dock_area_insert_parameters(area)
-        new_dock_areas = floating_widget.dock_container().findChildren(
-            DockAreaWidget, '', Qt.FindChildrenRecursively)
+
+        api = os.environ['QT_API']
+        if api == 'pyside2':
+            new_dock_areas = floating_widget.dock_container().findChildren(
+                DockAreaWidget, '')
+        else:
+            new_dock_areas = floating_widget.dock_container().findChildren(
+                DockAreaWidget, '', Qt.FindChildrenRecursively)
+
         target_area_splitter = find_parent(QSplitter, target_area)
 
         if not target_area_splitter:
@@ -298,8 +312,13 @@ class DockContainerWidgetPrivate:
             target_area_splitter = splitter
 
         area_index = target_area_splitter.indexOf(target_area)
-        floating_splitter = floating_widget.dock_container().findChild(
-            QWidget, '', Qt.FindDirectChildrenOnly)
+        api = os.environ['QT_API']
+        if api == 'pyside2':
+            floating_splitter = floating_widget.dock_container().findChild(
+                QWidget, '')
+        else:
+            floating_splitter = floating_widget.dock_container().findChild(
+                QWidget, '', Qt.FindDirectChildrenOnly)
 
         if target_area_splitter.orientation() == insert_param.orientation:
             sizes = target_area_splitter.sizes()
