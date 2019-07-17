@@ -1,12 +1,14 @@
-from typing import Optional
+from typing import Optional, Any, Union, Type
 
-from qtpy.QtCore import Qt
+from qtpy.QtCore import Qt, QObject, QRegExp
 from qtpy.QtGui import QPainter, QPixmap, QIcon
 from qtpy.QtWidgets import QApplication
 from qtpy import QT_VERSION
+# if needed, you can import specific boolean API variables from this module
+# when implementing API code elsewhere
+from qtpy import API, PYQT4, PYQT5, PYSIDE, PYSIDE2
 
 from .dock_splitter import DockSplitter
-
 
 DEBUG_LEVEL = 0
 QT_VERSION_TUPLE = tuple(int(i) for i in QT_VERSION.split('.')[:3])
@@ -116,3 +118,40 @@ def find_parent(parent_type, widget):
             return parent_widget
 
         parent_widget = parent_widget.parentWidget()
+
+
+def find_child(parent: Type[QObject], type: Type[QObject], name: str = '',
+               options: Qt.FindChildOptions = Qt.FindChildrenRecursively) -> Optional[QObject]:
+    '''
+    Returns the child of this object that can be cast into type T and that is called name, or nullptr if there is no
+    such object. Omitting the name argument causes all object names to be matched. The search is performed recursively,
+    unless options specifies the option FindDirectChildrenOnly.
+
+    If there is more than one child matching the search, the most direct ancestor is returned. If there are several
+    direct ancestors, it is undefined which one will be returned. In that case, findChildren() should be used.
+
+    WARNING: If you're using PySide, PySide2 or PyQt4, the options parameter will be discarded.
+    '''
+
+    if PYQT5:
+        return parent.findChild(type, name, options)
+    else:
+        # every other API (PySide, PySide2, PyQt4) has no options parameter
+        return parent.findChild(type, name)
+
+
+def find_children(parent: Type[QObject], type: Type[QObject], name: Union[str, QRegExp] = '',
+               options: Qt.FindChildOptions = Qt.FindChildrenRecursively) -> Optional[Any]:
+    '''
+    Returns all children of this object with the given name that can be cast to type T, or an empty list if there are no
+    such objects. Omitting the name argument causes all object names to be matched. The search is performed recursively,
+    unless options specifies the option FindDirectChildrenOnly.
+
+    WARNING: If you're using PySide, PySide2 or PyQt4, the options parameter will be discarded.
+    '''
+
+    if PYQT5:
+        return parent.findChildren(type, name, options)
+    else:
+        # every other API (PySide, PySide2, PyQt4) has no options parameter
+        return parent.findChildren(type, name)

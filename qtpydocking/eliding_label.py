@@ -1,8 +1,8 @@
-import os
-
 from qtpy.QtCore import QSize, Qt, Signal
 from qtpy.QtGui import QMouseEvent, QResizeEvent
 from qtpy.QtWidgets import QLabel, QWidget
+
+from .util import PYSIDE2
 
 
 class ElidingLabelPrivate:
@@ -65,8 +65,7 @@ class ElidingLabel(QLabel):
         parent : QWidget
         flags : Qt.WindowFlags
         '''
-        api = os.environ['QT_API']
-        if api == 'pyside2':
+        if PYSIDE2:
             kwarg = {'f': flags}
         else:
             kwarg = {'flags': flags}

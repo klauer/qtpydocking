@@ -1,5 +1,4 @@
 import logging
-import os
 from typing import TYPE_CHECKING, List, Dict, Tuple, Optional
 
 from qtpy.QtCore import (QByteArray, QEvent, QPoint, QXmlStreamReader,
@@ -7,7 +6,7 @@ from qtpy.QtCore import (QByteArray, QEvent, QPoint, QXmlStreamReader,
 from qtpy.QtWidgets import QFrame, QGridLayout, QSplitter, QWidget
 
 from .util import (find_parent, hide_empty_parent_splitters,
-                   emit_top_level_event_for_widget)
+                   emit_top_level_event_for_widget, find_child, find_children)
 from .enums import (DockWidgetArea, DockWidgetFeature, TitleBarButton,
                     DockFlags, DockInsertParam)
 from .dock_splitter import DockSplitter
@@ -228,13 +227,8 @@ class DockContainerWidgetPrivate:
         insert_param = dock_area_insert_parameters(area)
         floating_dock_container = floating_widget.dock_container()
 
-        api = os.environ['QT_API']
-        if api == 'pyside2':
-            new_dock_areas = floating_dock_container.findChildren(
-                DockAreaWidget, '')
-        else:
-            new_dock_areas = floating_dock_container.findChildren(
-                DockAreaWidget, '', Qt.FindChildrenRecursively)
+        new_dock_areas = find_children(
+            floating_dock_container, DockAreaWidget, '', Qt.FindChildrenRecursively)
 
         single_dropped_dock_widget = floating_dock_container.top_level_dock_widget()
         single_dock_widget = self.public.top_level_dock_widget()
@@ -295,13 +289,9 @@ class DockContainerWidgetPrivate:
 
         insert_param = dock_area_insert_parameters(area)
 
-        api = os.environ['QT_API']
-        if api == 'pyside2':
-            new_dock_areas = floating_widget.dock_container().findChildren(
-                DockAreaWidget, '')
-        else:
-            new_dock_areas = floating_widget.dock_container().findChildren(
-                DockAreaWidget, '', Qt.FindChildrenRecursively)
+        # noinspection PyArgumentList
+        new_dock_areas = find_children(
+            floating_widget.dock_container(), DockAreaWidget, '', Qt.FindChildrenRecursively)
 
         target_area_splitter = find_parent(QSplitter, target_area)
 
@@ -312,13 +302,9 @@ class DockContainerWidgetPrivate:
             target_area_splitter = splitter
 
         area_index = target_area_splitter.indexOf(target_area)
-        api = os.environ['QT_API']
-        if api == 'pyside2':
-            floating_splitter = floating_widget.dock_container().findChild(
-                QWidget, '')
-        else:
-            floating_splitter = floating_widget.dock_container().findChild(
-                QWidget, '', Qt.FindDirectChildrenOnly)
+
+        floating_splitter = find_child(
+            floating_widget.dock_container(), QWidget, '', Qt.FindDirectChildrenOnly)
 
         if target_area_splitter.orientation() == insert_param.orientation:
             sizes = target_area_splitter.sizes()
@@ -1382,5 +1368,5 @@ class DockContainerWidget(QFrame):
         keep_open_area : DockAreaWidget
         '''
         for dock_area in self.d.dock_areas:
-            if (dock_area != keep_open_area and DockWidgetFeature.closable in dock_area.features()):
+            if dock_area != keep_open_area and DockWidgetFeature.closable in dock_area.features():
                 dock_area.close_area()
