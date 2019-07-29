@@ -3,8 +3,6 @@
 codecov
 coverage
 flake8
-pyqt5
-PySide2
 pytest
 pytest-qt
 sphinx
