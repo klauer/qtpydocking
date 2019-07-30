@@ -5,6 +5,7 @@ coverage
 flake8
 pytest
 pytest-qt
+pytest-faulthandler
 sphinx
 doctr
 # These are dependencies of various sphinx extensions for documentation.

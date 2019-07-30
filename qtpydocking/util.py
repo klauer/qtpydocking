@@ -1,6 +1,8 @@
+import functools
+
 from typing import Optional, Any, Union, Type
 
-from qtpy.QtCore import Qt, QObject, QRegExp
+from qtpy.QtCore import Qt, QEvent, QObject, QRegExp
 from qtpy.QtGui import QPainter, QPixmap, QIcon
 from qtpy.QtWidgets import QApplication
 from qtpy import QT_VERSION
@@ -155,3 +157,23 @@ def find_children(parent: Type[QObject], type: Type[QObject], name: Union[str, Q
     else:
         # every other API (PySide, PySide2, PyQt4) has no options parameter
         return parent.findChildren(type, name)
+
+
+def event_filter_decorator(method):
+    '''
+    PySide2 exhibits some strange behavior where an eventFilter may get a
+    'PySide2.QtWidgets.QWidgetItem` as the `event` argument. This wrapper
+    effectively just makes those specific cases a no-operation.
+
+    NOTE::
+        This is considered a work-around until the source of the issue can be
+        determined.
+    '''
+    if PYSIDE or PYSIDE2:
+        @functools.wraps(method)
+        def wrapped(self, obj: QObject, event: QEvent):
+            if not isinstance(event, QEvent):
+                return True
+            return method(self, obj, event)
+        return wrapped
+    return method

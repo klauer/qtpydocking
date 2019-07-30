@@ -5,7 +5,7 @@ from qtpy.QtCore import QEvent, QObject, QPoint, Qt, Signal
 from qtpy.QtGui import QMouseEvent, QWheelEvent
 from qtpy.QtWidgets import QBoxLayout, QFrame, QScrollArea, QSizePolicy, QWidget
 
-from .util import start_drag_distance
+from .util import start_drag_distance, event_filter_decorator
 from .enums import DragState, DockWidgetArea
 from .dock_widget_tab import DockWidgetTab
 from .floating_dock_container import FloatingDockContainer
@@ -455,6 +455,7 @@ class DockAreaTabBar(QScrollArea):
 
         return self.d.tabs_layout.itemAt(index).widget()
 
+    @event_filter_decorator
     def eventFilter(self, tab: QObject, event: QEvent) -> bool:
         '''
         Filters the tab widget events

@@ -10,6 +10,8 @@ addons:
       packages:
         - herbstluftwm
         - libxkbcommon-x11-0
+        - qt5-default
+
 env: 
   global:
     - OFFICIAL_REPO="klauer/qtpydocking"
@@ -22,6 +24,7 @@ cache:
     - $HOME/.ccache  # https://github.com/travis-ci/travis-ci/issues/5853
 
 matrix:
+  fast_finish: true
   include:
     - python: 3.6
       env:
@@ -37,6 +40,13 @@ matrix:
     - python: 3.7
       env:
         - QT_API=PySide2
+  allow_failures:
+  - python: 3.6
+    env:
+      - QT_API=PySide2
+  - python: 3.7
+    env:
+      - QT_API=PySide2
 
 
 install:
