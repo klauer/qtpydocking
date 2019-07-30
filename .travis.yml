@@ -3,7 +3,7 @@ dist: xenial
 sudo: false
 
 services:
-    - xvfb
+  - xvfb
 
 addons:
     apt:
@@ -11,8 +11,10 @@ addons:
         - herbstluftwm
         - libxkbcommon-x11-0
 env: 
-   global:
-      - OFFICIAL_REPO="klauer/qtpydocking"
+  global:
+    - OFFICIAL_REPO="klauer/qtpydocking"
+    # Doctr deploy key for klauer/qtpydocking
+    - secure: "qqYfoPOJWnlAEhLfXUiQqHxMFTuo4WibiTy1HiBpyImkhyLXeb7nP0bHn1AzhXcnYAYV7p8IjsIqyqkeklgGqufNfmwrz9kPoN1IZW53GxPYoVcThGpWOEeUavXsNUlT+ixHV245Y2DTFQ3B+44uH9SHW6r5EdGGYXTmqo6TZfLGlKcexeqEyhuaFww0b93THHxIyGdyhJ1SdmOOLHzswSrW/aUR8JbZhYl/j23Ou+g1uFIwv5iVx2pnWJibIyD80oQONMNqO+0gP4EfAy9XMMSABllojidK4So1oyyeLjUcNPyDSzvnrQVyEaptwc//eS55MFxn21oL4pUSH1cXprJpZAJUOMZzsNIGJNcIl+iG29ISha41Vn9bJy18lZqpeNe5jNKqNVO9tL3Vh2jplOK2E0tqa4HJx9n9aVizBh1j1M/RvH0XHaLqaQ+eg1Nl0owqG9nhPRCkV43LLnH3o8mmoqSQ+Qn2NgtAIqx1DjyUe/3PVhFZClnyFfXFgO8o+NYSsfyAr99H89tCh/l6Sry9Awk1VOy+HGgMtq/BAfTNB7gR97s0mNTnYetgYymdJncnI3f7I09IT448hHEX+dpRfNeRBtx9U1aErTEGgZexCTI2Lf1D88vRkoBaHr0NFTnKYHap9vOUsLb8O7j0VpdaKZfhjXg9HLw62E82fb0="
 
 cache:
   directories:
