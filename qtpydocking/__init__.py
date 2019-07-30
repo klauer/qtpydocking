@@ -1,4 +1,7 @@
 # TODO: Q_PROPERTY
+from ._version import get_versions
+__version__ = get_versions()['version']
+del get_versions
 
 from .enums import DockInsertParam
 from .enums import DockWidgetArea
@@ -32,6 +35,7 @@ from . import examples
 
 
 __all__ = [
+    '__version__',
     'DockAreaLayout',
     'DockAreaTabBar',
     'DockAreaTitleBar',
