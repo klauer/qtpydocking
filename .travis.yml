@@ -55,10 +55,8 @@ install:
   - conda build -q conda-recipe --python=$TRAVIS_PYTHON_VERSION --output-folder bld-dir
   - conda config --add channels "file://`pwd`/bld-dir"
 
-  # Install the specific binding we're testing against
-  - echo "${QT_API}" >> requirements.txt
+  # Create the test environment
   - conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION qtpydocking --file requirements.txt
-
   - source deactivate
   - source activate test-environment
 
@@ -67,6 +65,9 @@ install:
 
   # Install the package
   - pip install -e .
+
+  # Install the specific binding we're testing against
+  - pip install "${QT_API}"
 
 
 before_script:
