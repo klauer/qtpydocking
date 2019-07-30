@@ -1,0 +1,510 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>qtpydocking.dock_area_title_bar &mdash; qtpydocking  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> qtpydocking
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">API Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_area_layout">qtpydocking.dock_area_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_area_tab_bar">qtpydocking.dock_area_tab_bar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_area_title_bar">qtpydocking.dock_area_title_bar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_area_widget">qtpydocking.dock_area_widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_container_widget">qtpydocking.dock_container_widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_manager">qtpydocking.dock_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_overlay">qtpydocking.dock_overlay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_splitter">qtpydocking.dock_splitter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_widget">qtpydocking.dock_widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_widget_tab">qtpydocking.dock_widget_tab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.eliding_label">qtpydocking.eliding_label</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.enums">qtpydocking.enums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.floating_dock_container">qtpydocking.floating_dock_container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.util">qtpydocking.util</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/klauer/qtpydocking">Github Repository</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">qtpydocking</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>qtpydocking.dock_area_title_bar</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for qtpydocking.dock_area_title_bar</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">TYPE_CHECKING</span><span class="p">,</span> <span class="n">Optional</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="kn">from</span> <span class="nn">qtpy.QtCore</span> <span class="k">import</span> <span class="n">QPoint</span><span class="p">,</span> <span class="n">Qt</span><span class="p">,</span> <span class="n">Signal</span><span class="p">,</span> <span class="n">QSize</span>
+<span class="kn">from</span> <span class="nn">qtpy.QtGui</span> <span class="k">import</span> <span class="n">QCursor</span><span class="p">,</span> <span class="n">QIcon</span>
+<span class="kn">from</span> <span class="nn">qtpy.QtWidgets</span> <span class="k">import</span> <span class="p">(</span><span class="n">QAbstractButton</span><span class="p">,</span> <span class="n">QAction</span><span class="p">,</span> <span class="n">QBoxLayout</span><span class="p">,</span> <span class="n">QFrame</span><span class="p">,</span>
+                            <span class="n">QMenu</span><span class="p">,</span> <span class="n">QSizePolicy</span><span class="p">,</span> <span class="n">QStyle</span><span class="p">,</span> <span class="n">QToolButton</span><span class="p">)</span>
+
+
+<span class="kn">from</span> <span class="nn">.enums</span> <span class="k">import</span> <span class="n">DockFlags</span><span class="p">,</span> <span class="n">DragState</span><span class="p">,</span> <span class="n">DockWidgetFeature</span><span class="p">,</span> <span class="n">TitleBarButton</span>
+<span class="kn">from</span> <span class="nn">.util</span> <span class="k">import</span> <span class="n">make_icon_pair</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">DockAreaWidget</span><span class="p">,</span> <span class="n">DockAreaTabBar</span><span class="p">,</span> <span class="n">DockManager</span>
+
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">DockAreaTitleBarPrivate</span><span class="p">:</span>
+    <span class="n">public</span><span class="p">:</span> <span class="s1">&#39;DockAreaTitleBar&#39;</span>
+    <span class="n">tabs_menu_button</span><span class="p">:</span> <span class="n">QToolButton</span>
+    <span class="n">undock_button</span><span class="p">:</span> <span class="n">QToolButton</span>
+    <span class="n">close_button</span><span class="p">:</span> <span class="n">QToolButton</span>
+    <span class="n">top_layout</span><span class="p">:</span> <span class="n">QBoxLayout</span>
+    <span class="n">dock_area</span><span class="p">:</span> <span class="s1">&#39;DockAreaWidget&#39;</span>
+    <span class="n">tab_bar</span><span class="p">:</span> <span class="s1">&#39;DockAreaTabBar&#39;</span>
+    <span class="n">menu_outdated</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">tabs_menu</span><span class="p">:</span> <span class="n">QMenu</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">public</span><span class="p">:</span> <span class="s1">&#39;DockAreaTitleBar&#39;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">public</span> <span class="o">=</span> <span class="n">public</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tabs_menu_button</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">undock_button</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">close_button</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">top_layout</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dock_area</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tab_bar</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">menu_outdated</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tabs_menu</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">create_buttons</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Creates the title bar close and menu buttons</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tabs_menu_button</span> <span class="o">=</span> <span class="n">QToolButton</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tabs_menu_button</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;tabsMenuButton&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tabs_menu_button</span><span class="o">.</span><span class="n">setAutoRaise</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tabs_menu_button</span><span class="o">.</span><span class="n">setPopupMode</span><span class="p">(</span><span class="n">QToolButton</span><span class="o">.</span><span class="n">InstantPopup</span><span class="p">)</span>
+
+        <span class="n">make_icon_pair</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">style</span><span class="p">(),</span>
+                       <span class="n">parent</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">tabs_menu_button</span><span class="p">,</span>
+                       <span class="n">standard_pixmap</span><span class="o">=</span><span class="n">QStyle</span><span class="o">.</span><span class="n">SP_TitleBarUnshadeButton</span><span class="p">,</span>
+                       <span class="n">transparent_role</span><span class="o">=</span><span class="n">QIcon</span><span class="o">.</span><span class="n">Disabled</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">tabs_menu</span> <span class="o">=</span> <span class="n">QMenu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tabs_menu_button</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tabs_menu</span><span class="o">.</span><span class="n">setToolTipsVisible</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tabs_menu</span><span class="o">.</span><span class="n">aboutToShow</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">on_tabs_menu_about_to_show</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tabs_menu_button</span><span class="o">.</span><span class="n">setMenu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tabs_menu</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tabs_menu_button</span><span class="o">.</span><span class="n">setToolTip</span><span class="p">(</span><span class="s2">&quot;List all tabs&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">tabs_menu_button</span><span class="o">.</span><span class="n">setSizePolicy</span><span class="p">(</span>
+            <span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Fixed</span><span class="p">,</span> <span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Expanding</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">top_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tabs_menu_button</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tabs_menu_button</span><span class="o">.</span><span class="n">menu</span><span class="p">()</span><span class="o">.</span><span class="n">triggered</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">on_tabs_menu_action_triggered</span><span class="p">)</span>
+
+        <span class="c1"># Undock button</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">undock_button</span> <span class="o">=</span> <span class="n">QToolButton</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">undock_button</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;undockButton&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">undock_button</span><span class="o">.</span><span class="n">setAutoRaise</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">undock_button</span><span class="o">.</span><span class="n">setToolTip</span><span class="p">(</span><span class="s2">&quot;Detach Group&quot;</span><span class="p">)</span>
+
+        <span class="n">make_icon_pair</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">style</span><span class="p">(),</span>
+                       <span class="n">parent</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">undock_button</span><span class="p">,</span>
+                       <span class="n">standard_pixmap</span><span class="o">=</span><span class="n">QStyle</span><span class="o">.</span><span class="n">SP_TitleBarNormalButton</span><span class="p">,</span>
+                       <span class="n">transparent_role</span><span class="o">=</span><span class="n">QIcon</span><span class="o">.</span><span class="n">Disabled</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">undock_button</span><span class="o">.</span><span class="n">setSizePolicy</span><span class="p">(</span>
+            <span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Fixed</span><span class="p">,</span> <span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Expanding</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">top_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">undock_button</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">undock_button</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">on_undock_button_clicked</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">close_button</span> <span class="o">=</span> <span class="n">QToolButton</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">close_button</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;closeButton&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">close_button</span><span class="o">.</span><span class="n">setAutoRaise</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">make_icon_pair</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">style</span><span class="p">(),</span>
+                       <span class="n">parent</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">close_button</span><span class="p">,</span>
+                       <span class="n">standard_pixmap</span><span class="o">=</span><span class="n">QStyle</span><span class="o">.</span><span class="n">SP_TitleBarCloseButton</span><span class="p">,</span>
+                       <span class="n">transparent_role</span><span class="o">=</span><span class="n">QIcon</span><span class="o">.</span><span class="n">Disabled</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_config_flag</span><span class="p">(</span><span class="n">DockFlags</span><span class="o">.</span><span class="n">dock_area_close_button_closes_tab</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">close_button</span><span class="o">.</span><span class="n">setToolTip</span><span class="p">(</span><span class="s2">&quot;Close Active Tab&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">close_button</span><span class="o">.</span><span class="n">setToolTip</span><span class="p">(</span><span class="s2">&quot;Close Group&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">close_button</span><span class="o">.</span><span class="n">setSizePolicy</span><span class="p">(</span>
+            <span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Fixed</span><span class="p">,</span> <span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Expanding</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">close_button</span><span class="o">.</span><span class="n">setIconSize</span><span class="p">(</span><span class="n">QSize</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">top_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">close_button</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">close_button</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">on_close_button_clicked</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">create_tab_bar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Creates the internal TabBar</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+
+        <span class="kn">from</span> <span class="nn">.dock_area_tab_bar</span> <span class="k">import</span> <span class="n">DockAreaTabBar</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tab_bar</span> <span class="o">=</span> <span class="n">DockAreaTabBar</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dock_area</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">top_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tab_bar</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">tab_bar</span><span class="o">.</span><span class="n">tab_closed</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">mark_tabs_menu_outdated</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tab_bar</span><span class="o">.</span><span class="n">tab_opened</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">mark_tabs_menu_outdated</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tab_bar</span><span class="o">.</span><span class="n">tab_inserted</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">mark_tabs_menu_outdated</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tab_bar</span><span class="o">.</span><span class="n">removing_tab</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">mark_tabs_menu_outdated</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tab_bar</span><span class="o">.</span><span class="n">tab_moved</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">mark_tabs_menu_outdated</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tab_bar</span><span class="o">.</span><span class="n">current_changed</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">on_current_tab_changed</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tab_bar</span><span class="o">.</span><span class="n">tab_bar_clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">tab_bar_clicked</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">tab_bar</span><span class="o">.</span><span class="n">setContextMenuPolicy</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">CustomContextMenu</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tab_bar</span><span class="o">.</span><span class="n">customContextMenuRequested</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">show_context_menu</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">dock_manager</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;DockManager&#39;</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Convenience function for DockManager access</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : DockManager</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dock_area</span><span class="o">.</span><span class="n">dock_manager</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">test_config_flag</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">flag</span><span class="p">:</span> <span class="n">DockFlags</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Returns true if the given config flag is set</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        flag : DockFlags</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : bool</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="n">flag</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dock_area</span><span class="o">.</span><span class="n">dock_manager</span><span class="p">()</span><span class="o">.</span><span class="n">config_flags</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="DockAreaTitleBar"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_area_title_bar.DockAreaTitleBar">[docs]</a><span class="k">class</span> <span class="nc">DockAreaTitleBar</span><span class="p">(</span><span class="n">QFrame</span><span class="p">):</span>
+    <span class="c1"># This signal is emitted if a tab in the tab bar is clicked by the user or</span>
+    <span class="c1"># if the user clicks on a tab item in the title bar tab menu.</span>
+    <span class="n">tab_bar_clicked</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="s1">&#39;DockAreaWidget&#39;</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Default Constructor</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        parent : DockAreaWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span> <span class="o">=</span> <span class="n">DockAreaTitleBarPrivate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_area</span> <span class="o">=</span> <span class="n">parent</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;dockAreaTitleBar&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">top_layout</span> <span class="o">=</span> <span class="n">QBoxLayout</span><span class="p">(</span><span class="n">QBoxLayout</span><span class="o">.</span><span class="n">LeftToRight</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">top_layout</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">top_layout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">top_layout</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setSizePolicy</span><span class="p">(</span><span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Expanding</span><span class="p">,</span> <span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Fixed</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">create_tab_bar</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">create_buttons</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">f</span><span class="s1">&#39;&lt;</span><span class="si">{self.__class__.__name__}</span><span class="s1">&gt;&#39;</span>
+
+    <span class="k">def</span> <span class="nf">on_tabs_menu_about_to_show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">menu_outdated</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="n">menu</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tabs_menu_button</span><span class="o">.</span><span class="n">menu</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">menu</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">menu</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tab_bar</span><span class="o">.</span><span class="n">count</span><span class="p">()):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tab_bar</span><span class="o">.</span><span class="n">is_tab_open</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+                <span class="k">continue</span>
+
+            <span class="n">tab</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tab_bar</span><span class="o">.</span><span class="n">tab</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+            <span class="c1"># TODO icon None?</span>
+            <span class="n">action</span> <span class="o">=</span> <span class="n">menu</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">tab</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>  <span class="c1"># QAction(tab.icon(), tab.text()))</span>
+            <span class="n">action</span><span class="o">.</span><span class="n">setToolTip</span><span class="p">(</span><span class="n">tab</span><span class="o">.</span><span class="n">toolTip</span><span class="p">())</span>
+            <span class="n">action</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">menu_outdated</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">on_close_button_clicked</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;DockAreaTitleBar.onCloseButtonClicked&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">test_config_flag</span><span class="p">(</span><span class="n">DockFlags</span><span class="o">.</span><span class="n">dock_area_close_button_closes_tab</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tab_bar</span><span class="o">.</span><span class="n">close_tab</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tab_bar</span><span class="o">.</span><span class="n">current_index</span><span class="p">())</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_area</span><span class="o">.</span><span class="n">close_area</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">on_undock_button_clicked</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tab_bar</span><span class="o">.</span><span class="n">make_area_floating</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mapFromGlobal</span><span class="p">(</span><span class="n">QCursor</span><span class="o">.</span><span class="n">pos</span><span class="p">()),</span>
+                                          <span class="n">DragState</span><span class="o">.</span><span class="n">inactive</span><span class="p">)</span>
+
+<div class="viewcode-block" id="DockAreaTitleBar.on_tabs_menu_action_triggered"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_area_title_bar.DockAreaTitleBar.on_tabs_menu_action_triggered">[docs]</a>    <span class="k">def</span> <span class="nf">on_tabs_menu_action_triggered</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="n">QAction</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        On tabs menu action triggered</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        action : QAction</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="n">action</span><span class="o">.</span><span class="n">data</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tab_bar</span><span class="o">.</span><span class="n">set_current_index</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tab_bar_clicked</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="n">index</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockAreaTitleBar.on_current_tab_changed"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_area_title_bar.DockAreaTitleBar.on_current_tab_changed">[docs]</a>    <span class="k">def</span> <span class="nf">on_current_tab_changed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        On current tab changed</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        index : int</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">test_config_flag</span><span class="p">(</span><span class="n">DockFlags</span><span class="o">.</span><span class="n">dock_area_close_button_closes_tab</span><span class="p">):</span>
+            <span class="n">dock_widget</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tab_bar</span><span class="o">.</span><span class="n">tab</span><span class="p">(</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">dock_widget</span><span class="p">()</span>
+            <span class="n">enabled</span> <span class="o">=</span> <span class="n">DockWidgetFeature</span><span class="o">.</span><span class="n">closable</span> <span class="ow">in</span> <span class="n">dock_widget</span><span class="o">.</span><span class="n">features</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">close_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="n">enabled</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockAreaTitleBar.show_context_menu"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_area_title_bar.DockAreaTitleBar.show_context_menu">[docs]</a>    <span class="k">def</span> <span class="nf">show_context_menu</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">:</span> <span class="n">QPoint</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Show context menu</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        pos : QPoint</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">menu</span> <span class="o">=</span> <span class="n">QMenu</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">menu</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="s2">&quot;Detach Area&quot;</span><span class="p">,</span>
+                       <span class="bp">self</span><span class="o">.</span><span class="n">on_undock_button_clicked</span><span class="p">)</span>
+        <span class="n">menu</span><span class="o">.</span><span class="n">addSeparator</span><span class="p">()</span>
+        <span class="n">action</span> <span class="o">=</span> <span class="n">menu</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="s2">&quot;Close Area&quot;</span><span class="p">,</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">on_close_button_clicked</span><span class="p">)</span>
+        <span class="n">enabled</span> <span class="o">=</span> <span class="n">DockWidgetFeature</span><span class="o">.</span><span class="n">closable</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_area</span><span class="o">.</span><span class="n">features</span><span class="p">()</span>
+        <span class="n">action</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="n">enabled</span><span class="p">)</span>
+
+        <span class="n">menu</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="s2">&quot;Close Other Areas&quot;</span><span class="p">,</span>
+                       <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_area</span><span class="o">.</span><span class="n">close_other_areas</span><span class="p">)</span>
+        <span class="n">menu</span><span class="o">.</span><span class="n">exec_</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mapToGlobal</span><span class="p">(</span><span class="n">pos</span><span class="p">))</span></div>
+
+    <span class="k">def</span> <span class="nf">mark_tabs_menu_outdated</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">menu_outdated</span> <span class="o">=</span> <span class="kc">True</span>
+
+<div class="viewcode-block" id="DockAreaTitleBar.tab_bar"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_area_title_bar.DockAreaTitleBar.tab_bar">[docs]</a>    <span class="k">def</span> <span class="nf">tab_bar</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;DockAreaTabBar&#39;</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Returns the pointer to the tabBar</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : DockAreaTabBar</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tab_bar</span></div>
+
+<div class="viewcode-block" id="DockAreaTitleBar.button"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_area_title_bar.DockAreaTitleBar.button">[docs]</a>    <span class="k">def</span> <span class="nf">button</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">which</span><span class="p">:</span> <span class="n">TitleBarButton</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">QAbstractButton</span><span class="p">]:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Returns the button corresponding to the given title bar button identifier</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        which : TitleBarButton</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : QAbstractButton</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">which</span> <span class="o">==</span> <span class="n">TitleBarButton</span><span class="o">.</span><span class="n">tabs_menu</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tabs_menu_button</span>
+        <span class="k">if</span> <span class="n">which</span> <span class="o">==</span> <span class="n">TitleBarButton</span><span class="o">.</span><span class="n">undock</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">undock_button</span>
+        <span class="k">if</span> <span class="n">which</span> <span class="o">==</span> <span class="n">TitleBarButton</span><span class="o">.</span><span class="n">close</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">close_button</span>
+
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="DockAreaTitleBar.setVisible"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_area_title_bar.DockAreaTitleBar.setVisible">[docs]</a>    <span class="k">def</span> <span class="nf">setVisible</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">visible</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        This function is here for debug reasons</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        visible : bool</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="n">visible</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mark_tabs_menu_outdated</span><span class="p">()</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Ken Lauer
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

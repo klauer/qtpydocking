@@ -1,0 +1,974 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>qtpydocking.dock_widget &mdash; qtpydocking  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> qtpydocking
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">API Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_area_layout">qtpydocking.dock_area_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_area_tab_bar">qtpydocking.dock_area_tab_bar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_area_title_bar">qtpydocking.dock_area_title_bar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_area_widget">qtpydocking.dock_area_widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_container_widget">qtpydocking.dock_container_widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_manager">qtpydocking.dock_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_overlay">qtpydocking.dock_overlay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_splitter">qtpydocking.dock_splitter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_widget">qtpydocking.dock_widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_widget_tab">qtpydocking.dock_widget_tab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.eliding_label">qtpydocking.eliding_label</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.enums">qtpydocking.enums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.floating_dock_container">qtpydocking.floating_dock_container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.util">qtpydocking.util</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/klauer/qtpydocking">Github Repository</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">qtpydocking</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>qtpydocking.dock_widget</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for qtpydocking.dock_widget</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">TYPE_CHECKING</span><span class="p">,</span> <span class="n">Optional</span>
+
+<span class="kn">from</span> <span class="nn">qtpy.QtCore</span> <span class="k">import</span> <span class="n">QEvent</span><span class="p">,</span> <span class="n">QSize</span><span class="p">,</span> <span class="n">QXmlStreamWriter</span><span class="p">,</span> <span class="n">Qt</span><span class="p">,</span> <span class="n">Signal</span>
+<span class="kn">from</span> <span class="nn">qtpy.QtGui</span> <span class="k">import</span> <span class="n">QIcon</span>
+<span class="kn">from</span> <span class="nn">qtpy.QtWidgets</span> <span class="k">import</span> <span class="p">(</span><span class="n">QAction</span><span class="p">,</span> <span class="n">QBoxLayout</span><span class="p">,</span> <span class="n">QFrame</span><span class="p">,</span> <span class="n">QScrollArea</span><span class="p">,</span>
+                            <span class="n">QSplitter</span><span class="p">,</span> <span class="n">QToolBar</span><span class="p">,</span> <span class="n">QWidget</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">.enums</span> <span class="k">import</span> <span class="p">(</span><span class="n">DockWidgetFeature</span><span class="p">,</span> <span class="n">WidgetState</span><span class="p">,</span> <span class="n">ToggleViewActionMode</span><span class="p">,</span>
+                    <span class="n">InsertMode</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">.util</span> <span class="k">import</span> <span class="n">find_parent</span><span class="p">,</span> <span class="n">emit_top_level_event_for_widget</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="p">(</span><span class="n">DockAreaWidget</span><span class="p">,</span> <span class="n">DockContainerWidget</span><span class="p">,</span> <span class="n">DockManager</span><span class="p">,</span>
+                   <span class="n">DockWidgetTab</span><span class="p">)</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">DockWidgetPrivate</span><span class="p">:</span>
+    <span class="n">public</span><span class="p">:</span> <span class="s1">&#39;DockWidget&#39;</span>
+    <span class="n">layout</span><span class="p">:</span> <span class="n">QBoxLayout</span>
+    <span class="n">widget</span><span class="p">:</span> <span class="n">QWidget</span>
+    <span class="n">tab_widget</span><span class="p">:</span> <span class="s1">&#39;DockWidgetTab&#39;</span>
+    <span class="n">features</span><span class="p">:</span> <span class="n">DockWidgetFeature</span>
+    <span class="n">dock_manager</span><span class="p">:</span> <span class="s1">&#39;DockManager&#39;</span>
+    <span class="n">dock_area</span><span class="p">:</span> <span class="s1">&#39;DockAreaWidget&#39;</span>
+    <span class="n">toggle_view_action</span><span class="p">:</span> <span class="n">QAction</span>
+    <span class="n">closed</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">scroll_area</span><span class="p">:</span> <span class="n">QScrollArea</span>
+    <span class="n">tool_bar</span><span class="p">:</span> <span class="n">QToolBar</span>
+    <span class="n">tool_bar_style_docked</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">tool_bar_style_floating</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">tool_bar_icon_size_docked</span><span class="p">:</span> <span class="n">QSize</span>
+    <span class="n">tool_bar_icon_size_floating</span><span class="p">:</span> <span class="n">QSize</span>
+    <span class="n">is_floating_top_level</span><span class="p">:</span> <span class="nb">bool</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">public</span><span class="p">:</span> <span class="s1">&#39;DockWidget&#39;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">public</span> <span class="o">=</span> <span class="n">public</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">widget</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tab_widget</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">features</span> <span class="o">=</span> <span class="n">DockWidgetFeature</span><span class="o">.</span><span class="n">all_features</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dock_manager</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dock_area</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">toggle_view_action</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">closed</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scroll_area</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tool_bar</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tool_bar_style_docked</span> <span class="o">=</span> <span class="n">Qt</span><span class="o">.</span><span class="n">ToolButtonIconOnly</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tool_bar_style_floating</span> <span class="o">=</span> <span class="n">Qt</span><span class="o">.</span><span class="n">ToolButtonTextUnderIcon</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tool_bar_icon_size_docked</span> <span class="o">=</span> <span class="n">QSize</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tool_bar_icon_size_floating</span> <span class="o">=</span> <span class="n">QSize</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">24</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_floating_top_level</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">show_dock_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Show dock widget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="kn">from</span> <span class="nn">.floating_dock_container</span> <span class="k">import</span> <span class="n">FloatingDockContainer</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">dock_area</span><span class="p">:</span>
+            <span class="n">floating_widget</span> <span class="o">=</span> <span class="n">FloatingDockContainer</span><span class="p">(</span><span class="n">dock_widget</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="p">)</span>
+            <span class="n">floating_widget</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">size</span><span class="p">())</span>
+            <span class="n">floating_widget</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+            <span class="k">return</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">dock_area</span><span class="o">.</span><span class="n">toggle_view</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dock_area</span><span class="o">.</span><span class="n">set_current_dock_widget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tab_widget</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+        <span class="n">splitter</span> <span class="o">=</span> <span class="n">find_parent</span><span class="p">(</span><span class="n">QSplitter</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dock_area</span><span class="p">)</span>
+
+        <span class="k">while</span> <span class="n">splitter</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">splitter</span><span class="o">.</span><span class="n">isVisible</span><span class="p">():</span>
+            <span class="n">splitter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+            <span class="n">splitter</span> <span class="o">=</span> <span class="n">find_parent</span><span class="p">(</span><span class="n">QSplitter</span><span class="p">,</span> <span class="n">splitter</span><span class="p">)</span>
+
+        <span class="n">container</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dock_area</span><span class="o">.</span><span class="n">dock_container</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">container</span><span class="o">.</span><span class="n">is_floating</span><span class="p">():</span>
+            <span class="n">floating_widget</span> <span class="o">=</span> <span class="n">find_parent</span><span class="p">(</span><span class="n">FloatingDockContainer</span><span class="p">,</span> <span class="n">container</span><span class="p">)</span>
+            <span class="n">floating_widget</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">hide_dock_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Hide dock widget.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tab_widget</span><span class="o">.</span><span class="n">hide</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update_parent_dock_area</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">update_parent_dock_area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Hides a dock area if all dock widgets in the area are closed. This</span>
+<span class="sd">        function updates the current selected tab and hides the parent dock</span>
+<span class="sd">        area if it is empty</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">dock_area</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="n">next_dock_widget</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dock_area</span><span class="o">.</span><span class="n">next_open_dock_widget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">next_dock_widget</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dock_area</span><span class="o">.</span><span class="n">set_current_dock_widget</span><span class="p">(</span><span class="n">next_dock_widget</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dock_area</span><span class="o">.</span><span class="n">hide_area_with_no_visible_content</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">setup_tool_bar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Setup the top tool bar</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tool_bar</span> <span class="o">=</span> <span class="n">QToolBar</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tool_bar</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;dockWidgetToolBar&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">insertWidget</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tool_bar</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tool_bar</span><span class="o">.</span><span class="n">setIconSize</span><span class="p">(</span><span class="n">QSize</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tool_bar</span><span class="o">.</span><span class="n">toggleViewAction</span><span class="p">()</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tool_bar</span><span class="o">.</span><span class="n">toggleViewAction</span><span class="p">()</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">top_level_changed</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">set_toolbar_floating_style</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">setup_scroll_area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Setup the main scroll area</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scroll_area</span> <span class="o">=</span> <span class="n">QScrollArea</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scroll_area</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;dockWidgetScrollArea&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scroll_area</span><span class="o">.</span><span class="n">setWidgetResizable</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">scroll_area</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="DockWidget"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget">[docs]</a><span class="k">class</span> <span class="nc">DockWidget</span><span class="p">(</span><span class="n">QFrame</span><span class="p">):</span>
+    <span class="c1"># This signal is emitted if the dock widget is opened or closed</span>
+    <span class="n">view_toggled</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="nb">bool</span><span class="p">)</span>
+    <span class="c1"># This signal is emitted if the dock widget is closed</span>
+    <span class="n">closed</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">()</span>
+    <span class="c1"># This signal is emitted if the window title of this dock widget changed</span>
+    <span class="n">title_changed</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+    <span class="c1"># This signal is emitted when the floating property changes. The topLevel</span>
+    <span class="c1"># parameter is true if the dock widget is now floating; otherwise it is</span>
+    <span class="c1"># false.</span>
+    <span class="n">top_level_changed</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="nb">bool</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="n">QWidget</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        This constructor creates a dock widget with the given title. The title</span>
+<span class="sd">        is the text that is shown in the window title when the dock widget is</span>
+<span class="sd">        floating and it is the title that is shown in the titlebar or the tab</span>
+<span class="sd">        of this dock widget if it is tabified. The object name of the dock</span>
+<span class="sd">        widget is also set to the title. The object name is required by the</span>
+<span class="sd">        dock manager to properly save and restore the state of the dock widget.</span>
+<span class="sd">        That means, the title needs to be unique. If your title is not unique</span>
+<span class="sd">        or if you would like to change the title during runtime, you need to</span>
+<span class="sd">        set a unique object name explicitely by calling setObjectName() after</span>
+<span class="sd">        construction. Use the layoutFlags to configure the layout of the dock</span>
+<span class="sd">        widget.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        title : str</span>
+<span class="sd">        parent : QWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span> <span class="o">=</span> <span class="n">DockWidgetPrivate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">QBoxLayout</span><span class="p">(</span><span class="n">QBoxLayout</span><span class="o">.</span><span class="n">TopToBottom</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">layout</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+
+        <span class="kn">from</span> <span class="nn">.dock_widget_tab</span> <span class="k">import</span> <span class="n">DockWidgetTab</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tab_widget</span> <span class="o">=</span> <span class="n">DockWidgetTab</span><span class="p">(</span><span class="n">dock_widget</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>  <span class="c1"># TODO: parent?</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">toggle_view_action</span> <span class="o">=</span> <span class="n">QAction</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">toggle_view_action</span><span class="o">.</span><span class="n">setCheckable</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">toggle_view_action</span><span class="o">.</span><span class="n">triggered</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">toggle_view</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_toolbar_floating_style</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">f</span><span class="s1">&#39;&lt;</span><span class="si">{self.__class__.__name__}</span><span class="s1"> title={self.windowTitle()!r}&gt;&#39;</span>
+
+<div class="viewcode-block" id="DockWidget.set_toolbar_floating_style"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.set_toolbar_floating_style">[docs]</a>    <span class="k">def</span> <span class="nf">set_toolbar_floating_style</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">floating</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Adjusts the toolbar icon sizes according to the floating state</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        top_level : bool</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tool_bar</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="n">icon_size</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tool_bar_icon_size_floating</span>
+                     <span class="k">if</span> <span class="n">floating</span>
+                     <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tool_bar_icon_size_docked</span>
+                     <span class="p">)</span>
+        <span class="k">if</span> <span class="n">icon_size</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tool_bar</span><span class="o">.</span><span class="n">iconSize</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tool_bar</span><span class="o">.</span><span class="n">setIconSize</span><span class="p">(</span><span class="n">icon_size</span><span class="p">)</span>
+
+        <span class="n">button_style</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tool_bar_style_floating</span>
+                        <span class="k">if</span> <span class="n">floating</span>
+                        <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tool_bar_style_docked</span>
+                        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">button_style</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tool_bar</span><span class="o">.</span><span class="n">toolButtonStyle</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tool_bar</span><span class="o">.</span><span class="n">setToolButtonStyle</span><span class="p">(</span><span class="n">button_style</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockWidget.set_dock_manager"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.set_dock_manager">[docs]</a>    <span class="k">def</span> <span class="nf">set_dock_manager</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dock_manager</span><span class="p">:</span> <span class="s1">&#39;DockManager&#39;</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Assigns the dock manager that manages this dock widget</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        dock_manager : DockManager</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_manager</span> <span class="o">=</span> <span class="n">dock_manager</span></div>
+
+<div class="viewcode-block" id="DockWidget.set_dock_area"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.set_dock_area">[docs]</a>    <span class="k">def</span> <span class="nf">set_dock_area</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dock_area</span><span class="p">:</span> <span class="s1">&#39;DockAreaWidget&#39;</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        If this dock widget is inserted into a dock area, the dock area will be</span>
+<span class="sd">        registered on this widget via this function. If a dock widget is</span>
+<span class="sd">        removed from a dock area, this function will be called with nullptr</span>
+<span class="sd">        value.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        dock_area : DockAreaWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_area</span> <span class="o">=</span> <span class="n">dock_area</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">toggle_view_action</span><span class="o">.</span><span class="n">setChecked</span><span class="p">(</span><span class="n">dock_area</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_closed</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="DockWidget.set_toggle_view_action_checked"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.set_toggle_view_action_checked">[docs]</a>    <span class="k">def</span> <span class="nf">set_toggle_view_action_checked</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">checked</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        This function changes the toggle view action without emitting any signal</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        checked : bool</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">action</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">toggle_view_action</span>
+        <span class="n">action</span><span class="o">.</span><span class="n">blockSignals</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">action</span><span class="o">.</span><span class="n">setChecked</span><span class="p">(</span><span class="n">checked</span><span class="p">)</span>
+        <span class="n">action</span><span class="o">.</span><span class="n">blockSignals</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockWidget.save_state"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.save_state">[docs]</a>    <span class="k">def</span> <span class="nf">save_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stream</span><span class="p">:</span> <span class="n">QXmlStreamWriter</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Saves the state into the given stream</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        stream : QXmlStreamWriter</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">stream</span><span class="o">.</span><span class="n">writeStartElement</span><span class="p">(</span><span class="s2">&quot;Widget&quot;</span><span class="p">)</span>
+        <span class="n">stream</span><span class="o">.</span><span class="n">writeAttribute</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">objectName</span><span class="p">())</span>
+        <span class="n">stream</span><span class="o">.</span><span class="n">writeAttribute</span><span class="p">(</span><span class="s2">&quot;Closed&quot;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">closed</span> <span class="k">else</span> <span class="s1">&#39;0&#39;</span><span class="p">)</span>
+        <span class="n">stream</span><span class="o">.</span><span class="n">writeEndElement</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="DockWidget.flag_as_unassigned"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.flag_as_unassigned">[docs]</a>    <span class="k">def</span> <span class="nf">flag_as_unassigned</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        This is a helper function for the dock manager to flag this widget as</span>
+<span class="sd">        unassigned. When calling the restore function, it may happen, that the</span>
+<span class="sd">        saved state contains less dock widgets then currently available. All</span>
+<span class="sd">        widgets whose data is not contained in the saved state, are flagged as</span>
+<span class="sd">        unassigned after the restore process. If the user shows an unassigned</span>
+<span class="sd">        dock widget, a floating widget will be created to take up the dock</span>
+<span class="sd">        widget.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">closed</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;flag_as_unassigned </span><span class="si">%s</span><span class="s1"> -&gt; setParent </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span>
+                     <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_manager</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setParent</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_manager</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_dock_area</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+
+        <span class="n">tab_widget</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tab_widget</span><span class="p">()</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;flag_as_unassigned </span><span class="si">%s</span><span class="s1"> -&gt; setParent </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">tab_widget</span><span class="p">,</span>
+                     <span class="bp">self</span><span class="p">)</span>
+        <span class="n">tab_widget</span><span class="o">.</span><span class="n">setParent</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockWidget.emit_top_level_changed"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.emit_top_level_changed">[docs]</a>    <span class="k">def</span> <span class="nf">emit_top_level_changed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">floating</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Use this function to emit a top level changed event. Do never use emit</span>
+<span class="sd">        top_level_changed(). Always use this function because it only emits a</span>
+<span class="sd">        signal if the floating state has really changed</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        floating : bool</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">floating</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">is_floating_top_level</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">is_floating_top_level</span> <span class="o">=</span> <span class="n">floating</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">top_level_changed</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">is_floating_top_level</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockWidget.set_closed_state"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.set_closed_state">[docs]</a>    <span class="k">def</span> <span class="nf">set_closed_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">closed</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Internal function for modifying the closed state when restoring a saved</span>
+<span class="sd">        docking state</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        closed : bool</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">closed</span> <span class="o">=</span> <span class="n">closed</span></div>
+
+<div class="viewcode-block" id="DockWidget.toggle_view_internal"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.toggle_view_internal">[docs]</a>    <span class="k">def</span> <span class="nf">toggle_view_internal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">open_</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Internal toggle view function that does not check if the widget already</span>
+<span class="sd">        is in the given state</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        open_ : bool</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">dock_container</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dock_container</span><span class="p">()</span>
+        <span class="n">top_level_dock_widget_before</span> <span class="o">=</span> <span class="p">(</span><span class="n">dock_container</span><span class="o">.</span><span class="n">top_level_dock_widget</span><span class="p">()</span>
+                                        <span class="k">if</span> <span class="n">dock_container</span> <span class="k">else</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">open_</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">show_dock_widget</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">hide_dock_widget</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">closed</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">open_</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">toggle_view_action</span><span class="o">.</span><span class="n">blockSignals</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">toggle_view_action</span><span class="o">.</span><span class="n">setChecked</span><span class="p">(</span><span class="n">open_</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">toggle_view_action</span><span class="o">.</span><span class="n">blockSignals</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_area</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_area</span><span class="o">.</span><span class="n">toggle_dock_widget_view</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">open_</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">open_</span> <span class="ow">and</span> <span class="n">top_level_dock_widget_before</span><span class="p">:</span>
+            <span class="n">emit_top_level_event_for_widget</span><span class="p">(</span><span class="n">top_level_dock_widget_before</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+        <span class="c1"># Here we need to call the dockContainer() function again, because if</span>
+        <span class="c1"># this dock widget was unassigned before the call to showDockWidget() then</span>
+        <span class="c1"># it has a dock container now</span>
+        <span class="n">dock_container</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dock_container</span><span class="p">()</span>
+        <span class="n">top_level_dock_widget_after</span> <span class="o">=</span> <span class="p">(</span><span class="n">dock_container</span><span class="o">.</span><span class="n">top_level_dock_widget</span><span class="p">()</span>
+                                       <span class="k">if</span> <span class="n">dock_container</span>
+                                       <span class="k">else</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">emit_top_level_event_for_widget</span><span class="p">(</span><span class="n">top_level_dock_widget_after</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">dock_container</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">floating_container</span> <span class="o">=</span> <span class="n">dock_container</span><span class="o">.</span><span class="n">floating_widget</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">floating_container</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">floating_container</span><span class="o">.</span><span class="n">update_window_title</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">open_</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">closed</span><span class="o">.</span><span class="n">emit</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">view_toggled</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="n">open_</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockWidget.minimumSizeHint"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.minimumSizeHint">[docs]</a>    <span class="k">def</span> <span class="nf">minimumSizeHint</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QSize</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        We return a fixed minimum size hint for all dock widgets</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : QSize</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="n">QSize</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockWidget.set_widget"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.set_widget">[docs]</a>    <span class="k">def</span> <span class="nf">set_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">widget</span><span class="p">:</span> <span class="n">QWidget</span><span class="p">,</span>
+                   <span class="n">insert_mode</span><span class="p">:</span> <span class="n">InsertMode</span> <span class="o">=</span> <span class="n">InsertMode</span><span class="o">.</span><span class="n">auto_scroll_area</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Sets the widget for the dock widget to widget. The InsertMode defines</span>
+<span class="sd">        how the widget is inserted into the dock widget. The content of a dock</span>
+<span class="sd">        widget should be resizable do a very small size to prevent the dock</span>
+<span class="sd">        widget from blocking the resizing. To ensure, that a dock widget can be</span>
+<span class="sd">        resized very well, it is better to insert the content+ widget into a</span>
+<span class="sd">        scroll area or to provide a widget that is already a scroll area or</span>
+<span class="sd">        that contains a scroll area. If the InsertMode is AutoScrollArea, the</span>
+<span class="sd">        DockWidget tries to automatically detect how to insert the given</span>
+<span class="sd">        widget.</span>
+
+<span class="sd">        If the widget is derived from QScrollArea (i.e. an QAbstractItemView),</span>
+<span class="sd">        then the widget is inserted directly. If the given widget is not a</span>
+<span class="sd">        scroll area, the widget will be inserted into a scroll area. To force</span>
+<span class="sd">        insertion into a scroll area, you can also provide the InsertMode</span>
+<span class="sd">        ForceScrollArea. To prevent insertion into a scroll area, you can</span>
+<span class="sd">        provide the InsertMode ForceNoScrollArea</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        widget : QWidget</span>
+<span class="sd">        insert_mode : InsertMode</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">scroll_area</span> <span class="o">=</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">widget</span><span class="p">,</span> <span class="n">QScrollArea</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">scroll_area</span> <span class="ow">or</span> <span class="n">InsertMode</span><span class="o">.</span><span class="n">force_no_scroll_area</span> <span class="o">==</span> <span class="n">insert_mode</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">widget</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">scroll_area</span><span class="p">:</span>
+                <span class="n">viewport</span> <span class="o">=</span> <span class="n">widget</span><span class="o">.</span><span class="n">viewport</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">viewport</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">viewport</span><span class="o">.</span><span class="n">setProperty</span><span class="p">(</span><span class="s1">&#39;dockWidgetContent&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">setup_scroll_area</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">scroll_area</span><span class="o">.</span><span class="n">setWidget</span><span class="p">(</span><span class="n">widget</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">widget</span> <span class="o">=</span> <span class="n">widget</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">widget</span><span class="o">.</span><span class="n">setProperty</span><span class="p">(</span><span class="s2">&quot;dockWidgetContent&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockWidget.take_widget"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.take_widget">[docs]</a>    <span class="k">def</span> <span class="nf">take_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Remove the widget from the dock, giving ownership back to the caller</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span>
+        <span class="n">d</span><span class="o">.</span><span class="n">scroll_area</span><span class="o">.</span><span class="n">takeWidget</span><span class="p">()</span>
+        <span class="n">widget</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">widget</span>
+        <span class="n">d</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">removeWidget</span><span class="p">(</span><span class="n">widget</span><span class="p">)</span>
+        <span class="n">widget</span><span class="o">.</span><span class="n">setParent</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">widget</span></div>
+
+<div class="viewcode-block" id="DockWidget.widget"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.widget">[docs]</a>    <span class="k">def</span> <span class="nf">widget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QWidget</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Returns the widget for the dock widget. This function returns None if</span>
+<span class="sd">        the widget has not been set.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : QWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">widget</span></div>
+
+<div class="viewcode-block" id="DockWidget.tab_widget"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.tab_widget">[docs]</a>    <span class="k">def</span> <span class="nf">tab_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;DockWidgetTab&#39;</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Returns the title bar widget of this dock widget</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : DockWidgetTab</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tab_widget</span></div>
+
+<div class="viewcode-block" id="DockWidget.set_features"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.set_features">[docs]</a>    <span class="k">def</span> <span class="nf">set_features</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">features</span><span class="p">:</span> <span class="n">DockWidgetFeature</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Sets, whether the dock widget is movable, closable, and floatable.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        features : DockWidgetFeature</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">features</span> <span class="o">=</span> <span class="n">features</span></div>
+
+<div class="viewcode-block" id="DockWidget.set_feature"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.set_feature">[docs]</a>    <span class="k">def</span> <span class="nf">set_feature</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">flag</span><span class="p">:</span> <span class="n">DockWidgetFeature</span><span class="p">,</span> <span class="n">on</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Sets the feature flag for this dock widget if on is true; otherwise</span>
+<span class="sd">        clears the flag.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        flag : DockWidgetFeature</span>
+<span class="sd">        on : bool</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">on</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">features</span> <span class="o">|=</span> <span class="n">flag</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">features</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="n">flag</span></div>
+
+<div class="viewcode-block" id="DockWidget.features"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.features">[docs]</a>    <span class="k">def</span> <span class="nf">features</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DockWidgetFeature</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        This property holds whether the dock widget is movable, closable, and</span>
+<span class="sd">        floatable. By default, this property is set to a combination of</span>
+<span class="sd">        DockWidgetClosable, DockWidgetMovable and DockWidgetFloatable.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : DockWidgetFeature</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">features</span></div>
+
+<div class="viewcode-block" id="DockWidget.dock_manager"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.dock_manager">[docs]</a>    <span class="k">def</span> <span class="nf">dock_manager</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;DockManager&#39;</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Returns the dock manager that manages the dock widget or 0 if the</span>
+<span class="sd">        widget has not been assigned to any dock manager yet</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : DockManager</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_manager</span></div>
+
+<div class="viewcode-block" id="DockWidget.dock_container"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.dock_container">[docs]</a>    <span class="k">def</span> <span class="nf">dock_container</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="s1">&#39;DockContainerWidget&#39;</span><span class="p">]:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Returns the dock container widget this dock area widget belongs to or</span>
+<span class="sd">        None if this dock widget has not been docked yet</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : DockContainerWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_area</span><span class="o">.</span><span class="n">dock_container</span><span class="p">()</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_area</span> <span class="k">else</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="DockWidget.dock_area_widget"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.dock_area_widget">[docs]</a>    <span class="k">def</span> <span class="nf">dock_area_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;DockAreaWidget&#39;</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Returns the dock area widget this dock widget belongs to or 0 if this</span>
+<span class="sd">        dock widget has not been docked yet</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : DockAreaWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_area</span></div>
+
+<div class="viewcode-block" id="DockWidget.is_floating"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.is_floating">[docs]</a>    <span class="k">def</span> <span class="nf">is_floating</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        This property holds whether the dock widget is floating. A dock widget</span>
+<span class="sd">        is only floating, if it is the one and only widget inside of a floating</span>
+<span class="sd">        container. If there are more than one dock widget in a floating</span>
+<span class="sd">        container, the all dock widgets are docked and not floating.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : bool</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_in_floating_container</span><span class="p">():</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dock_container</span><span class="p">()</span><span class="o">.</span><span class="n">top_level_dock_widget</span><span class="p">()</span> <span class="ow">is</span> <span class="bp">self</span></div>
+
+<div class="viewcode-block" id="DockWidget.is_in_floating_container"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.is_in_floating_container">[docs]</a>    <span class="k">def</span> <span class="nf">is_in_floating_container</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        This function returns true, if this dock widget is in a floating. The</span>
+<span class="sd">        function returns true, if the dock widget is floating and it also</span>
+<span class="sd">        returns true if it is docked inside of a floating container.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : bool</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">container</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dock_container</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">container</span> <span class="ow">and</span> <span class="n">container</span><span class="o">.</span><span class="n">is_floating</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="DockWidget.is_closed"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.is_closed">[docs]</a>    <span class="k">def</span> <span class="nf">is_closed</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Returns true, if this dock widget is closed.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : bool</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">closed</span></div>
+
+<div class="viewcode-block" id="DockWidget.toggle_view_action"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.toggle_view_action">[docs]</a>    <span class="k">def</span> <span class="nf">toggle_view_action</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QAction</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Returns a checkable action that can be used to show or close this dock</span>
+<span class="sd">        widget. The action&#39;s text is set to the dock widget&#39;s window title.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : QAction</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">toggle_view_action</span></div>
+
+<div class="viewcode-block" id="DockWidget.set_toggle_view_action_mode"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.set_toggle_view_action_mode">[docs]</a>    <span class="k">def</span> <span class="nf">set_toggle_view_action_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mode</span><span class="p">:</span> <span class="n">ToggleViewActionMode</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Configures the behavior of the toggle view action.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        mode : ToggleViewActionMode</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">is_action_mode</span> <span class="o">=</span> <span class="n">ToggleViewActionMode</span><span class="o">.</span><span class="n">toggle</span> <span class="o">==</span> <span class="n">mode</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">toggle_view_action</span><span class="o">.</span><span class="n">setCheckable</span><span class="p">(</span><span class="n">is_action_mode</span><span class="p">)</span>
+        <span class="n">icon</span> <span class="o">=</span> <span class="n">QIcon</span><span class="p">()</span> <span class="k">if</span> <span class="n">is_action_mode</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tab_widget</span><span class="o">.</span><span class="n">icon</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">icon</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">toggle_view_action</span><span class="o">.</span><span class="n">setIcon</span><span class="p">(</span><span class="n">icon</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockWidget.set_icon"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.set_icon">[docs]</a>    <span class="k">def</span> <span class="nf">set_icon</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">icon</span><span class="p">:</span> <span class="n">QIcon</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Sets the dock widget icon that is shown in tabs and in toggle view actions</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        icon : QIcon</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tab_widget</span><span class="o">.</span><span class="n">set_icon</span><span class="p">(</span><span class="n">icon</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">toggle_view_action</span><span class="o">.</span><span class="n">isCheckable</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">toggle_view_action</span><span class="o">.</span><span class="n">setIcon</span><span class="p">(</span><span class="n">icon</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockWidget.icon"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.icon">[docs]</a>    <span class="k">def</span> <span class="nf">icon</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QIcon</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Returns the icon that has been assigned to the dock widget</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : QIcon</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tab_widget</span><span class="o">.</span><span class="n">icon</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="DockWidget.tool_bar"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.tool_bar">[docs]</a>    <span class="k">def</span> <span class="nf">tool_bar</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QToolBar</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        If the WithToolBar layout flag is enabled, then this function returns</span>
+<span class="sd">        the dock widget toolbar. If the flag is disabled, the function returns</span>
+<span class="sd">        a nullptr. This function returns the dock widget top tool bar. If no</span>
+<span class="sd">        toolbar is assigned, this function returns nullptr. To get a vaild</span>
+<span class="sd">        toolbar you either need to create a default empty toolbar via</span>
+<span class="sd">        createDefaultToolBar() function or you need to assign you custom</span>
+<span class="sd">        toolbar via setToolBar().</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : QToolBar</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tool_bar</span></div>
+
+<div class="viewcode-block" id="DockWidget.create_default_tool_bar"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.create_default_tool_bar">[docs]</a>    <span class="k">def</span> <span class="nf">create_default_tool_bar</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QToolBar</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        If you would like to use the default top tool bar, then call this</span>
+<span class="sd">        function to create the default tool bar. After this function the</span>
+<span class="sd">        toolBar() function will return a valid toolBar() object.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : QToolBar</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tool_bar</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">setup_tool_bar</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tool_bar</span></div>
+
+<div class="viewcode-block" id="DockWidget.set_tool_bar"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.set_tool_bar">[docs]</a>    <span class="k">def</span> <span class="nf">set_tool_bar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tool_bar</span><span class="p">:</span> <span class="n">QToolBar</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Assign a new tool bar that is shown above the content widget. The dock</span>
+<span class="sd">        widget will become the owner of the tool bar and deletes it on</span>
+<span class="sd">        destruction</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        tool_bar : QToolBar</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tool_bar</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tool_bar</span><span class="o">.</span><span class="n">deleteLater</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tool_bar</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tool_bar</span> <span class="o">=</span> <span class="n">tool_bar</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">insertWidget</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tool_bar</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">top_level_changed</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">set_toolbar_floating_style</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_toolbar_floating_style</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">is_floating</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="DockWidget.set_tool_bar_style"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.set_tool_bar_style">[docs]</a>    <span class="k">def</span> <span class="nf">set_tool_bar_style</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="n">Qt</span><span class="o">.</span><span class="n">ToolButtonStyle</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">WidgetState</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        This function sets the tool button style for the given dock widget</span>
+<span class="sd">        state. It is possible to switch the tool button style depending on the</span>
+<span class="sd">        state. If a dock widget is floating, then here are more space and it is</span>
+<span class="sd">        possible to select a style that requires more space like</span>
+<span class="sd">        Qt.ToolButtonTextUnderIcon. For the docked state</span>
+<span class="sd">        Qt.ToolButtonIconOnly might be better.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        style : Qt.ToolButtonStyle</span>
+<span class="sd">        state : WidgetState</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">WidgetState</span><span class="o">.</span><span class="n">floating</span> <span class="o">==</span> <span class="n">state</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tool_bar_style_floating</span> <span class="o">=</span> <span class="n">style</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tool_bar_style_docked</span> <span class="o">=</span> <span class="n">style</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_toolbar_floating_style</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">is_floating</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="DockWidget.tool_bar_style"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.tool_bar_style">[docs]</a>    <span class="k">def</span> <span class="nf">tool_bar_style</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">WidgetState</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Qt</span><span class="o">.</span><span class="n">ToolButtonStyle</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Returns the tool button style for the given docking state.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        state : WidgetState</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : Qt.ToolButtonStyle</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tool_bar_style_floating</span>
+                <span class="k">if</span> <span class="n">WidgetState</span><span class="o">.</span><span class="n">floating</span> <span class="o">==</span> <span class="n">state</span>
+                <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tool_bar_style_docked</span>
+                <span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockWidget.set_tool_bar_icon_size"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.set_tool_bar_icon_size">[docs]</a>    <span class="k">def</span> <span class="nf">set_tool_bar_icon_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">icon_size</span><span class="p">:</span> <span class="n">QSize</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">WidgetState</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        This function sets the tool button icon size for the given state. If a</span>
+<span class="sd">        dock widget is floating, there is more space an increasing the icon</span>
+<span class="sd">        size is possible. For docked widgets, small icon sizes, eg. 16 x 16</span>
+<span class="sd">        might be better.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        icon_size : QSize</span>
+<span class="sd">        state : WidgetState</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">WidgetState</span><span class="o">.</span><span class="n">floating</span> <span class="o">==</span> <span class="n">state</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tool_bar_icon_size_floating</span> <span class="o">=</span> <span class="n">icon_size</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tool_bar_icon_size_docked</span> <span class="o">=</span> <span class="n">icon_size</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_toolbar_floating_style</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">is_floating</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="DockWidget.tool_bar_icon_size"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.tool_bar_icon_size">[docs]</a>    <span class="k">def</span> <span class="nf">tool_bar_icon_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">WidgetState</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QSize</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Returns the icon size for a given docking state.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        state : WidgetState</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : QSize</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tool_bar_icon_size_floating</span>
+                <span class="k">if</span> <span class="n">WidgetState</span><span class="o">.</span><span class="n">floating</span> <span class="o">==</span> <span class="n">state</span>
+                <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tool_bar_icon_size_docked</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockWidget.set_tab_tool_tip"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.set_tab_tool_tip">[docs]</a>    <span class="k">def</span> <span class="nf">set_tab_tool_tip</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        This is function sets text tooltip for title bar widget and tooltip for toggle view action</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        text : str</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tab_widget</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tab_widget</span><span class="o">.</span><span class="n">setToolTip</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">toggle_view_action</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">toggle_view_action</span><span class="o">.</span><span class="n">setToolTip</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_area</span><span class="p">:</span>
+            <span class="c1"># update tabs menu</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_area</span><span class="o">.</span><span class="n">mark_title_bar_menu_outdated</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="DockWidget.event"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.event">[docs]</a>    <span class="k">def</span> <span class="nf">event</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span> <span class="n">QEvent</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Emits titleChanged signal if title change event occurs</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        e : QEvent</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : bool</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">type</span><span class="p">()</span> <span class="o">==</span> <span class="n">QEvent</span><span class="o">.</span><span class="n">WindowTitleChange</span><span class="p">:</span>
+            <span class="n">title</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">windowTitle</span><span class="p">()</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tab_widget</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">tab_widget</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">toggle_view_action</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">toggle_view_action</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_area</span><span class="p">:</span>
+                <span class="c1"># update tabs menu</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_area</span><span class="o">.</span><span class="n">mark_title_bar_menu_outdated</span><span class="p">()</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">title_changed</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">event</span><span class="p">(</span><span class="n">e</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockWidget.toggle_view"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_widget.DockWidget.toggle_view">[docs]</a>    <span class="k">def</span> <span class="nf">toggle_view</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">open_</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        This property controls whether the dock widget is open or closed. The</span>
+<span class="sd">        toogleViewAction triggers this slot</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        open_ : bool</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="c1"># If the toggle view action mode is ActionModeShow, then Open is always</span>
+        <span class="c1"># true if the sender is the toggle view action</span>
+        <span class="n">sender</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sender</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">sender</span> <span class="ow">is</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">toggle_view_action</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">toggle_view_action</span><span class="o">.</span><span class="n">isCheckable</span><span class="p">():</span>
+            <span class="n">open_</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="c1"># If the dock widget state is different, then we really need to toggle</span>
+        <span class="c1"># the state. If we are in the right state, then we simply make this</span>
+        <span class="c1"># dock widget the current dock widget</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">closed</span> <span class="o">!=</span> <span class="p">(</span><span class="ow">not</span> <span class="n">open_</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">toggle_view_internal</span><span class="p">(</span><span class="n">open_</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">open_</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_area</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_area</span><span class="o">.</span><span class="n">set_current_dock_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Ken Lauer
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

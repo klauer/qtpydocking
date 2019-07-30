@@ -1,0 +1,385 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>qtpydocking.util &mdash; qtpydocking  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> qtpydocking
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">API Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_area_layout">qtpydocking.dock_area_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_area_tab_bar">qtpydocking.dock_area_tab_bar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_area_title_bar">qtpydocking.dock_area_title_bar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_area_widget">qtpydocking.dock_area_widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_container_widget">qtpydocking.dock_container_widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_manager">qtpydocking.dock_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_overlay">qtpydocking.dock_overlay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_splitter">qtpydocking.dock_splitter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_widget">qtpydocking.dock_widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_widget_tab">qtpydocking.dock_widget_tab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.eliding_label">qtpydocking.eliding_label</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.enums">qtpydocking.enums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.floating_dock_container">qtpydocking.floating_dock_container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.util">qtpydocking.util</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/klauer/qtpydocking">Github Repository</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">qtpydocking</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>qtpydocking.util</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for qtpydocking.util</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">functools</span>
+
+<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Type</span>
+
+<span class="kn">from</span> <span class="nn">qtpy.QtCore</span> <span class="k">import</span> <span class="n">Qt</span><span class="p">,</span> <span class="n">QEvent</span><span class="p">,</span> <span class="n">QObject</span><span class="p">,</span> <span class="n">QRegExp</span>
+<span class="kn">from</span> <span class="nn">qtpy.QtGui</span> <span class="k">import</span> <span class="n">QPainter</span><span class="p">,</span> <span class="n">QPixmap</span><span class="p">,</span> <span class="n">QIcon</span>
+<span class="kn">from</span> <span class="nn">qtpy.QtWidgets</span> <span class="k">import</span> <span class="n">QApplication</span>
+<span class="kn">from</span> <span class="nn">qtpy</span> <span class="k">import</span> <span class="n">QT_VERSION</span>
+<span class="c1"># if needed, you can import specific boolean API variables from this module</span>
+<span class="c1"># when implementing API code elsewhere</span>
+<span class="kn">from</span> <span class="nn">qtpy</span> <span class="k">import</span> <span class="n">API</span><span class="p">,</span> <span class="n">PYQT4</span><span class="p">,</span> <span class="n">PYQT5</span><span class="p">,</span> <span class="n">PYSIDE</span><span class="p">,</span> <span class="n">PYSIDE2</span>
+
+<span class="kn">from</span> <span class="nn">.dock_splitter</span> <span class="k">import</span> <span class="n">DockSplitter</span>
+
+<span class="n">DEBUG_LEVEL</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">QT_VERSION_TUPLE</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">QT_VERSION</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[:</span><span class="mi">3</span><span class="p">])</span>
+<span class="k">del</span> <span class="n">QT_VERSION</span>
+
+
+<div class="viewcode-block" id="emit_top_level_event_for_widget"><a class="viewcode-back" href="../../api.html#qtpydocking.util.emit_top_level_event_for_widget">[docs]</a><span class="k">def</span> <span class="nf">emit_top_level_event_for_widget</span><span class="p">(</span><span class="n">widget</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="s1">&#39;DockWidget&#39;</span><span class="p">],</span>
+                                    <span class="n">floating</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Call this function to emit a topLevelChanged() signal and to update the</span>
+<span class="sd">    dock area tool bar visibility</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    widget : DockWidget</span>
+<span class="sd">        The top-level dock widget</span>
+<span class="sd">    floating : bool</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">widget</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span>
+
+    <span class="n">widget</span><span class="o">.</span><span class="n">dock_area_widget</span><span class="p">()</span><span class="o">.</span><span class="n">update_title_bar_visibility</span><span class="p">()</span>
+    <span class="n">widget</span><span class="o">.</span><span class="n">emit_top_level_changed</span><span class="p">(</span><span class="n">floating</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="start_drag_distance"><a class="viewcode-back" href="../../api.html#qtpydocking.util.start_drag_distance">[docs]</a><span class="k">def</span> <span class="nf">start_drag_distance</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    The distance the user needs to move the mouse with the left button hold</span>
+<span class="sd">    down before a dock widget start floating</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    value : int</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">QApplication</span><span class="o">.</span><span class="n">startDragDistance</span><span class="p">()</span> <span class="o">*</span> <span class="mf">1.5</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="create_transparent_pixmap"><a class="viewcode-back" href="../../api.html#qtpydocking.util.create_transparent_pixmap">[docs]</a><span class="k">def</span> <span class="nf">create_transparent_pixmap</span><span class="p">(</span><span class="n">source</span><span class="p">:</span> <span class="n">QPixmap</span><span class="p">,</span> <span class="n">opacity</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QPixmap</span><span class="p">:</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Creates a semi transparent pixmap from the given pixmap Source. The Opacity</span>
+<span class="sd">    parameter defines the opacity from completely transparent (0.0) to</span>
+<span class="sd">    completely opaque (1.0)</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    source : QPixmap</span>
+<span class="sd">    opacity : qreal</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    value : QPixmap</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">transparent_pixmap</span> <span class="o">=</span> <span class="n">QPixmap</span><span class="p">(</span><span class="n">source</span><span class="o">.</span><span class="n">size</span><span class="p">())</span>
+    <span class="n">transparent_pixmap</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">transparent</span><span class="p">)</span>
+
+    <span class="n">painter</span> <span class="o">=</span> <span class="n">QPainter</span><span class="p">(</span><span class="n">transparent_pixmap</span><span class="p">)</span>
+    <span class="n">painter</span><span class="o">.</span><span class="n">setOpacity</span><span class="p">(</span><span class="n">opacity</span><span class="p">)</span>
+    <span class="n">painter</span><span class="o">.</span><span class="n">drawPixmap</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">source</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">transparent_pixmap</span></div>
+
+
+<div class="viewcode-block" id="make_icon_pair"><a class="viewcode-back" href="../../api.html#qtpydocking.util.make_icon_pair">[docs]</a><span class="k">def</span> <span class="nf">make_icon_pair</span><span class="p">(</span><span class="n">style</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">standard_pixmap</span><span class="p">,</span>
+                   <span class="n">transparent_role</span><span class="o">=</span><span class="n">QIcon</span><span class="o">.</span><span class="n">Disabled</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span>
+                   <span class="n">transparency</span><span class="o">=</span><span class="mf">0.25</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Using a standard pixmap (e.g., close button), create two pixmaps and set</span>
+<span class="sd">    parent icon</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">icon</span> <span class="o">=</span> <span class="n">QIcon</span><span class="p">()</span>
+    <span class="n">normal_pixmap</span> <span class="o">=</span> <span class="n">style</span><span class="o">.</span><span class="n">standardPixmap</span><span class="p">(</span><span class="n">standard_pixmap</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span>
+    <span class="n">icon</span><span class="o">.</span><span class="n">addPixmap</span><span class="p">(</span><span class="n">create_transparent_pixmap</span><span class="p">(</span><span class="n">normal_pixmap</span><span class="p">,</span> <span class="n">transparency</span><span class="p">),</span>
+                   <span class="n">transparent_role</span><span class="p">)</span>
+    <span class="n">icon</span><span class="o">.</span><span class="n">addPixmap</span><span class="p">(</span><span class="n">normal_pixmap</span><span class="p">,</span> <span class="n">QIcon</span><span class="o">.</span><span class="n">Normal</span><span class="p">)</span>
+    <span class="n">parent</span><span class="o">.</span><span class="n">setIcon</span><span class="p">(</span><span class="n">icon</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">icon</span></div>
+
+
+<div class="viewcode-block" id="hide_empty_parent_splitters"><a class="viewcode-back" href="../../api.html#qtpydocking.util.hide_empty_parent_splitters">[docs]</a><span class="k">def</span> <span class="nf">hide_empty_parent_splitters</span><span class="p">(</span><span class="n">splitter</span><span class="p">:</span> <span class="n">DockSplitter</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This function walks the splitter tree upwards to hides all splitters that</span>
+<span class="sd">    do not have visible content</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    splitter : DockSplitter</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">while</span> <span class="n">splitter</span> <span class="ow">and</span> <span class="n">splitter</span><span class="o">.</span><span class="n">isVisible</span><span class="p">():</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">splitter</span><span class="o">.</span><span class="n">has_visible_content</span><span class="p">():</span>
+            <span class="n">splitter</span><span class="o">.</span><span class="n">hide</span><span class="p">()</span>
+
+        <span class="n">splitter</span> <span class="o">=</span> <span class="n">find_parent</span><span class="p">(</span><span class="n">DockSplitter</span><span class="p">,</span> <span class="n">splitter</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="find_parent"><a class="viewcode-back" href="../../api.html#qtpydocking.util.find_parent">[docs]</a><span class="k">def</span> <span class="nf">find_parent</span><span class="p">(</span><span class="n">parent_type</span><span class="p">,</span> <span class="n">widget</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Searches for the parent widget of the given type.</span>
+<span class="sd">    Returns the parent widget of the given widget or 0 if the widget is not</span>
+<span class="sd">    child of any widget of type T</span>
+
+<span class="sd">    It is not safe to use this function in in DockWidget because only</span>
+<span class="sd">    the current dock widget has a parent. All dock widgets that are not the</span>
+<span class="sd">    current dock widget in a dock area have no parent.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">parent_widget</span> <span class="o">=</span> <span class="n">widget</span><span class="o">.</span><span class="n">parentWidget</span><span class="p">()</span>
+    <span class="k">while</span> <span class="n">parent_widget</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">parent_widget</span><span class="p">,</span> <span class="n">parent_type</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">parent_widget</span>
+
+        <span class="n">parent_widget</span> <span class="o">=</span> <span class="n">parent_widget</span><span class="o">.</span><span class="n">parentWidget</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="find_child"><a class="viewcode-back" href="../../api.html#qtpydocking.util.find_child">[docs]</a><span class="k">def</span> <span class="nf">find_child</span><span class="p">(</span><span class="n">parent</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">QObject</span><span class="p">],</span> <span class="nb">type</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">QObject</span><span class="p">],</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+               <span class="n">options</span><span class="p">:</span> <span class="n">Qt</span><span class="o">.</span><span class="n">FindChildOptions</span> <span class="o">=</span> <span class="n">Qt</span><span class="o">.</span><span class="n">FindChildrenRecursively</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">QObject</span><span class="p">]:</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Returns the child of this object that can be cast into type T and that is called name, or nullptr if there is no</span>
+<span class="sd">    such object. Omitting the name argument causes all object names to be matched. The search is performed recursively,</span>
+<span class="sd">    unless options specifies the option FindDirectChildrenOnly.</span>
+
+<span class="sd">    If there is more than one child matching the search, the most direct ancestor is returned. If there are several</span>
+<span class="sd">    direct ancestors, it is undefined which one will be returned. In that case, findChildren() should be used.</span>
+
+<span class="sd">    WARNING: If you&#39;re using PySide, PySide2 or PyQt4, the options parameter will be discarded.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="k">if</span> <span class="n">PYQT5</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">parent</span><span class="o">.</span><span class="n">findChild</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># every other API (PySide, PySide2, PyQt4) has no options parameter</span>
+        <span class="k">return</span> <span class="n">parent</span><span class="o">.</span><span class="n">findChild</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="find_children"><a class="viewcode-back" href="../../api.html#qtpydocking.util.find_children">[docs]</a><span class="k">def</span> <span class="nf">find_children</span><span class="p">(</span><span class="n">parent</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">QObject</span><span class="p">],</span> <span class="nb">type</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">QObject</span><span class="p">],</span> <span class="n">name</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">QRegExp</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+               <span class="n">options</span><span class="p">:</span> <span class="n">Qt</span><span class="o">.</span><span class="n">FindChildOptions</span> <span class="o">=</span> <span class="n">Qt</span><span class="o">.</span><span class="n">FindChildrenRecursively</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]:</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Returns all children of this object with the given name that can be cast to type T, or an empty list if there are no</span>
+<span class="sd">    such objects. Omitting the name argument causes all object names to be matched. The search is performed recursively,</span>
+<span class="sd">    unless options specifies the option FindDirectChildrenOnly.</span>
+
+<span class="sd">    WARNING: If you&#39;re using PySide, PySide2 or PyQt4, the options parameter will be discarded.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="k">if</span> <span class="n">PYQT5</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">parent</span><span class="o">.</span><span class="n">findChildren</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># every other API (PySide, PySide2, PyQt4) has no options parameter</span>
+        <span class="k">return</span> <span class="n">parent</span><span class="o">.</span><span class="n">findChildren</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="event_filter_decorator"><a class="viewcode-back" href="../../api.html#qtpydocking.util.event_filter_decorator">[docs]</a><span class="k">def</span> <span class="nf">event_filter_decorator</span><span class="p">(</span><span class="n">method</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    PySide2 exhibits some strange behavior where an eventFilter may get a</span>
+<span class="sd">    &#39;PySide2.QtWidgets.QWidgetItem` as the `event` argument. This wrapper</span>
+<span class="sd">    effectively just makes those specific cases a no-operation.</span>
+
+<span class="sd">    NOTE::</span>
+<span class="sd">        This is considered a work-around until the source of the issue can be</span>
+<span class="sd">        determined.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">PYSIDE</span> <span class="ow">or</span> <span class="n">PYSIDE2</span><span class="p">:</span>
+        <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">method</span><span class="p">)</span>
+        <span class="k">def</span> <span class="nf">wrapped</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">QObject</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="n">QEvent</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">QEvent</span><span class="p">):</span>
+                <span class="k">return</span> <span class="kc">True</span>
+            <span class="k">return</span> <span class="n">method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">event</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">wrapped</span>
+    <span class="k">return</span> <span class="n">method</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Ken Lauer
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

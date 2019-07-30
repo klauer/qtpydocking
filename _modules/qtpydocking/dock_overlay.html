@@ -1,0 +1,1040 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>qtpydocking.dock_overlay &mdash; qtpydocking  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> qtpydocking
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">API Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_area_layout">qtpydocking.dock_area_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_area_tab_bar">qtpydocking.dock_area_tab_bar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_area_title_bar">qtpydocking.dock_area_title_bar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_area_widget">qtpydocking.dock_area_widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_container_widget">qtpydocking.dock_container_widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_manager">qtpydocking.dock_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_overlay">qtpydocking.dock_overlay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_splitter">qtpydocking.dock_splitter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_widget">qtpydocking.dock_widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_widget_tab">qtpydocking.dock_widget_tab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.eliding_label">qtpydocking.eliding_label</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.enums">qtpydocking.enums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.floating_dock_container">qtpydocking.floating_dock_container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.util">qtpydocking.util</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/klauer/qtpydocking">Github Repository</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">qtpydocking</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>qtpydocking.dock_overlay</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for qtpydocking.dock_overlay</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">Dict</span>
+
+<span class="kn">from</span> <span class="nn">qtpy.QtCore</span> <span class="k">import</span> <span class="p">(</span><span class="n">QEvent</span><span class="p">,</span> <span class="n">QPoint</span><span class="p">,</span> <span class="n">QPointF</span><span class="p">,</span> <span class="n">QRect</span><span class="p">,</span> <span class="n">Qt</span><span class="p">,</span> <span class="n">QSizeF</span><span class="p">,</span> <span class="n">QRectF</span><span class="p">,</span>
+                         <span class="n">QLineF</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">qtpy.QtGui</span> <span class="k">import</span> <span class="p">(</span><span class="n">QColor</span><span class="p">,</span> <span class="n">QCursor</span><span class="p">,</span> <span class="n">QHideEvent</span><span class="p">,</span> <span class="n">QPaintEvent</span><span class="p">,</span> <span class="n">QPainter</span><span class="p">,</span>
+                        <span class="n">QPalette</span><span class="p">,</span> <span class="n">QShowEvent</span><span class="p">,</span> <span class="n">QPixmap</span><span class="p">,</span> <span class="n">QPolygonF</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">qtpy.QtWidgets</span> <span class="k">import</span> <span class="n">QFrame</span><span class="p">,</span> <span class="n">QWidget</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QGridLayout</span>
+
+
+<span class="kn">from</span> <span class="nn">.enums</span> <span class="k">import</span> <span class="n">OverlayMode</span><span class="p">,</span> <span class="n">DockWidgetArea</span><span class="p">,</span> <span class="n">IconColor</span><span class="p">,</span> <span class="n">area_alignment</span>
+<span class="c1"># from .dock_area_widget import DockAreaWidget</span>
+<span class="kn">from</span> <span class="nn">.dock_container_widget</span> <span class="k">import</span> <span class="n">DockAreaWidget</span>
+
+
+<span class="k">class</span> <span class="nc">DockOverlayPrivate</span><span class="p">:</span>
+    <span class="n">public</span><span class="p">:</span> <span class="s1">&#39;DockOverlay&#39;</span>
+    <span class="n">allowed_areas</span><span class="p">:</span> <span class="n">DockWidgetArea</span>
+    <span class="n">cross</span><span class="p">:</span> <span class="s1">&#39;DockOverlayCross&#39;</span>
+    <span class="n">target_widget</span><span class="p">:</span> <span class="n">QWidget</span>
+    <span class="n">target_rect</span><span class="p">:</span> <span class="n">QRect</span>
+    <span class="n">last_location</span><span class="p">:</span> <span class="n">DockWidgetArea</span>
+    <span class="n">drop_preview_enabled</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">mode</span><span class="p">:</span> <span class="n">OverlayMode</span>
+    <span class="n">drop_area_rect</span><span class="p">:</span> <span class="n">QRect</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">public</span><span class="p">:</span> <span class="s1">&#39;DockOverlay&#39;</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Private data constructor</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        public : DockOverlay</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">public</span> <span class="o">=</span> <span class="n">public</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">allowed_areas</span> <span class="o">=</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">invalid</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cross</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target_widget</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target_rect</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_location</span> <span class="o">=</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">invalid</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">drop_preview_enabled</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mode</span> <span class="o">=</span> <span class="n">OverlayMode</span><span class="o">.</span><span class="n">dock_area</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">drop_area_rect</span> <span class="o">=</span> <span class="kc">None</span>
+
+
+<div class="viewcode-block" id="DockOverlay"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlay">[docs]</a><span class="k">class</span> <span class="nc">DockOverlay</span><span class="p">(</span><span class="n">QFrame</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="n">QWidget</span><span class="p">,</span> <span class="n">mode</span><span class="p">:</span> <span class="n">OverlayMode</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Creates a dock overlay</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        parent : QWidget</span>
+<span class="sd">        mode : OverlayMode</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span> <span class="o">=</span> <span class="n">DockOverlayPrivate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">mode</span> <span class="o">=</span> <span class="n">mode</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">cross</span> <span class="o">=</span> <span class="n">DockOverlayCross</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowFlags</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">Tool</span> <span class="o">|</span> <span class="n">Qt</span><span class="o">.</span><span class="n">FramelessWindowHint</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowOpacity</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;DockOverlay&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setAttribute</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">WA_NoSystemBackground</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setAttribute</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">WA_TranslucentBackground</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">cross</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">f</span><span class="s1">&#39;&lt;DockOverlay mode=</span><span class="si">{self.d.mode}</span><span class="s1">&gt;&#39;</span>
+
+<div class="viewcode-block" id="DockOverlay.set_allowed_areas"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlay.set_allowed_areas">[docs]</a>    <span class="k">def</span> <span class="nf">set_allowed_areas</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">areas</span><span class="p">:</span> <span class="n">DockWidgetArea</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Configures the areas that are allowed for docking</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        areas : DockWidgetArea</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">areas</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">allowed_areas</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">allowed_areas</span> <span class="o">=</span> <span class="n">areas</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">cross</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="DockOverlay.allowed_areas"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlay.allowed_areas">[docs]</a>    <span class="k">def</span> <span class="nf">allowed_areas</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DockWidgetArea</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Returns flags with all allowed drop areas</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : DockWidgetArea</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">allowed_areas</span></div>
+
+<div class="viewcode-block" id="DockOverlay.drop_area_under_cursor"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlay.drop_area_under_cursor">[docs]</a>    <span class="k">def</span> <span class="nf">drop_area_under_cursor</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DockWidgetArea</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Returns the drop area under the current cursor location</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : DockWidgetArea</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">cross</span><span class="o">.</span><span class="n">cursor_location</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">result</span> <span class="o">!=</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">invalid</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">result</span>
+
+        <span class="n">dock_area</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">target_widget</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dock_area</span><span class="p">,</span> <span class="n">DockAreaWidget</span><span class="p">):</span>
+            <span class="n">pos</span> <span class="o">=</span> <span class="n">dock_area</span><span class="o">.</span><span class="n">mapFromGlobal</span><span class="p">(</span><span class="n">QCursor</span><span class="o">.</span><span class="n">pos</span><span class="p">())</span>
+            <span class="k">if</span> <span class="n">dock_area</span><span class="o">.</span><span class="n">title_bar_geometry</span><span class="p">()</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">center</span>
+
+        <span class="k">return</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">invalid</span></div>
+
+<div class="viewcode-block" id="DockOverlay.show_overlay"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlay.show_overlay">[docs]</a>    <span class="k">def</span> <span class="nf">show_overlay</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">QWidget</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DockWidgetArea</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Show the drop overlay for the given target widget</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        target : QWidget</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : DockWidgetArea</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">target_widget</span> <span class="ow">is</span> <span class="n">target</span><span class="p">:</span>
+            <span class="c1"># Hint: We could update geometry of overlay here.</span>
+            <span class="n">da</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">drop_area_under_cursor</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">da</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">last_location</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">repaint</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">last_location</span> <span class="o">=</span> <span class="n">da</span>
+
+            <span class="k">return</span> <span class="n">da</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">target_widget</span> <span class="o">=</span> <span class="n">target</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">target_rect</span> <span class="o">=</span> <span class="n">QRect</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">last_location</span> <span class="o">=</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">invalid</span>
+
+        <span class="c1"># Move it over the target.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">target</span><span class="o">.</span><span class="n">size</span><span class="p">())</span>
+        <span class="n">top_left</span> <span class="o">=</span> <span class="n">target</span><span class="o">.</span><span class="n">mapToGlobal</span><span class="p">(</span><span class="n">target</span><span class="o">.</span><span class="n">rect</span><span class="p">()</span><span class="o">.</span><span class="n">topLeft</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">top_left</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">cross</span><span class="o">.</span><span class="n">update_position</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">cross</span><span class="o">.</span><span class="n">update_overlay_icons</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">drop_area_under_cursor</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="DockOverlay.hide_overlay"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlay.hide_overlay">[docs]</a>    <span class="k">def</span> <span class="nf">hide_overlay</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Hides the overlay</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hide</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">target_widget</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">target_rect</span> <span class="o">=</span> <span class="n">QRect</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">last_location</span> <span class="o">=</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">invalid</span></div>
+
+<div class="viewcode-block" id="DockOverlay.enable_drop_preview"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlay.enable_drop_preview">[docs]</a>    <span class="k">def</span> <span class="nf">enable_drop_preview</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enable</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Enables / disables the semi transparent overlay rectangle that</span>
+<span class="sd">        represents the future area of the dropped widget</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        enable : bool</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">drop_preview_enabled</span> <span class="o">=</span> <span class="n">enable</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="DockOverlay.drop_overlay_rect"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlay.drop_overlay_rect">[docs]</a>    <span class="k">def</span> <span class="nf">drop_overlay_rect</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QRect</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        The drop overlay rectangle for the target area</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : QRect</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">drop_area_rect</span></div>
+
+<div class="viewcode-block" id="DockOverlay.event"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlay.event">[docs]</a>    <span class="k">def</span> <span class="nf">event</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span> <span class="n">QEvent</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Handle polish events</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        e : QEvent</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : bool</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">event</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">type</span><span class="p">()</span> <span class="o">==</span> <span class="n">QEvent</span><span class="o">.</span><span class="n">Polish</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">cross</span><span class="o">.</span><span class="n">setup_overlay_cross</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">result</span></div>
+
+<div class="viewcode-block" id="DockOverlay.paintEvent"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlay.paintEvent">[docs]</a>    <span class="k">def</span> <span class="nf">paintEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span> <span class="n">QPaintEvent</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Paintevent</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        e : QPaintEvent</span>
+<span class="sd">            Unused</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="c1">#pylint: disable=unused-argument</span>
+
+        <span class="c1"># Draw rect based on location</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">drop_preview_enabled</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">drop_area_rect</span> <span class="o">=</span> <span class="n">QRect</span><span class="p">()</span>
+            <span class="k">return</span>
+
+        <span class="n">r</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="p">()</span>
+        <span class="n">da</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">drop_area_under_cursor</span><span class="p">()</span>
+        <span class="n">factor</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span>
+                  <span class="k">if</span> <span class="n">OverlayMode</span><span class="o">.</span><span class="n">container</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">mode</span>
+                  <span class="k">else</span> <span class="mi">2</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">da</span> <span class="o">==</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">top</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">setHeight</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">height</span><span class="p">()</span><span class="o">/</span><span class="n">factor</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">da</span> <span class="o">==</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">setX</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">width</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="mf">1.</span><span class="o">/</span><span class="n">factor</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">da</span> <span class="o">==</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">bottom</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">setY</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">height</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="mf">1.</span><span class="o">/</span><span class="n">factor</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">da</span> <span class="o">==</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">left</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">setWidth</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">width</span><span class="p">()</span><span class="o">/</span><span class="n">factor</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">da</span> <span class="o">==</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">center</span><span class="p">:</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="n">painter</span> <span class="o">=</span> <span class="n">QPainter</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">palette</span><span class="p">()</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="n">QPalette</span><span class="o">.</span><span class="n">Active</span><span class="p">,</span> <span class="n">QPalette</span><span class="o">.</span><span class="n">Highlight</span><span class="p">)</span>
+
+        <span class="n">pen</span> <span class="o">=</span> <span class="n">painter</span><span class="o">.</span><span class="n">pen</span><span class="p">()</span>
+        <span class="n">pen</span><span class="o">.</span><span class="n">setColor</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">darker</span><span class="p">(</span><span class="mi">120</span><span class="p">))</span>
+        <span class="n">pen</span><span class="o">.</span><span class="n">setStyle</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">SolidLine</span><span class="p">)</span>
+        <span class="n">pen</span><span class="o">.</span><span class="n">setWidth</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">pen</span><span class="o">.</span><span class="n">setCosmetic</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">painter</span><span class="o">.</span><span class="n">setPen</span><span class="p">(</span><span class="n">pen</span><span class="p">)</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">lighter</span><span class="p">(</span><span class="mi">130</span><span class="p">)</span>
+        <span class="n">color</span><span class="o">.</span><span class="n">setAlpha</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span>
+        <span class="n">painter</span><span class="o">.</span><span class="n">setBrush</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+        <span class="n">painter</span><span class="o">.</span><span class="n">drawRect</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">adjusted</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">drop_area_rect</span> <span class="o">=</span> <span class="n">r</span></div>
+
+<div class="viewcode-block" id="DockOverlay.showEvent"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlay.showEvent">[docs]</a>    <span class="k">def</span> <span class="nf">showEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span> <span class="n">QShowEvent</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Showevent</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        e : QShowEvent</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">cross</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">showEvent</span><span class="p">(</span><span class="n">e</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockOverlay.hideEvent"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlay.hideEvent">[docs]</a>    <span class="k">def</span> <span class="nf">hideEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span> <span class="n">QHideEvent</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Hideevent</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        e : QHideEvent</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">cross</span><span class="o">.</span><span class="n">hide</span><span class="p">()</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">hideEvent</span><span class="p">(</span><span class="n">e</span><span class="p">)</span></div></div>
+
+
+<span class="k">class</span> <span class="nc">DockOverlayCrossPrivate</span><span class="p">:</span>
+    <span class="n">public</span><span class="p">:</span> <span class="s1">&#39;DockOverlayCross&#39;</span>
+    <span class="n">mode</span><span class="p">:</span> <span class="n">OverlayMode</span>
+    <span class="n">dock_overlay</span><span class="p">:</span> <span class="n">DockOverlay</span>
+    <span class="n">drop_indicator_widgets</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">DockWidgetArea</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">]</span>
+    <span class="n">grid_layout</span><span class="p">:</span> <span class="n">QGridLayout</span>
+    <span class="n">icon_colors</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">IconColor</span><span class="p">,</span> <span class="n">QColor</span><span class="p">]</span>
+    <span class="n">update_required</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">last_device_pixel_ratio</span><span class="p">:</span> <span class="nb">float</span>
+
+    <span class="n">_area_grid_positions</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">OverlayMode</span><span class="o">.</span><span class="n">dock_area</span><span class="p">:</span> <span class="p">{</span>
+            <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">top</span><span class="p">:</span> <span class="n">QPoint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+            <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">right</span><span class="p">:</span> <span class="n">QPoint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+            <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">bottom</span><span class="p">:</span> <span class="n">QPoint</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+            <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">left</span><span class="p">:</span> <span class="n">QPoint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+            <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">center</span><span class="p">:</span> <span class="n">QPoint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="p">},</span>
+        <span class="n">OverlayMode</span><span class="o">.</span><span class="n">container</span><span class="p">:</span> <span class="p">{</span>
+            <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">top</span><span class="p">:</span> <span class="n">QPoint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+            <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">right</span><span class="p">:</span> <span class="n">QPoint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+            <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">bottom</span><span class="p">:</span> <span class="n">QPoint</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+            <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">left</span><span class="p">:</span> <span class="n">QPoint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+            <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">center</span><span class="p">:</span> <span class="n">QPoint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">public</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Private data constructor</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        public : DockOverlayCross</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">public</span> <span class="o">=</span> <span class="n">public</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mode</span> <span class="o">=</span> <span class="n">OverlayMode</span><span class="o">.</span><span class="n">dock_area</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dock_overlay</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">drop_indicator_widgets</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">grid_layout</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">icon_colors</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="n">IconColor</span><span class="o">.</span><span class="n">frame_color</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="n">IconColor</span><span class="o">.</span><span class="n">window_background_color</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="n">IconColor</span><span class="o">.</span><span class="n">overlay_color</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="n">IconColor</span><span class="o">.</span><span class="n">arrow_color</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="n">IconColor</span><span class="o">.</span><span class="n">shadow_color</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="p">}</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">update_required</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_device_pixel_ratio</span> <span class="o">=</span> <span class="mf">0.1</span>
+
+    <span class="k">def</span> <span class="nf">area_grid_position</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">area</span><span class="p">:</span> <span class="n">DockWidgetArea</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QPoint</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Returns</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        area : DockWidgetArea</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : QPoint</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_area_grid_positions</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">mode</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">area</span><span class="p">,</span> <span class="n">QPoint</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">default_icon_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color_index</span><span class="p">:</span> <span class="n">IconColor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QColor</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Palette based default icon colors</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        color_index : IconColor</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : QColor</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">pal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">palette</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">color_index</span> <span class="o">==</span> <span class="n">IconColor</span><span class="o">.</span><span class="n">frame_color</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">pal</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="n">QPalette</span><span class="o">.</span><span class="n">Active</span><span class="p">,</span> <span class="n">QPalette</span><span class="o">.</span><span class="n">Highlight</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">color_index</span> <span class="o">==</span> <span class="n">IconColor</span><span class="o">.</span><span class="n">window_background_color</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">pal</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="n">QPalette</span><span class="o">.</span><span class="n">Active</span><span class="p">,</span> <span class="n">QPalette</span><span class="o">.</span><span class="n">Base</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">color_index</span> <span class="o">==</span> <span class="n">IconColor</span><span class="o">.</span><span class="n">overlay_color</span><span class="p">:</span>
+            <span class="n">color</span> <span class="o">=</span> <span class="n">pal</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="n">QPalette</span><span class="o">.</span><span class="n">Active</span><span class="p">,</span> <span class="n">QPalette</span><span class="o">.</span><span class="n">Highlight</span><span class="p">)</span>
+            <span class="n">color</span><span class="o">.</span><span class="n">setAlpha</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">color</span>
+        <span class="k">if</span> <span class="n">color_index</span> <span class="o">==</span> <span class="n">IconColor</span><span class="o">.</span><span class="n">arrow_color</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">pal</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="n">QPalette</span><span class="o">.</span><span class="n">Active</span><span class="p">,</span> <span class="n">QPalette</span><span class="o">.</span><span class="n">Base</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">color_index</span> <span class="o">==</span> <span class="n">IconColor</span><span class="o">.</span><span class="n">shadow_color</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">QColor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">64</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">QColor</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">icon_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color_index</span><span class="p">:</span> <span class="n">IconColor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QColor</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Stylehseet based icon colors</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        color_index : IconColor</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : QColor</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">icon_colors</span><span class="p">[</span><span class="n">color_index</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">color</span><span class="p">:</span>
+            <span class="n">color</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_icon_color</span><span class="p">(</span><span class="n">color_index</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">icon_colors</span><span class="p">[</span><span class="n">color_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">color</span>
+
+        <span class="k">return</span> <span class="n">color</span>
+
+    <span class="k">def</span> <span class="nf">create_drop_indicator_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">area</span><span class="p">:</span> <span class="n">DockWidgetArea</span><span class="p">,</span> <span class="n">mode</span><span class="p">:</span> <span class="n">OverlayMode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QLabel</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Create drop indicator widget</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        area : DockWidgetArea</span>
+<span class="sd">        mode : OverlayMode</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : QLabel</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">()</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;DockWidgetAreaLabel&quot;</span><span class="p">)</span>
+
+        <span class="n">metric</span> <span class="o">=</span> <span class="mf">3.0</span> <span class="o">*</span> <span class="n">l</span><span class="o">.</span><span class="n">fontMetrics</span><span class="p">()</span><span class="o">.</span><span class="n">height</span><span class="p">()</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="n">QSizeF</span><span class="p">(</span><span class="n">metric</span><span class="p">,</span> <span class="n">metric</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">setPixmap</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">create_high_dpi_drop_indicator_pixmap</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">area</span><span class="p">,</span> <span class="n">mode</span><span class="p">))</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">setWindowFlags</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">Tool</span> <span class="o">|</span> <span class="n">Qt</span><span class="o">.</span><span class="n">FramelessWindowHint</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">setAttribute</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">WA_TranslucentBackground</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">setProperty</span><span class="p">(</span><span class="s2">&quot;dockWidgetArea&quot;</span><span class="p">,</span> <span class="n">area</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">l</span>
+
+    <span class="k">def</span> <span class="nf">update_drop_indicator_icon</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="p">:</span> <span class="n">QLabel</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Update drop indicator icon</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        drop_indicator_widget : QLabel</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">metric</span> <span class="o">=</span> <span class="mf">3.0</span> <span class="o">*</span> <span class="n">label</span><span class="o">.</span><span class="n">fontMetrics</span><span class="p">()</span><span class="o">.</span><span class="n">height</span><span class="p">()</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="n">QSizeF</span><span class="p">(</span><span class="n">metric</span><span class="p">,</span> <span class="n">metric</span><span class="p">)</span>
+        <span class="n">area</span> <span class="o">=</span> <span class="n">label</span><span class="o">.</span><span class="n">property</span><span class="p">(</span><span class="s2">&quot;dockWidgetArea&quot;</span><span class="p">)</span>
+        <span class="n">label</span><span class="o">.</span><span class="n">setPixmap</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">create_high_dpi_drop_indicator_pixmap</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">area</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">create_high_dpi_drop_indicator_pixmap</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">:</span> <span class="n">QSizeF</span><span class="p">,</span> <span class="n">area</span><span class="p">:</span> <span class="n">DockWidgetArea</span><span class="p">,</span>
+            <span class="n">mode</span><span class="p">:</span> <span class="n">OverlayMode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QPixmap</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Create high dpi drop indicator pixmap</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        size : QSizeF</span>
+<span class="sd">        area : DockWidgetArea</span>
+<span class="sd">        mode : OverlayMode</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : QPixmap</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">border_color</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">icon_color</span><span class="p">(</span><span class="n">IconColor</span><span class="o">.</span><span class="n">frame_color</span><span class="p">)</span>
+        <span class="n">background_color</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">icon_color</span><span class="p">(</span><span class="n">IconColor</span><span class="o">.</span><span class="n">window_background_color</span><span class="p">)</span>
+
+        <span class="n">window</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">window</span><span class="p">()</span>
+
+        <span class="c1"># QT version compatibility (TODO necessary for qtpy?)</span>
+        <span class="n">device_pixel_ratio</span> <span class="o">=</span> <span class="p">(</span><span class="n">window</span><span class="o">.</span><span class="n">devicePixelRatioF</span><span class="p">()</span>
+                              <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="s1">&#39;devicePixelRatioF&#39;</span><span class="p">)</span>
+                              <span class="k">else</span> <span class="n">window</span><span class="o">.</span><span class="n">devicePixelRatio</span><span class="p">())</span>
+
+        <span class="n">pixmap_size</span> <span class="o">=</span> <span class="n">QSizeF</span><span class="p">(</span><span class="n">size</span> <span class="o">*</span> <span class="n">device_pixel_ratio</span><span class="p">)</span>
+        <span class="n">pm</span> <span class="o">=</span> <span class="n">QPixmap</span><span class="p">(</span><span class="n">pixmap_size</span><span class="o">.</span><span class="n">toSize</span><span class="p">())</span>
+        <span class="n">pm</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">QColor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">QPainter</span><span class="p">(</span><span class="n">pm</span><span class="p">)</span>
+        <span class="n">pen</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">pen</span><span class="p">()</span>
+        <span class="n">shadow_rect</span> <span class="o">=</span> <span class="n">QRectF</span><span class="p">(</span><span class="n">pm</span><span class="o">.</span><span class="n">rect</span><span class="p">())</span>
+
+        <span class="n">base_rect</span> <span class="o">=</span> <span class="n">QRectF</span><span class="p">()</span>
+        <span class="n">base_rect</span><span class="o">.</span><span class="n">setSize</span><span class="p">(</span><span class="n">shadow_rect</span><span class="o">.</span><span class="n">size</span><span class="p">()</span> <span class="o">*</span> <span class="mf">0.7</span><span class="p">)</span>
+        <span class="n">base_rect</span><span class="o">.</span><span class="n">moveCenter</span><span class="p">(</span><span class="n">shadow_rect</span><span class="o">.</span><span class="n">center</span><span class="p">())</span>
+
+        <span class="c1"># Fill</span>
+        <span class="n">shadow_color</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">icon_color</span><span class="p">(</span><span class="n">IconColor</span><span class="o">.</span><span class="n">shadow_color</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">shadow_color</span><span class="o">.</span><span class="n">alpha</span><span class="p">()</span> <span class="o">==</span> <span class="mi">255</span><span class="p">:</span>
+            <span class="n">shadow_color</span><span class="o">.</span><span class="n">setAlpha</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span>
+
+        <span class="n">p</span><span class="o">.</span><span class="n">fillRect</span><span class="p">(</span><span class="n">shadow_rect</span><span class="p">,</span> <span class="n">shadow_color</span><span class="p">)</span>
+
+        <span class="c1"># Drop area rect.</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+        <span class="n">area_rect</span> <span class="o">=</span> <span class="n">QRectF</span><span class="p">()</span>
+        <span class="n">area_line</span> <span class="o">=</span> <span class="n">QLineF</span><span class="p">()</span>
+        <span class="n">non_area_rect</span> <span class="o">=</span> <span class="n">QRectF</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">area</span> <span class="o">==</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">top</span><span class="p">:</span>
+            <span class="n">area_rect</span> <span class="o">=</span> <span class="n">QRectF</span><span class="p">(</span><span class="n">base_rect</span><span class="o">.</span><span class="n">x</span><span class="p">(),</span> <span class="n">base_rect</span><span class="o">.</span><span class="n">y</span><span class="p">(),</span> <span class="n">base_rect</span><span class="o">.</span><span class="n">width</span><span class="p">(),</span>
+                               <span class="n">base_rect</span><span class="o">.</span><span class="n">height</span><span class="p">()</span><span class="o">*.</span><span class="mi">5</span><span class="p">)</span>
+            <span class="n">non_area_rect</span> <span class="o">=</span> <span class="n">QRectF</span><span class="p">(</span><span class="n">base_rect</span><span class="o">.</span><span class="n">x</span><span class="p">(),</span> <span class="n">shadow_rect</span><span class="o">.</span><span class="n">height</span><span class="p">()</span><span class="o">*.</span><span class="mi">5</span><span class="p">,</span>
+                                   <span class="n">base_rect</span><span class="o">.</span><span class="n">width</span><span class="p">(),</span> <span class="n">base_rect</span><span class="o">.</span><span class="n">height</span><span class="p">()</span><span class="o">*.</span><span class="mi">5</span><span class="p">)</span>
+            <span class="n">area_line</span> <span class="o">=</span> <span class="n">QLineF</span><span class="p">(</span><span class="n">area_rect</span><span class="o">.</span><span class="n">bottomLeft</span><span class="p">(),</span> <span class="n">area_rect</span><span class="o">.</span><span class="n">bottomRight</span><span class="p">())</span>
+        <span class="k">elif</span> <span class="n">area</span> <span class="o">==</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
+            <span class="n">area_rect</span> <span class="o">=</span> <span class="n">QRectF</span><span class="p">(</span><span class="n">shadow_rect</span><span class="o">.</span><span class="n">width</span><span class="p">()</span><span class="o">*.</span><span class="mi">5</span><span class="p">,</span> <span class="n">base_rect</span><span class="o">.</span><span class="n">y</span><span class="p">(),</span>
+                               <span class="n">base_rect</span><span class="o">.</span><span class="n">width</span><span class="p">()</span><span class="o">*.</span><span class="mi">5</span><span class="p">,</span> <span class="n">base_rect</span><span class="o">.</span><span class="n">height</span><span class="p">())</span>
+            <span class="n">non_area_rect</span> <span class="o">=</span> <span class="n">QRectF</span><span class="p">(</span><span class="n">base_rect</span><span class="o">.</span><span class="n">x</span><span class="p">(),</span> <span class="n">base_rect</span><span class="o">.</span><span class="n">y</span><span class="p">(),</span>
+                                   <span class="n">base_rect</span><span class="o">.</span><span class="n">width</span><span class="p">()</span><span class="o">*.</span><span class="mi">5</span><span class="p">,</span> <span class="n">base_rect</span><span class="o">.</span><span class="n">height</span><span class="p">())</span>
+            <span class="n">area_line</span> <span class="o">=</span> <span class="n">QLineF</span><span class="p">(</span><span class="n">area_rect</span><span class="o">.</span><span class="n">topLeft</span><span class="p">(),</span> <span class="n">area_rect</span><span class="o">.</span><span class="n">bottomLeft</span><span class="p">())</span>
+        <span class="k">elif</span> <span class="n">area</span> <span class="o">==</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">bottom</span><span class="p">:</span>
+            <span class="n">area_rect</span> <span class="o">=</span> <span class="n">QRectF</span><span class="p">(</span><span class="n">base_rect</span><span class="o">.</span><span class="n">x</span><span class="p">(),</span> <span class="n">shadow_rect</span><span class="o">.</span><span class="n">height</span><span class="p">()</span><span class="o">*.</span><span class="mi">5</span><span class="p">,</span>
+                               <span class="n">base_rect</span><span class="o">.</span><span class="n">width</span><span class="p">(),</span> <span class="n">base_rect</span><span class="o">.</span><span class="n">height</span><span class="p">()</span><span class="o">*.</span><span class="mi">5</span><span class="p">)</span>
+            <span class="n">non_area_rect</span> <span class="o">=</span> <span class="n">QRectF</span><span class="p">(</span><span class="n">base_rect</span><span class="o">.</span><span class="n">x</span><span class="p">(),</span> <span class="n">base_rect</span><span class="o">.</span><span class="n">y</span><span class="p">(),</span>
+                                   <span class="n">base_rect</span><span class="o">.</span><span class="n">width</span><span class="p">(),</span> <span class="n">base_rect</span><span class="o">.</span><span class="n">height</span><span class="p">()</span><span class="o">*.</span><span class="mi">5</span><span class="p">)</span>
+            <span class="n">area_line</span> <span class="o">=</span> <span class="n">QLineF</span><span class="p">(</span><span class="n">area_rect</span><span class="o">.</span><span class="n">topLeft</span><span class="p">(),</span> <span class="n">area_rect</span><span class="o">.</span><span class="n">topRight</span><span class="p">())</span>
+        <span class="k">elif</span> <span class="n">area</span> <span class="o">==</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">left</span><span class="p">:</span>
+            <span class="n">area_rect</span> <span class="o">=</span> <span class="n">QRectF</span><span class="p">(</span><span class="n">base_rect</span><span class="o">.</span><span class="n">x</span><span class="p">(),</span> <span class="n">base_rect</span><span class="o">.</span><span class="n">y</span><span class="p">(),</span>
+                               <span class="n">base_rect</span><span class="o">.</span><span class="n">width</span><span class="p">()</span><span class="o">*.</span><span class="mi">5</span><span class="p">,</span> <span class="n">base_rect</span><span class="o">.</span><span class="n">height</span><span class="p">())</span>
+            <span class="n">non_area_rect</span> <span class="o">=</span> <span class="n">QRectF</span><span class="p">(</span><span class="n">shadow_rect</span><span class="o">.</span><span class="n">width</span><span class="p">()</span><span class="o">*.</span><span class="mi">5</span><span class="p">,</span> <span class="n">base_rect</span><span class="o">.</span><span class="n">y</span><span class="p">(),</span>
+                                   <span class="n">base_rect</span><span class="o">.</span><span class="n">width</span><span class="p">()</span><span class="o">*.</span><span class="mi">5</span><span class="p">,</span> <span class="n">base_rect</span><span class="o">.</span><span class="n">height</span><span class="p">())</span>
+            <span class="n">area_line</span> <span class="o">=</span> <span class="n">QLineF</span><span class="p">(</span><span class="n">area_rect</span><span class="o">.</span><span class="n">topRight</span><span class="p">(),</span> <span class="n">area_rect</span><span class="o">.</span><span class="n">bottomRight</span><span class="p">())</span>
+
+        <span class="n">baseSize</span> <span class="o">=</span> <span class="n">base_rect</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">OverlayMode</span><span class="o">.</span><span class="n">container</span> <span class="o">==</span> <span class="n">mode</span>
+                <span class="ow">and</span> <span class="n">area</span> <span class="o">!=</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">center</span><span class="p">):</span>
+            <span class="n">base_rect</span> <span class="o">=</span> <span class="n">area_rect</span>
+
+        <span class="n">p</span><span class="o">.</span><span class="n">fillRect</span><span class="p">(</span><span class="n">base_rect</span><span class="p">,</span> <span class="n">background_color</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">area_rect</span><span class="o">.</span><span class="n">isValid</span><span class="p">():</span>
+            <span class="n">pen</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">pen</span><span class="p">()</span>
+            <span class="n">pen</span><span class="o">.</span><span class="n">setColor</span><span class="p">(</span><span class="n">border_color</span><span class="p">)</span>
+            <span class="n">Color</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">icon_color</span><span class="p">(</span><span class="n">IconColor</span><span class="o">.</span><span class="n">overlay_color</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">Color</span><span class="o">.</span><span class="n">alpha</span><span class="p">()</span> <span class="o">==</span> <span class="mi">255</span><span class="p">:</span>
+                <span class="n">Color</span><span class="o">.</span><span class="n">setAlpha</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span>
+
+            <span class="n">p</span><span class="o">.</span><span class="n">setBrush</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">setPen</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">NoPen</span><span class="p">)</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">drawRect</span><span class="p">(</span><span class="n">area_rect</span><span class="p">)</span>
+            <span class="n">pen</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">pen</span><span class="p">()</span>
+            <span class="n">pen</span><span class="o">.</span><span class="n">setWidth</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">pen</span><span class="o">.</span><span class="n">setColor</span><span class="p">(</span><span class="n">border_color</span><span class="p">)</span>
+            <span class="n">pen</span><span class="o">.</span><span class="n">setStyle</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">DashLine</span><span class="p">)</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">setPen</span><span class="p">(</span><span class="n">pen</span><span class="p">)</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">drawLine</span><span class="p">(</span><span class="n">area_line</span><span class="p">)</span>
+
+        <span class="n">p</span><span class="o">.</span><span class="n">restore</span><span class="p">()</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+        <span class="c1"># Draw outer border</span>
+        <span class="n">pen</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">pen</span><span class="p">()</span>
+        <span class="n">pen</span><span class="o">.</span><span class="n">setColor</span><span class="p">(</span><span class="n">border_color</span><span class="p">)</span>
+        <span class="n">pen</span><span class="o">.</span><span class="n">setWidth</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">setBrush</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">NoBrush</span><span class="p">)</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">setPen</span><span class="p">(</span><span class="n">pen</span><span class="p">)</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">drawRect</span><span class="p">(</span><span class="n">base_rect</span><span class="p">)</span>
+
+        <span class="c1"># draw window title bar</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">setBrush</span><span class="p">(</span><span class="n">border_color</span><span class="p">)</span>
+        <span class="n">frame_rect</span> <span class="o">=</span> <span class="n">QRectF</span><span class="p">(</span><span class="n">base_rect</span><span class="o">.</span><span class="n">topLeft</span><span class="p">(),</span>
+                            <span class="n">QSizeF</span><span class="p">(</span><span class="n">base_rect</span><span class="o">.</span><span class="n">width</span><span class="p">(),</span> <span class="n">baseSize</span><span class="o">.</span><span class="n">height</span><span class="p">()</span><span class="o">/</span><span class="mi">10</span><span class="p">))</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">drawRect</span><span class="p">(</span><span class="n">frame_rect</span><span class="p">)</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">restore</span><span class="p">()</span>
+
+        <span class="c1"># Draw arrow for outer container drop indicators</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">OverlayMode</span><span class="o">.</span><span class="n">container</span> <span class="o">==</span> <span class="n">mode</span> <span class="ow">and</span>
+                <span class="n">area</span> <span class="o">!=</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">center</span><span class="p">):</span>
+            <span class="n">arrow_rect</span> <span class="o">=</span> <span class="n">QRectF</span><span class="p">()</span>
+            <span class="n">arrow_rect</span><span class="o">.</span><span class="n">setSize</span><span class="p">(</span><span class="n">baseSize</span><span class="p">)</span>
+            <span class="n">arrow_rect</span><span class="o">.</span><span class="n">setWidth</span><span class="p">(</span><span class="n">arrow_rect</span><span class="o">.</span><span class="n">width</span><span class="p">()</span><span class="o">/</span><span class="mf">4.6</span><span class="p">)</span>
+            <span class="n">arrow_rect</span><span class="o">.</span><span class="n">setHeight</span><span class="p">(</span><span class="n">arrow_rect</span><span class="o">.</span><span class="n">height</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+            <span class="n">arrow_rect</span><span class="o">.</span><span class="n">moveCenter</span><span class="p">(</span><span class="n">QPointF</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+
+            <span class="n">arrow</span> <span class="o">=</span> <span class="n">QPolygonF</span><span class="p">()</span>
+            <span class="n">arrow</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">arrow_rect</span><span class="o">.</span><span class="n">topLeft</span><span class="p">())</span>
+            <span class="n">arrow</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">QPointF</span><span class="p">(</span><span class="n">arrow_rect</span><span class="o">.</span><span class="n">right</span><span class="p">(),</span> <span class="n">arrow_rect</span><span class="o">.</span><span class="n">center</span><span class="p">()</span><span class="o">.</span><span class="n">y</span><span class="p">()))</span>
+            <span class="n">arrow</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">arrow_rect</span><span class="o">.</span><span class="n">bottomLeft</span><span class="p">())</span>
+
+            <span class="n">p</span><span class="o">.</span><span class="n">setPen</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">NoPen</span><span class="p">)</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">setBrush</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">icon_color</span><span class="p">(</span><span class="n">IconColor</span><span class="o">.</span><span class="n">arrow_color</span><span class="p">))</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">setRenderHint</span><span class="p">(</span><span class="n">QPainter</span><span class="o">.</span><span class="n">Antialiasing</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">non_area_rect</span><span class="o">.</span><span class="n">center</span><span class="p">()</span><span class="o">.</span><span class="n">x</span><span class="p">(),</span> <span class="n">non_area_rect</span><span class="o">.</span><span class="n">center</span><span class="p">()</span><span class="o">.</span><span class="n">y</span><span class="p">())</span>
+            <span class="k">if</span> <span class="n">area</span> <span class="o">==</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">top</span><span class="p">:</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">area</span> <span class="o">==</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
+                <span class="o">...</span>
+            <span class="k">elif</span> <span class="n">area</span> <span class="o">==</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">bottom</span><span class="p">:</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">area</span> <span class="o">==</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">left</span><span class="p">:</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">180</span><span class="p">)</span>
+
+            <span class="n">p</span><span class="o">.</span><span class="n">drawPolygon</span><span class="p">(</span><span class="n">arrow</span><span class="p">)</span>
+
+        <span class="n">pm</span><span class="o">.</span><span class="n">setDevicePixelRatio</span><span class="p">(</span><span class="n">device_pixel_ratio</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">pm</span>
+
+
+<div class="viewcode-block" id="DockOverlayCross"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlayCross">[docs]</a><span class="k">class</span> <span class="nc">DockOverlayCross</span><span class="p">(</span><span class="n">QWidget</span><span class="p">):</span>
+    <span class="n">_all_areas</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">left</span><span class="p">,</span>
+        <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">right</span><span class="p">,</span>
+        <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">top</span><span class="p">,</span>
+        <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">bottom</span><span class="p">,</span>
+        <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">center</span><span class="p">,</span>
+    <span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">overlay</span><span class="p">:</span> <span class="n">DockOverlay</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Creates an overlay cross for the given overlay</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        overlay : DockOverlay</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">overlay</span><span class="o">.</span><span class="n">parentWidget</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span> <span class="o">=</span> <span class="n">DockOverlayCrossPrivate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_overlay</span> <span class="o">=</span> <span class="n">overlay</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowFlags</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">Tool</span> <span class="o">|</span> <span class="n">Qt</span><span class="o">.</span><span class="n">FramelessWindowHint</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;DockOverlayCross&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setAttribute</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">WA_TranslucentBackground</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">grid_layout</span> <span class="o">=</span> <span class="n">QGridLayout</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">grid_layout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">grid_layout</span><span class="p">)</span>
+
+<div class="viewcode-block" id="DockOverlayCross.set_icon_frame_color"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlayCross.set_icon_frame_color">[docs]</a>    <span class="k">def</span> <span class="nf">set_icon_frame_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="n">QColor</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Set icon frame color</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        color : QColor</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_icon_color</span><span class="p">(</span><span class="n">IconColor</span><span class="o">.</span><span class="n">frame_color</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockOverlayCross.set_icon_background_color"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlayCross.set_icon_background_color">[docs]</a>    <span class="k">def</span> <span class="nf">set_icon_background_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="n">QColor</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Set icon background color</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        color : QColor</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_icon_color</span><span class="p">(</span><span class="n">IconColor</span><span class="o">.</span><span class="n">window_background_color</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockOverlayCross.set_icon_overlay_color"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlayCross.set_icon_overlay_color">[docs]</a>    <span class="k">def</span> <span class="nf">set_icon_overlay_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="n">QColor</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Set icon overlay color</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        color : QColor</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_icon_color</span><span class="p">(</span><span class="n">IconColor</span><span class="o">.</span><span class="n">overlay_color</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockOverlayCross.set_icon_arrow_color"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlayCross.set_icon_arrow_color">[docs]</a>    <span class="k">def</span> <span class="nf">set_icon_arrow_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="n">QColor</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Set icon arrow color</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        color : QColor</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_icon_color</span><span class="p">(</span><span class="n">IconColor</span><span class="o">.</span><span class="n">arrow_color</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockOverlayCross.set_icon_shadow_color"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlayCross.set_icon_shadow_color">[docs]</a>    <span class="k">def</span> <span class="nf">set_icon_shadow_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="n">QColor</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Set icon shadow color</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        color : QColor</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_icon_color</span><span class="p">(</span><span class="n">IconColor</span><span class="o">.</span><span class="n">shadow_color</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockOverlayCross.set_icon_color"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlayCross.set_icon_color">[docs]</a>    <span class="k">def</span> <span class="nf">set_icon_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color_index</span><span class="p">:</span> <span class="n">IconColor</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="n">QColor</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Sets a certain icon color</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        color_index : IconColor</span>
+<span class="sd">        color : QColor</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">icon_colors</span><span class="p">[</span><span class="n">color_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">color</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">update_required</span> <span class="o">=</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="DockOverlayCross.icon_color"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlayCross.icon_color">[docs]</a>    <span class="k">def</span> <span class="nf">icon_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color_index</span><span class="p">:</span> <span class="n">IconColor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QColor</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Returns the icon color given by ColorIndex</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        color_index : IconColor</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : QColor</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">icon_colors</span><span class="p">[</span><span class="n">color_index</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="DockOverlayCross.cursor_location"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlayCross.cursor_location">[docs]</a>    <span class="k">def</span> <span class="nf">cursor_location</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DockWidgetArea</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Returns the dock widget area depending on the current cursor location.</span>
+<span class="sd">        The function checks, if the mouse cursor is inside of any drop</span>
+<span class="sd">        indicator widget and returns the corresponding DockWidgetArea.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : DockWidgetArea</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">pos</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapFromGlobal</span><span class="p">(</span><span class="n">QCursor</span><span class="o">.</span><span class="n">pos</span><span class="p">())</span>
+        <span class="n">allowed_areas</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_overlay</span><span class="o">.</span><span class="n">allowed_areas</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">area</span><span class="p">,</span> <span class="n">widget</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">drop_indicator_widgets</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">area</span> <span class="ow">in</span> <span class="n">allowed_areas</span> <span class="ow">and</span> <span class="n">widget</span>
+                    <span class="ow">and</span> <span class="n">widget</span><span class="o">.</span><span class="n">isVisible</span><span class="p">()</span>
+                    <span class="ow">and</span> <span class="n">widget</span><span class="o">.</span><span class="n">geometry</span><span class="p">()</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">pos</span><span class="p">)):</span>
+                <span class="k">return</span> <span class="n">area</span>
+
+        <span class="k">return</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">invalid</span></div>
+
+<div class="viewcode-block" id="DockOverlayCross.setup_overlay_cross"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlayCross.setup_overlay_cross">[docs]</a>    <span class="k">def</span> <span class="nf">setup_overlay_cross</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mode</span><span class="p">:</span> <span class="n">OverlayMode</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Sets up the overlay cross for the given overlay mode</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        mode : OverlayMode</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">mode</span> <span class="o">=</span> <span class="n">mode</span>
+        <span class="n">area_widgets</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="n">area</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">create_drop_indicator_widget</span><span class="p">(</span><span class="n">area</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">area</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_all_areas</span>
+        <span class="p">}</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">last_device_pixel_ratio</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">devicePixelRatioF</span><span class="p">()</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;devicePixelRatioF&#39;</span><span class="p">)</span>
+            <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">devicePixelRatio</span><span class="p">())</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_area_widgets</span><span class="p">(</span><span class="n">area_widgets</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">update_required</span> <span class="o">=</span> <span class="kc">False</span></div>
+
+<div class="viewcode-block" id="DockOverlayCross.update_overlay_icons"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlayCross.update_overlay_icons">[docs]</a>    <span class="k">def</span> <span class="nf">update_overlay_icons</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Recreates the overlay icons.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">windowHandle</span><span class="p">()</span><span class="o">.</span><span class="n">devicePixelRatio</span><span class="p">()</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">last_device_pixel_ratio</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="k">for</span> <span class="n">widget</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">drop_indicator_widgets</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">update_drop_indicator_icon</span><span class="p">(</span><span class="n">widget</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">last_device_pixel_ratio</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">devicePixelRatioF</span><span class="p">()</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;devicePixelRatioF&#39;</span><span class="p">)</span>
+            <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">devicePixelRatio</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="DockOverlayCross.reset"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlayCross.reset">[docs]</a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Resets and updates the</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+
+        <span class="n">allowed_areas</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_overlay</span><span class="o">.</span><span class="n">allowed_areas</span><span class="p">()</span>
+
+        <span class="c1"># Update visibility of area widgets based on allowedAreas.</span>
+        <span class="k">for</span> <span class="n">area</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_all_areas</span><span class="p">:</span>
+            <span class="n">pos</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">area_grid_position</span><span class="p">(</span><span class="n">area</span><span class="p">)</span>
+            <span class="n">item</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">grid_layout</span><span class="o">.</span><span class="n">itemAtPosition</span><span class="p">(</span><span class="n">pos</span><span class="o">.</span><span class="n">x</span><span class="p">(),</span> <span class="n">pos</span><span class="o">.</span><span class="n">y</span><span class="p">())</span>
+            <span class="n">widget</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">widget</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">item</span> <span class="ow">and</span> <span class="n">widget</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">widget</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="n">area</span> <span class="ow">in</span> <span class="n">allowed_areas</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockOverlayCross.update_position"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlayCross.update_position">[docs]</a>    <span class="k">def</span> <span class="nf">update_position</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Updates the current position</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_overlay</span><span class="o">.</span><span class="n">size</span><span class="p">())</span>
+        <span class="n">top_left</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_overlay</span><span class="o">.</span><span class="n">pos</span><span class="p">()</span>
+        <span class="n">offest</span> <span class="o">=</span> <span class="n">QPoint</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">()</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_overlay</span><span class="o">.</span><span class="n">width</span><span class="p">())</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span>
+                        <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">()</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_overlay</span><span class="o">.</span><span class="n">height</span><span class="p">())</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">cross_top_left</span> <span class="o">=</span> <span class="n">top_left</span><span class="o">-</span><span class="n">offest</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">cross_top_left</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockOverlayCross.set_icon_colors"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlayCross.set_icon_colors">[docs]</a>    <span class="k">def</span> <span class="nf">set_icon_colors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">colors</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        A string with all icon colors to set. You can use this property to</span>
+<span class="sd">        style the overly icon via CSS stylesheet file. The colors are set via a</span>
+<span class="sd">        color identifier and a hex AARRGGBB value like in the example below.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        colors : str</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">string_to_color_type</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;Frame&quot;</span><span class="p">:</span> <span class="n">IconColor</span><span class="o">.</span><span class="n">frame_color</span><span class="p">,</span>
+            <span class="s2">&quot;Background&quot;</span><span class="p">:</span> <span class="n">IconColor</span><span class="o">.</span><span class="n">window_background_color</span><span class="p">,</span>
+            <span class="s2">&quot;Overlay&quot;</span><span class="p">:</span> <span class="n">IconColor</span><span class="o">.</span><span class="n">overlay_color</span><span class="p">,</span>
+            <span class="s2">&quot;Arrow&quot;</span><span class="p">:</span> <span class="n">IconColor</span><span class="o">.</span><span class="n">arrow_color</span><span class="p">,</span>
+            <span class="s2">&quot;Shadow&quot;</span><span class="p">:</span> <span class="n">IconColor</span><span class="o">.</span><span class="n">shadow_color</span><span class="p">,</span>
+        <span class="p">}</span>
+
+        <span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">colors</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">name</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="p">)</span>
+                <span class="n">color_type</span> <span class="o">=</span> <span class="n">string_to_color_type</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+            <span class="k">except</span> <span class="p">(</span><span class="ne">KeyError</span><span class="p">,</span> <span class="ne">IndexError</span><span class="p">):</span>
+                <span class="k">continue</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">icon_colors</span><span class="p">[</span><span class="n">color_type</span><span class="p">]</span> <span class="o">=</span> <span class="n">QColor</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">update_required</span> <span class="o">=</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="DockOverlayCross.showEvent"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlayCross.showEvent">[docs]</a>    <span class="k">def</span> <span class="nf">showEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="n">QShowEvent</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Showevent</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        e : QShowEvent</span>
+<span class="sd">            Unused</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="c1">#pylint: disable=unused-argument</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">update_required</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">setup_overlay_cross</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">update_position</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="DockOverlayCross.set_area_widgets"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlayCross.set_area_widgets">[docs]</a>    <span class="k">def</span> <span class="nf">set_area_widgets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">widgets</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Set area widgets</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        widgets : dict</span>
+<span class="sd">            DockWidgetArea to QWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="c1"># Delete old widgets.</span>
+        <span class="k">for</span> <span class="n">area</span><span class="p">,</span> <span class="n">widget</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">drop_indicator_widgets</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">grid_layout</span><span class="o">.</span><span class="n">removeWidget</span><span class="p">(</span><span class="n">widget</span><span class="p">)</span>
+            <span class="n">widget</span><span class="o">.</span><span class="n">destroyLater</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">drop_indicator_widgets</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+        <span class="c1"># Insert new widgets into grid.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">drop_indicator_widgets</span> <span class="o">=</span> <span class="n">widgets</span>
+        <span class="k">for</span> <span class="n">area</span><span class="p">,</span> <span class="n">widget</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">drop_indicator_widgets</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">pos</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">area_grid_position</span><span class="p">(</span><span class="n">area</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">grid_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">widget</span><span class="p">,</span> <span class="n">pos</span><span class="o">.</span><span class="n">x</span><span class="p">(),</span> <span class="n">pos</span><span class="o">.</span><span class="n">y</span><span class="p">(),</span>
+                                         <span class="n">area_alignment</span><span class="p">[</span><span class="n">area</span><span class="p">])</span>
+
+        <span class="k">if</span> <span class="n">OverlayMode</span><span class="o">.</span><span class="n">dock_area</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">mode</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">grid_layout</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="n">stretch_values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">grid_layout</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+            <span class="n">stretch_values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">stretch</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="n">stretch_values</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">grid_layout</span><span class="o">.</span><span class="n">setRowStretch</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">stretch</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">grid_layout</span><span class="o">.</span><span class="n">setColumnStretch</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">stretch</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Ken Lauer
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

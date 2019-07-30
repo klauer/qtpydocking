@@ -1,0 +1,765 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>qtpydocking.floating_dock_container &mdash; qtpydocking  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> qtpydocking
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">API Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_area_layout">qtpydocking.dock_area_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_area_tab_bar">qtpydocking.dock_area_tab_bar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_area_title_bar">qtpydocking.dock_area_title_bar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_area_widget">qtpydocking.dock_area_widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_container_widget">qtpydocking.dock_container_widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_manager">qtpydocking.dock_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_overlay">qtpydocking.dock_overlay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_splitter">qtpydocking.dock_splitter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_widget">qtpydocking.dock_widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_widget_tab">qtpydocking.dock_widget_tab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.eliding_label">qtpydocking.eliding_label</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.enums">qtpydocking.enums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.floating_dock_container">qtpydocking.floating_dock_container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.util">qtpydocking.util</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/klauer/qtpydocking">Github Repository</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">qtpydocking</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>qtpydocking.floating_dock_container</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for qtpydocking.floating_dock_container</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">TYPE_CHECKING</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="kn">from</span> <span class="nn">qtpy.QtCore</span> <span class="k">import</span> <span class="p">(</span><span class="n">QEvent</span><span class="p">,</span> <span class="n">QObject</span><span class="p">,</span> <span class="n">QPoint</span><span class="p">,</span> <span class="n">QRect</span><span class="p">,</span> <span class="n">QSize</span><span class="p">,</span> <span class="n">QXmlStreamReader</span><span class="p">,</span> <span class="n">Qt</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">qtpy.QtGui</span> <span class="k">import</span> <span class="n">QCloseEvent</span><span class="p">,</span> <span class="n">QCursor</span><span class="p">,</span> <span class="n">QGuiApplication</span><span class="p">,</span> <span class="n">QHideEvent</span><span class="p">,</span> <span class="n">QMoveEvent</span>
+<span class="kn">from</span> <span class="nn">qtpy.QtWidgets</span> <span class="k">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QBoxLayout</span><span class="p">,</span> <span class="n">QWidget</span>
+
+<span class="kn">from</span> <span class="nn">.enums</span> <span class="k">import</span> <span class="n">DockWidgetFeature</span><span class="p">,</span> <span class="n">DragState</span><span class="p">,</span> <span class="n">DockWidgetArea</span>
+<span class="kn">from</span> <span class="nn">.util</span> <span class="k">import</span> <span class="n">QT_VERSION_TUPLE</span><span class="p">,</span> <span class="n">event_filter_decorator</span>
+<span class="kn">from</span> <span class="nn">.dock_container_widget</span> <span class="k">import</span> <span class="n">DockContainerWidget</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">DockAreaWidget</span><span class="p">,</span> <span class="n">DockWidget</span><span class="p">,</span> <span class="n">DockManager</span>
+
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="n">_z_order_counter</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># TODO</span>
+
+
+<span class="k">class</span> <span class="nc">FloatingDockContainerPrivate</span><span class="p">:</span>
+    <span class="n">public</span><span class="p">:</span> <span class="s1">&#39;FloatingDockContainer&#39;</span>
+    <span class="n">dock_container</span><span class="p">:</span> <span class="n">DockContainerWidget</span>
+    <span class="n">z_order_index</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">dock_manager</span><span class="p">:</span> <span class="s1">&#39;DockManager&#39;</span>
+    <span class="n">dragging_state</span><span class="p">:</span> <span class="n">DragState</span>
+    <span class="n">drag_start_mouse_position</span><span class="p">:</span> <span class="n">QPoint</span>
+    <span class="n">drop_container</span><span class="p">:</span> <span class="n">DockContainerWidget</span>
+    <span class="n">single_dock_area</span><span class="p">:</span> <span class="s1">&#39;DockAreaWidget&#39;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">public</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Private data constructor</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        public : FloatingDockContainer</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">public</span> <span class="o">=</span> <span class="n">public</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dock_container</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">global</span> <span class="n">_z_order_counter</span>  <span class="c1"># TODO</span>
+        <span class="n">_z_order_counter</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">z_order_index</span> <span class="o">=</span> <span class="n">_z_order_counter</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">dock_manager</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dragging_state</span> <span class="o">=</span> <span class="n">DragState</span><span class="o">.</span><span class="n">inactive</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">drag_start_mouse_position</span> <span class="o">=</span> <span class="n">QPoint</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">drop_container</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">single_dock_area</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">title_mouse_release_event</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_state</span><span class="p">(</span><span class="n">DragState</span><span class="o">.</span><span class="n">inactive</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">drop_container</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="n">dock_manager</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dock_manager</span>
+        <span class="n">dock_area_overlay</span> <span class="o">=</span> <span class="n">dock_manager</span><span class="o">.</span><span class="n">dock_area_overlay</span><span class="p">()</span>
+        <span class="n">container_overlay</span> <span class="o">=</span> <span class="n">dock_manager</span><span class="o">.</span><span class="n">container_overlay</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">widget</span><span class="o">.</span><span class="n">drop_area_under_cursor</span><span class="p">()</span> <span class="o">!=</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">invalid</span>
+               <span class="k">for</span> <span class="n">widget</span> <span class="ow">in</span> <span class="p">(</span><span class="n">dock_area_overlay</span><span class="p">,</span> <span class="n">container_overlay</span><span class="p">)):</span>
+            <span class="c1"># Resize the floating widget to the size of the highlighted drop area</span>
+            <span class="c1"># rectangle</span>
+            <span class="n">overlay</span> <span class="o">=</span> <span class="n">container_overlay</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">overlay</span><span class="o">.</span><span class="n">drop_overlay_rect</span><span class="p">()</span><span class="o">.</span><span class="n">isValid</span><span class="p">():</span>
+                <span class="n">overlay</span> <span class="o">=</span> <span class="n">dock_area_overlay</span>
+
+            <span class="n">rect</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">drop_overlay_rect</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">rect</span><span class="o">.</span><span class="n">isValid</span><span class="p">():</span>
+                <span class="n">public</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">public</span>
+                <span class="n">frame_width</span> <span class="o">=</span> <span class="p">(</span><span class="n">public</span><span class="o">.</span><span class="n">frameSize</span><span class="p">()</span><span class="o">.</span><span class="n">width</span><span class="p">()</span> <span class="o">-</span>
+                               <span class="n">public</span><span class="o">.</span><span class="n">rect</span><span class="p">()</span><span class="o">.</span><span class="n">width</span><span class="p">())</span> <span class="o">//</span> <span class="mi">2</span>
+                <span class="n">title_bar_height</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">public</span><span class="o">.</span><span class="n">frameSize</span><span class="p">()</span><span class="o">.</span><span class="n">height</span><span class="p">()</span> <span class="o">-</span>
+                                       <span class="n">public</span><span class="o">.</span><span class="n">rect</span><span class="p">()</span><span class="o">.</span><span class="n">height</span><span class="p">()</span> <span class="o">-</span> <span class="n">frame_width</span><span class="p">)</span>
+
+                <span class="n">top_left</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">mapToGlobal</span><span class="p">(</span><span class="n">rect</span><span class="o">.</span><span class="n">topLeft</span><span class="p">())</span>
+                <span class="n">top_left</span><span class="o">.</span><span class="n">setY</span><span class="p">(</span><span class="n">top_left</span><span class="o">.</span><span class="n">y</span><span class="p">()</span> <span class="o">+</span> <span class="n">title_bar_height</span><span class="p">)</span>
+                <span class="n">geom</span> <span class="o">=</span> <span class="n">QRect</span><span class="p">(</span><span class="n">top_left</span><span class="p">,</span> <span class="n">QSize</span><span class="p">(</span><span class="n">rect</span><span class="o">.</span><span class="n">width</span><span class="p">(),</span> <span class="n">rect</span><span class="o">.</span><span class="n">height</span><span class="p">()</span> <span class="o">-</span>
+                                             <span class="n">title_bar_height</span><span class="p">))</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="n">geom</span><span class="p">)</span>
+                <span class="n">qapp</span> <span class="o">=</span> <span class="n">QApplication</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span>
+                <span class="n">qapp</span><span class="o">.</span><span class="n">processEvents</span><span class="p">()</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">drop_container</span><span class="o">.</span><span class="n">drop_floating_widget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="p">,</span> <span class="n">QCursor</span><span class="o">.</span><span class="n">pos</span><span class="p">())</span>
+
+        <span class="n">container_overlay</span><span class="o">.</span><span class="n">hide_overlay</span><span class="p">()</span>
+        <span class="n">dock_area_overlay</span><span class="o">.</span><span class="n">hide_overlay</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">update_drop_overlays</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">global_pos</span><span class="p">:</span> <span class="n">QPoint</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Update drop overlays</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        global_pos : QPoint</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">isVisible</span><span class="p">()</span> <span class="ow">or</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">dock_manager</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="n">top_container</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">for</span> <span class="n">container_widget</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dock_manager</span><span class="o">.</span><span class="n">dock_containers</span><span class="p">():</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">container_widget</span><span class="o">.</span><span class="n">isVisible</span><span class="p">():</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dock_container</span> <span class="ow">is</span> <span class="n">container_widget</span><span class="p">:</span>
+                <span class="k">continue</span>
+
+            <span class="n">mapped_pos</span> <span class="o">=</span> <span class="n">container_widget</span><span class="o">.</span><span class="n">mapFromGlobal</span><span class="p">(</span><span class="n">global_pos</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">container_widget</span><span class="o">.</span><span class="n">rect</span><span class="p">()</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">mapped_pos</span><span class="p">):</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">top_container</span> <span class="ow">or</span> <span class="n">container_widget</span><span class="o">.</span><span class="n">is_in_front_of</span><span class="p">(</span><span class="n">top_container</span><span class="p">):</span>
+                    <span class="n">top_container</span> <span class="o">=</span> <span class="n">container_widget</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">drop_container</span> <span class="o">=</span> <span class="n">top_container</span>
+        <span class="n">container_overlay</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dock_manager</span><span class="o">.</span><span class="n">container_overlay</span><span class="p">()</span>
+        <span class="n">dock_area_overlay</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dock_manager</span><span class="o">.</span><span class="n">dock_area_overlay</span><span class="p">()</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">top_container</span><span class="p">:</span>
+            <span class="n">container_overlay</span><span class="o">.</span><span class="n">hide_overlay</span><span class="p">()</span>
+            <span class="n">dock_area_overlay</span><span class="o">.</span><span class="n">hide_overlay</span><span class="p">()</span>
+            <span class="k">return</span>
+
+        <span class="n">visible_dock_areas</span> <span class="o">=</span> <span class="n">top_container</span><span class="o">.</span><span class="n">visible_dock_area_count</span><span class="p">()</span>
+        <span class="n">container_overlay</span><span class="o">.</span><span class="n">set_allowed_areas</span><span class="p">(</span>
+            <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">outer_dock_areas</span>
+            <span class="k">if</span> <span class="n">visible_dock_areas</span> <span class="o">&gt;</span> <span class="mi">1</span>
+            <span class="k">else</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">all_dock_areas</span>
+        <span class="p">)</span>
+
+        <span class="n">container_area</span> <span class="o">=</span> <span class="n">container_overlay</span><span class="o">.</span><span class="n">show_overlay</span><span class="p">(</span><span class="n">top_container</span><span class="p">)</span>
+        <span class="n">container_overlay</span><span class="o">.</span><span class="n">enable_drop_preview</span><span class="p">(</span><span class="n">container_area</span> <span class="o">!=</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">invalid</span><span class="p">)</span>
+        <span class="n">dock_area</span> <span class="o">=</span> <span class="n">top_container</span><span class="o">.</span><span class="n">dock_area_at</span><span class="p">(</span><span class="n">global_pos</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">dock_area</span> <span class="ow">and</span> <span class="n">dock_area</span><span class="o">.</span><span class="n">isVisible</span><span class="p">()</span> <span class="ow">and</span> <span class="n">visible_dock_areas</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">dock_area_overlay</span><span class="o">.</span><span class="n">enable_drop_preview</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">dock_area_overlay</span><span class="o">.</span><span class="n">set_allowed_areas</span><span class="p">(</span>
+                <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">no_area</span>
+                <span class="k">if</span> <span class="n">visible_dock_areas</span> <span class="o">==</span> <span class="mi">1</span>
+                <span class="k">else</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">all_dock_areas</span><span class="p">)</span>
+            <span class="n">area</span> <span class="o">=</span> <span class="n">dock_area_overlay</span><span class="o">.</span><span class="n">show_overlay</span><span class="p">(</span><span class="n">dock_area</span><span class="p">)</span>
+
+            <span class="c1"># A CenterDockWidgetArea for the dockAreaOverlay() indicates that</span>
+            <span class="c1"># the mouse is in the title bar. If the ContainerArea is valid</span>
+            <span class="c1"># then we ignore the dock area of the dockAreaOverlay() and disable</span>
+            <span class="c1"># the drop preview</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">area</span> <span class="o">==</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">center</span> <span class="ow">and</span>
+                    <span class="n">container_area</span> <span class="o">!=</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">invalid</span><span class="p">):</span>
+                <span class="n">dock_area_overlay</span><span class="o">.</span><span class="n">enable_drop_preview</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+                <span class="n">container_overlay</span><span class="o">.</span><span class="n">enable_drop_preview</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">container_overlay</span><span class="o">.</span><span class="n">enable_drop_preview</span><span class="p">(</span><span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">invalid</span> <span class="o">==</span> <span class="n">area</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">dock_area_overlay</span><span class="o">.</span><span class="n">hide_overlay</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">set_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state_id</span><span class="p">:</span> <span class="n">DragState</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Set state</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        state_id : DragState</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dragging_state</span> <span class="o">=</span> <span class="n">state_id</span>
+
+
+<div class="viewcode-block" id="FloatingDockContainer"><a class="viewcode-back" href="../../api.html#qtpydocking.floating_dock_container.FloatingDockContainer">[docs]</a><span class="k">class</span> <span class="nc">FloatingDockContainer</span><span class="p">(</span><span class="n">QWidget</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">dock_area</span><span class="p">:</span> <span class="s1">&#39;DockAreaWidget&#39;</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                 <span class="n">dock_widget</span><span class="p">:</span> <span class="s1">&#39;DockWidget&#39;</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                 <span class="n">dock_manager</span><span class="p">:</span> <span class="s1">&#39;DockManager&#39;</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        dock_manager : DockManager</span>
+
+<span class="sd">        dock_area : DockAreaWidget</span>
+<span class="sd">            Create floating widget with the given dock area</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">dock_manager</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">dock_area</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">dock_manager</span> <span class="o">=</span> <span class="n">dock_area</span><span class="o">.</span><span class="n">dock_manager</span><span class="p">()</span>
+            <span class="k">elif</span> <span class="n">dock_widget</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">dock_manager</span> <span class="o">=</span> <span class="n">dock_widget</span><span class="o">.</span><span class="n">dock_manager</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">dock_manager</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Must pass in either dock_area, dock_widget, or dock_manager&#39;</span><span class="p">)</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">dock_manager</span><span class="p">,</span> <span class="n">Qt</span><span class="o">.</span><span class="n">Window</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span> <span class="o">=</span> <span class="n">FloatingDockContainerPrivate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowFlags</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">Window</span> <span class="o">|</span> <span class="n">Qt</span><span class="o">.</span><span class="n">WindowMaximizeButtonHint</span> <span class="o">|</span> <span class="n">Qt</span><span class="o">.</span><span class="n">WindowCloseButtonHint</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_manager</span> <span class="o">=</span> <span class="n">dock_manager</span>
+        <span class="n">layout</span> <span class="o">=</span> <span class="n">QBoxLayout</span><span class="p">(</span><span class="n">QBoxLayout</span><span class="o">.</span><span class="n">TopToBottom</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+
+        <span class="n">dock_container</span> <span class="o">=</span> <span class="n">DockContainerWidget</span><span class="p">(</span><span class="n">dock_manager</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_container</span> <span class="o">=</span> <span class="n">dock_container</span>
+
+        <span class="n">dock_container</span><span class="o">.</span><span class="n">destroyed</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_destroyed</span><span class="p">)</span>
+
+        <span class="n">dock_container</span><span class="o">.</span><span class="n">dock_areas_added</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">on_dock_areas_added_or_removed</span><span class="p">)</span>
+        <span class="n">dock_container</span><span class="o">.</span><span class="n">dock_areas_removed</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">on_dock_areas_added_or_removed</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">dock_container</span><span class="p">)</span>
+        <span class="n">dock_manager</span><span class="o">.</span><span class="n">register_floating_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+        <span class="c1"># We install an event filter to detect mouse release events because we</span>
+        <span class="c1"># do not receive mouse release event if the floating widget is behind</span>
+        <span class="c1"># the drop overlay cross</span>
+        <span class="n">qapp</span> <span class="o">=</span> <span class="n">QApplication</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span>
+        <span class="n">qapp</span><span class="o">.</span><span class="n">installEventFilter</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">dock_area</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dock_container</span><span class="o">.</span><span class="n">add_dock_area</span><span class="p">(</span><span class="n">dock_area</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">dock_widget</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dock_container</span><span class="o">.</span><span class="n">add_dock_widget</span><span class="p">(</span>
+                <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">center</span><span class="p">,</span> <span class="n">dock_widget</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">f</span><span class="s1">&#39;&lt;FloatingDockContainer container=</span><span class="si">{self.d.dock_container}</span><span class="s1">&gt;&#39;</span>
+
+    <span class="k">def</span> <span class="nf">_destroyed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># TODO</span>
+        <span class="n">dock_container</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_container</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_container</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">dock_container</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_manager</span><span class="o">.</span><span class="n">remove_dock_container</span><span class="p">(</span><span class="n">dock_container</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_manager</span><span class="o">.</span><span class="n">remove_floating_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+        <span class="n">qapp</span> <span class="o">=</span> <span class="n">QApplication</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span>
+        <span class="n">qapp</span><span class="o">.</span><span class="n">removeEventFilter</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+<div class="viewcode-block" id="FloatingDockContainer.deleteLater"><a class="viewcode-back" href="../../api.html#qtpydocking.floating_dock_container.FloatingDockContainer.deleteLater">[docs]</a>    <span class="k">def</span> <span class="nf">deleteLater</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_destroyed</span><span class="p">()</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">deleteLater</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="nf">on_dock_areas_added_or_removed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;FloatingDockContainer.onDockAreasAddedOrRemoved()&#39;</span><span class="p">)</span>
+        <span class="n">top_level_dock_area</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_container</span><span class="o">.</span><span class="n">top_level_dock_area</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">top_level_dock_area</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">single_dock_area</span> <span class="o">=</span> <span class="n">top_level_dock_area</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">single_dock_area</span><span class="o">.</span><span class="n">current_dock_widget</span><span class="p">()</span><span class="o">.</span><span class="n">windowTitle</span><span class="p">())</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">single_dock_area</span><span class="o">.</span><span class="n">current_changed</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">on_dock_area_current_changed</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">single_dock_area</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">single_dock_area</span><span class="o">.</span><span class="n">current_changed</span><span class="o">.</span><span class="n">disconnect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">on_dock_area_current_changed</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">single_dock_area</span> <span class="o">=</span> <span class="kc">None</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="n">QApplication</span><span class="o">.</span><span class="n">applicationDisplayName</span><span class="p">())</span>
+
+<div class="viewcode-block" id="FloatingDockContainer.on_dock_area_current_changed"><a class="viewcode-back" href="../../api.html#qtpydocking.floating_dock_container.FloatingDockContainer.on_dock_area_current_changed">[docs]</a>    <span class="k">def</span> <span class="nf">on_dock_area_current_changed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        On dock area current changed</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        index : int</span>
+<span class="sd">            Unused</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="c1">#pylint: disable=unused-argument</span>
+        <span class="n">widget</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">single_dock_area</span><span class="o">.</span><span class="n">current_dock_widget</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">widget</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="n">widget</span><span class="o">.</span><span class="n">windowTitle</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="FloatingDockContainer.start_floating"><a class="viewcode-back" href="../../api.html#qtpydocking.floating_dock_container.FloatingDockContainer.start_floating">[docs]</a>    <span class="k">def</span> <span class="nf">start_floating</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">drag_start_mouse_pos</span><span class="p">:</span> <span class="n">QPoint</span><span class="p">,</span> <span class="n">size</span><span class="p">:</span> <span class="n">QSize</span><span class="p">,</span>
+                       <span class="n">drag_state</span><span class="p">:</span> <span class="n">DragState</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Starts floating at the given global position. Use moveToGlobalPos() to</span>
+<span class="sd">        move the widget to a new position depending on the start position given</span>
+<span class="sd">        in Pos parameter</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        drag_start_mouse_pos : QPoint</span>
+<span class="sd">        size : QSize</span>
+<span class="sd">        drag_state : DragState</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">set_state</span><span class="p">(</span><span class="n">drag_state</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">drag_start_mouse_position</span> <span class="o">=</span> <span class="n">drag_start_mouse_pos</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">move_floating</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="FloatingDockContainer.start_dragging"><a class="viewcode-back" href="../../api.html#qtpydocking.floating_dock_container.FloatingDockContainer.start_dragging">[docs]</a>    <span class="k">def</span> <span class="nf">start_dragging</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">drag_start_mouse_pos</span><span class="p">:</span> <span class="n">QPoint</span><span class="p">,</span> <span class="n">size</span><span class="p">:</span> <span class="n">QSize</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Call this function to start dragging the floating widget</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        drag_start_mouse_pos : QPoint</span>
+<span class="sd">        size : QSize</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_floating</span><span class="p">(</span><span class="n">drag_start_mouse_pos</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span>
+                            <span class="n">DragState</span><span class="o">.</span><span class="n">floating_widget</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FloatingDockContainer.init_floating_geometry"><a class="viewcode-back" href="../../api.html#qtpydocking.floating_dock_container.FloatingDockContainer.init_floating_geometry">[docs]</a>    <span class="k">def</span> <span class="nf">init_floating_geometry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">drag_start_mouse_pos</span><span class="p">:</span> <span class="n">QPoint</span><span class="p">,</span> <span class="n">size</span><span class="p">:</span> <span class="n">QSize</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Call this function if you just want to initialize the position and size</span>
+<span class="sd">        of the floating widget</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        drag_start_mouse_pos : QPoint</span>
+<span class="sd">        size : QSize</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_floating</span><span class="p">(</span><span class="n">drag_start_mouse_pos</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">DragState</span><span class="o">.</span><span class="n">inactive</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FloatingDockContainer.move_floating"><a class="viewcode-back" href="../../api.html#qtpydocking.floating_dock_container.FloatingDockContainer.move_floating">[docs]</a>    <span class="k">def</span> <span class="nf">move_floating</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Moves the widget to a new position relative to the position given when</span>
+<span class="sd">        startFloating() was called</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">border_size</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">frameSize</span><span class="p">()</span><span class="o">.</span><span class="n">width</span><span class="p">()</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">width</span><span class="p">())</span><span class="o">/</span><span class="mi">2</span>
+        <span class="n">move_to_pos</span> <span class="o">=</span> <span class="n">QCursor</span><span class="o">.</span><span class="n">pos</span><span class="p">()</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">drag_start_mouse_position</span><span class="o">-</span><span class="n">QPoint</span><span class="p">(</span><span class="n">border_size</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">move_to_pos</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FloatingDockContainer.restore_state"><a class="viewcode-back" href="../../api.html#qtpydocking.floating_dock_container.FloatingDockContainer.restore_state">[docs]</a>    <span class="k">def</span> <span class="nf">restore_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stream</span><span class="p">:</span> <span class="n">QXmlStreamReader</span><span class="p">,</span> <span class="n">testing</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Restores the state from given stream. If Testing is true, the function</span>
+<span class="sd">        only parses the data from the given stream but does not restore</span>
+<span class="sd">        anything. You can use this check for faulty files before you start</span>
+<span class="sd">        restoring the state</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        stream : QXmlStreamReader</span>
+<span class="sd">        testing : bool</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : bool</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_container</span><span class="o">.</span><span class="n">restore_state</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">testing</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">on_dock_areas_added_or_removed</span><span class="p">()</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="FloatingDockContainer.update_window_title"><a class="viewcode-back" href="../../api.html#qtpydocking.floating_dock_container.FloatingDockContainer.update_window_title">[docs]</a>    <span class="k">def</span> <span class="nf">update_window_title</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Call this function to update the window title</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">top_level_dock_area</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_container</span><span class="o">.</span><span class="n">top_level_dock_area</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">top_level_dock_area</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="n">top_level_dock_area</span><span class="o">.</span><span class="n">current_dock_widget</span><span class="p">()</span><span class="o">.</span><span class="n">windowTitle</span><span class="p">())</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="n">QApplication</span><span class="o">.</span><span class="n">applicationDisplayName</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="FloatingDockContainer.changeEvent"><a class="viewcode-back" href="../../api.html#qtpydocking.floating_dock_container.FloatingDockContainer.changeEvent">[docs]</a>    <span class="k">def</span> <span class="nf">changeEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="n">QEvent</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Changeevent</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        event : QEvent</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">changeEvent</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">type</span><span class="p">()</span> <span class="o">==</span> <span class="n">QEvent</span><span class="o">.</span><span class="n">ActivationChange</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">isActiveWindow</span><span class="p">():</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;FloatingWidget.changeEvent QEvent.ActivationChange &#39;</span><span class="p">)</span>
+            <span class="k">global</span> <span class="n">_z_order_counter</span>  <span class="c1"># TODO</span>
+            <span class="n">_z_order_counter</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">z_order_index</span> <span class="o">=</span> <span class="n">_z_order_counter</span></div>
+
+<div class="viewcode-block" id="FloatingDockContainer.moveEvent"><a class="viewcode-back" href="../../api.html#qtpydocking.floating_dock_container.FloatingDockContainer.moveEvent">[docs]</a>    <span class="k">def</span> <span class="nf">moveEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="n">QMoveEvent</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Moveevent</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        event : QMoveEvent</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">moveEvent</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+        <span class="n">state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dragging_state</span>
+        <span class="k">if</span> <span class="n">state</span> <span class="o">==</span> <span class="n">DragState</span><span class="o">.</span><span class="n">mouse_pressed</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">set_state</span><span class="p">(</span><span class="n">DragState</span><span class="o">.</span><span class="n">floating_widget</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">update_drop_overlays</span><span class="p">(</span><span class="n">QCursor</span><span class="o">.</span><span class="n">pos</span><span class="p">())</span>
+        <span class="k">elif</span> <span class="n">state</span> <span class="o">==</span> <span class="n">DragState</span><span class="o">.</span><span class="n">floating_widget</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">update_drop_overlays</span><span class="p">(</span><span class="n">QCursor</span><span class="o">.</span><span class="n">pos</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="FloatingDockContainer.event"><a class="viewcode-back" href="../../api.html#qtpydocking.floating_dock_container.FloatingDockContainer.event">[docs]</a>    <span class="k">def</span> <span class="nf">event</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span> <span class="n">QEvent</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Event</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        e : QEvent</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : bool</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dragging_state</span>
+        <span class="k">if</span> <span class="n">state</span> <span class="o">==</span> <span class="n">DragState</span><span class="o">.</span><span class="n">inactive</span><span class="p">:</span>
+            <span class="c1"># Normally we would check here, if the left mouse button is pressed.</span>
+            <span class="c1"># But from QT version 5.12.2 on the mouse events from</span>
+            <span class="c1"># QEvent.NonClientAreaMouseButtonPress return the wrong mouse</span>
+            <span class="c1"># button The event always returns Qt.RightButton even if the left</span>
+            <span class="c1"># button is clicked.</span>
+            <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">type</span><span class="p">()</span> <span class="o">==</span> <span class="n">QEvent</span><span class="o">.</span><span class="n">NonClientAreaMouseButtonPress</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">QT_VERSION_TUPLE</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+                    <span class="c1"># and QGuiApplication.mouseButtons().testFlag(Qt.LeftButton ...</span>
+                    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;FloatingWidget.event Event.NonClientAreaMouseButtonPress </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">type</span><span class="p">())</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">set_state</span><span class="p">(</span><span class="n">DragState</span><span class="o">.</span><span class="n">mouse_pressed</span><span class="p">)</span>
+                <span class="k">elif</span> <span class="n">QGuiApplication</span><span class="o">.</span><span class="n">mouseButtons</span><span class="p">()</span> <span class="o">==</span> <span class="n">Qt</span><span class="o">.</span><span class="n">LeftButton</span><span class="p">:</span>
+                    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;FloatingWidget.event Event.NonClientAreaMouseButtonPress </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">type</span><span class="p">())</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">set_state</span><span class="p">(</span><span class="n">DragState</span><span class="o">.</span><span class="n">mouse_pressed</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">state</span> <span class="o">==</span> <span class="n">DragState</span><span class="o">.</span><span class="n">mouse_pressed</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">type</span><span class="p">()</span> <span class="o">==</span> <span class="n">QEvent</span><span class="o">.</span><span class="n">NonClientAreaMouseButtonDblClick</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;FloatingWidget.event QEvent.NonClientAreaMouseButtonDblClick&#39;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">set_state</span><span class="p">(</span><span class="n">DragState</span><span class="o">.</span><span class="n">inactive</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">e</span><span class="o">.</span><span class="n">type</span><span class="p">()</span> <span class="o">==</span> <span class="n">QEvent</span><span class="o">.</span><span class="n">Resize</span><span class="p">:</span>
+                <span class="c1"># If the first event after the mouse press is a resize event, then</span>
+                <span class="c1"># the user resizes the window instead of dragging it around.</span>
+                <span class="c1"># But there is one exception. If the window is maximized,</span>
+                <span class="c1"># then dragging the window via title bar will cause the widget to</span>
+                <span class="c1"># leave the maximized state. This in turn will trigger a resize event.</span>
+                <span class="c1"># To know, if the resize event was triggered by user via moving a</span>
+                <span class="c1"># corner of the window frame or if it was caused by a windows state</span>
+                <span class="c1"># change, we check, if we are not in maximized state.</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">isMaximized</span><span class="p">():</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">set_state</span><span class="p">(</span><span class="n">DragState</span><span class="o">.</span><span class="n">inactive</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">state</span> <span class="o">==</span> <span class="n">DragState</span><span class="o">.</span><span class="n">floating_widget</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">type</span><span class="p">()</span> <span class="o">==</span> <span class="n">QEvent</span><span class="o">.</span><span class="n">NonClientAreaMouseButtonRelease</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;FloatingWidget.event QEvent.NonClientAreaMouseButtonRelease&#39;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">title_mouse_release_event</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">event</span><span class="p">(</span><span class="n">e</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FloatingDockContainer.closeEvent"><a class="viewcode-back" href="../../api.html#qtpydocking.floating_dock_container.FloatingDockContainer.closeEvent">[docs]</a>    <span class="k">def</span> <span class="nf">closeEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="n">QCloseEvent</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Closeevent</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        event : QCloseEvent</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;FloatingDockContainer closeEvent&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">set_state</span><span class="p">(</span><span class="n">DragState</span><span class="o">.</span><span class="n">inactive</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_closable</span><span class="p">():</span>
+            <span class="n">event</span><span class="o">.</span><span class="n">ignore</span><span class="p">()</span>
+            <span class="k">return</span>
+
+        <span class="c1"># In Qt version after 5.9.2 there seems to be a bug that causes the</span>
+        <span class="c1"># QWidget.event() function to not receive any NonClientArea mouse</span>
+        <span class="c1"># events anymore after a close/show cycle. The bug is reported here:</span>
+        <span class="c1"># https://bugreports.qt.io/browse/QTBUG-73295</span>
+        <span class="c1"># The following code is a workaround for Qt versions &gt; 5.9.2 that seems</span>
+        <span class="c1"># to work</span>
+        <span class="c1"># Starting from Qt version 5.12.2 this seems to work again. But</span>
+        <span class="c1"># now the QEvent.NonClientAreaMouseButtonPress function returns always</span>
+        <span class="c1"># Qt.RightButton even if the left button was pressed</span>
+        <span class="k">if</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">QT_VERSION_TUPLE</span> <span class="o">&lt;</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+            <span class="n">event</span><span class="o">.</span><span class="n">ignore</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">hide</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">closeEvent</span><span class="p">(</span><span class="n">event</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FloatingDockContainer.hideEvent"><a class="viewcode-back" href="../../api.html#qtpydocking.floating_dock_container.FloatingDockContainer.hideEvent">[docs]</a>    <span class="k">def</span> <span class="nf">hideEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="n">QHideEvent</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Hideevent</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        event : QHideEvent</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">hideEvent</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">dock_area</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_container</span><span class="o">.</span><span class="n">opened_dock_areas</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">dock_widget</span> <span class="ow">in</span> <span class="n">dock_area</span><span class="o">.</span><span class="n">opened_dock_widgets</span><span class="p">():</span>
+                <span class="n">dock_widget</span><span class="o">.</span><span class="n">toggle_view</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span></div>
+
+    <span class="c1"># def showEvent(self, event: QShowEvent):</span>
+    <span class="c1">#     &#39;&#39;&#39;</span>
+    <span class="c1">#     Showevent</span>
+    <span class="c1">#</span>
+    <span class="c1">#     Parameters</span>
+    <span class="c1">#     ----------</span>
+    <span class="c1">#     event : QShowEvent</span>
+    <span class="c1">#     &#39;&#39;&#39;</span>
+    <span class="c1">#     super().showEvent(event)</span>
+
+<div class="viewcode-block" id="FloatingDockContainer.eventFilter"><a class="viewcode-back" href="../../api.html#qtpydocking.floating_dock_container.FloatingDockContainer.eventFilter">[docs]</a>    <span class="nd">@event_filter_decorator</span>
+    <span class="k">def</span> <span class="nf">eventFilter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">watched</span><span class="p">:</span> <span class="n">QObject</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="n">QEvent</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Eventfilter</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        watched : QObject</span>
+<span class="sd">            Unused</span>
+<span class="sd">        event : QEvent</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : bool</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="c1">#pylint: disable=unused-argument</span>
+        <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span><span class="p">()</span> <span class="o">==</span> <span class="n">QEvent</span><span class="o">.</span><span class="n">MouseButtonRelease</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;MouseButtonRelease&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dragging_state</span> <span class="o">==</span> <span class="n">DragState</span><span class="o">.</span><span class="n">floating_widget</span><span class="p">:</span>
+                <span class="n">qapp</span> <span class="o">=</span> <span class="n">QApplication</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span>
+                <span class="n">qapp</span><span class="o">.</span><span class="n">removeEventFilter</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;FloatingWidget.eventFilter QEvent.MouseButtonRelease&#39;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">title_mouse_release_event</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="kc">False</span></div>
+
+
+<div class="viewcode-block" id="FloatingDockContainer.dock_container"><a class="viewcode-back" href="../../api.html#qtpydocking.floating_dock_container.FloatingDockContainer.dock_container">[docs]</a>    <span class="k">def</span> <span class="nf">dock_container</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;DockContainerWidget&#39;</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Access function for the internal dock container</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : DockContainerWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_container</span></div>
+
+<div class="viewcode-block" id="FloatingDockContainer.is_closable"><a class="viewcode-back" href="../../api.html#qtpydocking.floating_dock_container.FloatingDockContainer.is_closable">[docs]</a>    <span class="k">def</span> <span class="nf">is_closable</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        This function returns true, if it can be closed. It can be closed, if</span>
+<span class="sd">        all dock widgets in all dock areas can be closed</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : bool</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="n">DockWidgetFeature</span><span class="o">.</span><span class="n">closable</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_container</span><span class="o">.</span><span class="n">features</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="FloatingDockContainer.has_top_level_dock_widget"><a class="viewcode-back" href="../../api.html#qtpydocking.floating_dock_container.FloatingDockContainer.has_top_level_dock_widget">[docs]</a>    <span class="k">def</span> <span class="nf">has_top_level_dock_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        This function returns true, if this floating widget has only one single</span>
+<span class="sd">        visible dock widget in a single visible dock area. The single dock</span>
+<span class="sd">        widget is a real top level floating widget because no other widgets are</span>
+<span class="sd">        docked.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : bool</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_container</span><span class="o">.</span><span class="n">has_top_level_dock_widget</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="FloatingDockContainer.top_level_dock_widget"><a class="viewcode-back" href="../../api.html#qtpydocking.floating_dock_container.FloatingDockContainer.top_level_dock_widget">[docs]</a>    <span class="k">def</span> <span class="nf">top_level_dock_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;DockWidget&#39;</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        This function returns the first dock widget in the first dock area. If</span>
+<span class="sd">        the function hasSingleDockWidget() returns true, then this function</span>
+<span class="sd">        returns this single dock widget.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : DockWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_container</span><span class="o">.</span><span class="n">top_level_dock_widget</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="FloatingDockContainer.dock_widgets"><a class="viewcode-back" href="../../api.html#qtpydocking.floating_dock_container.FloatingDockContainer.dock_widgets">[docs]</a>    <span class="k">def</span> <span class="nf">dock_widgets</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        This function returns a list of all dock widget in this floating</span>
+<span class="sd">        widget. This is a simple convenience function that simply calls the</span>
+<span class="sd">        dockWidgets() function of the internal container widget.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : list</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_container</span><span class="o">.</span><span class="n">dock_widgets</span><span class="p">()</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Ken Lauer
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

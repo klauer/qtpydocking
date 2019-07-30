@@ -1,0 +1,1578 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>qtpydocking.dock_container_widget &mdash; qtpydocking  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> qtpydocking
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">API Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_area_layout">qtpydocking.dock_area_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_area_tab_bar">qtpydocking.dock_area_tab_bar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_area_title_bar">qtpydocking.dock_area_title_bar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_area_widget">qtpydocking.dock_area_widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_container_widget">qtpydocking.dock_container_widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_manager">qtpydocking.dock_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_overlay">qtpydocking.dock_overlay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_splitter">qtpydocking.dock_splitter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_widget">qtpydocking.dock_widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.dock_widget_tab">qtpydocking.dock_widget_tab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.eliding_label">qtpydocking.eliding_label</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.enums">qtpydocking.enums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.floating_dock_container">qtpydocking.floating_dock_container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html#module-qtpydocking.util">qtpydocking.util</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/klauer/qtpydocking">Github Repository</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">qtpydocking</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>qtpydocking.dock_container_widget</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for qtpydocking.dock_container_widget</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">TYPE_CHECKING</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Optional</span>
+
+<span class="kn">from</span> <span class="nn">qtpy.QtCore</span> <span class="k">import</span> <span class="p">(</span><span class="n">QByteArray</span><span class="p">,</span> <span class="n">QEvent</span><span class="p">,</span> <span class="n">QPoint</span><span class="p">,</span> <span class="n">QXmlStreamReader</span><span class="p">,</span>
+                         <span class="n">QXmlStreamWriter</span><span class="p">,</span> <span class="n">Qt</span><span class="p">,</span> <span class="n">Signal</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">qtpy.QtWidgets</span> <span class="k">import</span> <span class="n">QFrame</span><span class="p">,</span> <span class="n">QGridLayout</span><span class="p">,</span> <span class="n">QSplitter</span><span class="p">,</span> <span class="n">QWidget</span>
+
+<span class="kn">from</span> <span class="nn">.util</span> <span class="k">import</span> <span class="p">(</span><span class="n">find_parent</span><span class="p">,</span> <span class="n">hide_empty_parent_splitters</span><span class="p">,</span>
+                   <span class="n">emit_top_level_event_for_widget</span><span class="p">,</span> <span class="n">find_child</span><span class="p">,</span> <span class="n">find_children</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">.enums</span> <span class="k">import</span> <span class="p">(</span><span class="n">DockWidgetArea</span><span class="p">,</span> <span class="n">DockWidgetFeature</span><span class="p">,</span> <span class="n">TitleBarButton</span><span class="p">,</span>
+                    <span class="n">DockFlags</span><span class="p">,</span> <span class="n">DockInsertParam</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">.dock_splitter</span> <span class="k">import</span> <span class="n">DockSplitter</span>
+<span class="kn">from</span> <span class="nn">.dock_area_widget</span> <span class="k">import</span> <span class="n">DockAreaWidget</span>
+
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="p">(</span><span class="n">DockManager</span><span class="p">,</span> <span class="n">DockWidget</span><span class="p">,</span> <span class="n">DockWidgetTab</span><span class="p">,</span> <span class="n">DockAreaTabBar</span><span class="p">,</span>
+                   <span class="n">FloatingDockContainer</span><span class="p">,</span> <span class="n">DockAreaWidget</span><span class="p">)</span>
+
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="c1"># TODO global?</span>
+<span class="n">_z_order_counter</span> <span class="o">=</span> <span class="mi">0</span>
+
+<div class="viewcode-block" id="dock_area_insert_parameters"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.dock_area_insert_parameters">[docs]</a><span class="k">def</span> <span class="nf">dock_area_insert_parameters</span><span class="p">(</span><span class="n">area</span><span class="p">:</span> <span class="n">DockWidgetArea</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DockInsertParam</span><span class="p">:</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Returns the insertion parameters for the given dock area</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    area : DockWidgetArea</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    value : DockInsertParam</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">area</span> <span class="o">==</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">top</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">DockInsertParam</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">Vertical</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">area</span> <span class="o">==</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">DockInsertParam</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">Horizontal</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">area</span> <span class="ow">in</span> <span class="p">(</span><span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">center</span><span class="p">,</span>
+                <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">bottom</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">DockInsertParam</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">Vertical</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">area</span> <span class="o">==</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">left</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">DockInsertParam</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">Horizontal</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">DockInsertParam</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">Vertical</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="insert_widget_into_splitter"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.insert_widget_into_splitter">[docs]</a><span class="k">def</span> <span class="nf">insert_widget_into_splitter</span><span class="p">(</span><span class="n">splitter</span><span class="p">:</span> <span class="n">QSplitter</span><span class="p">,</span> <span class="n">widget</span><span class="p">:</span> <span class="n">QWidget</span><span class="p">,</span>
+                                <span class="n">append</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Helper function to ease insertion of dock area into splitter</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    splitter : QSplitter</span>
+<span class="sd">    widget : QWidget</span>
+<span class="sd">    append : bool</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">append</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">splitter</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">widget</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">splitter</span><span class="o">.</span><span class="n">insertWidget</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">widget</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="replace_splitter_widget"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.replace_splitter_widget">[docs]</a><span class="k">def</span> <span class="nf">replace_splitter_widget</span><span class="p">(</span><span class="n">splitter</span><span class="p">:</span> <span class="n">QSplitter</span><span class="p">,</span> <span class="n">from_</span><span class="p">:</span> <span class="n">QWidget</span><span class="p">,</span> <span class="n">to</span><span class="p">:</span> <span class="n">QWidget</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Replace the from widget in the given splitter with the To widget</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    splitter : QSplitter</span>
+<span class="sd">    from : QWidget</span>
+<span class="sd">    to : QWidget</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="n">splitter</span><span class="o">.</span><span class="n">indexOf</span><span class="p">(</span><span class="n">from_</span><span class="p">)</span>
+    <span class="n">from_</span><span class="o">.</span><span class="n">setParent</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;replace splitter widget </span><span class="si">%d</span><span class="s1"> </span><span class="si">%s</span><span class="s1"> -&gt; </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">from_</span><span class="p">,</span> <span class="n">to</span><span class="p">)</span>
+    <span class="n">splitter</span><span class="o">.</span><span class="n">insertWidget</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">to</span><span class="p">)</span></div>
+
+
+<span class="k">class</span> <span class="nc">DockContainerWidgetPrivate</span><span class="p">:</span>
+    <span class="n">public</span><span class="p">:</span> <span class="s1">&#39;DockContainerWidget&#39;</span>
+    <span class="n">dock_manager</span><span class="p">:</span> <span class="s1">&#39;DockManager&#39;</span>
+    <span class="n">z_order_index</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">dock_areas</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">DockAreaWidget</span><span class="p">]</span>
+    <span class="n">layout</span><span class="p">:</span> <span class="n">QGridLayout</span>
+    <span class="n">root_splitter</span><span class="p">:</span> <span class="n">DockSplitter</span>
+    <span class="n">is_floating</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">last_added_area_cache</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">DockWidgetArea</span><span class="p">,</span> <span class="n">DockAreaWidget</span><span class="p">]</span>
+    <span class="n">_visible_dock_area_count</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">top_level_dock_area</span><span class="p">:</span> <span class="n">DockAreaWidget</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">public</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Private data constructor</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        public : DockContainerWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">public</span> <span class="o">=</span> <span class="n">public</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dock_manager</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">z_order_index</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dock_areas</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">root_splitter</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_floating</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_added_area_cache</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_visible_dock_area_count</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">top_level_dock_area</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">dock_widget_into_container</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">area</span><span class="p">:</span> <span class="n">DockWidgetArea</span><span class="p">,</span>
+                                   <span class="n">dockwidget</span><span class="p">:</span> <span class="s1">&#39;DockWidget&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DockAreaWidget</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Adds dock widget to container and returns the dock area that contains</span>
+<span class="sd">        the inserted dock widget</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        area : DockWidgetArea</span>
+<span class="sd">        dockwidget : DockWidget</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : DockAreaWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">new_dock_area</span> <span class="o">=</span> <span class="n">DockAreaWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dock_manager</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="p">)</span>
+        <span class="n">new_dock_area</span><span class="o">.</span><span class="n">add_dock_widget</span><span class="p">(</span><span class="n">dockwidget</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_dock_area</span><span class="p">(</span><span class="n">new_dock_area</span><span class="p">,</span> <span class="n">area</span><span class="p">)</span>
+        <span class="n">new_dock_area</span><span class="o">.</span><span class="n">update_title_bar_visibility</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_added_area_cache</span><span class="p">[</span><span class="n">area</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_dock_area</span>
+        <span class="k">return</span> <span class="n">new_dock_area</span>
+
+    <span class="k">def</span> <span class="nf">dock_widget_into_dock_area</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">area</span><span class="p">:</span> <span class="n">DockWidgetArea</span><span class="p">,</span>
+                                   <span class="n">dock_widget</span><span class="p">:</span> <span class="s1">&#39;DockWidget&#39;</span><span class="p">,</span>
+                                   <span class="n">target_dock_area</span><span class="p">:</span> <span class="n">DockAreaWidget</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DockAreaWidget</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Adds dock widget to a existing DockWidgetArea</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        area : DockWidgetArea</span>
+<span class="sd">        dockwidget : DockWidget</span>
+<span class="sd">        target_dock_area : DockAreaWidget</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : DockAreaWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">area</span> <span class="o">==</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">center</span><span class="p">:</span>
+            <span class="n">target_dock_area</span><span class="o">.</span><span class="n">add_dock_widget</span><span class="p">(</span><span class="n">dock_widget</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">target_dock_area</span>
+
+        <span class="n">new_dock_area</span> <span class="o">=</span> <span class="n">DockAreaWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dock_manager</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="p">)</span>
+        <span class="n">new_dock_area</span><span class="o">.</span><span class="n">add_dock_widget</span><span class="p">(</span><span class="n">dock_widget</span><span class="p">)</span>
+
+        <span class="n">insert_param</span> <span class="o">=</span> <span class="n">dock_area_insert_parameters</span><span class="p">(</span><span class="n">area</span><span class="p">)</span>
+        <span class="n">target_area_splitter</span> <span class="o">=</span> <span class="n">find_parent</span><span class="p">(</span><span class="n">QSplitter</span><span class="p">,</span> <span class="n">target_dock_area</span><span class="p">)</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="n">target_area_splitter</span><span class="o">.</span><span class="n">indexOf</span><span class="p">(</span><span class="n">target_dock_area</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">target_area_splitter</span><span class="o">.</span><span class="n">orientation</span><span class="p">()</span> <span class="o">==</span> <span class="n">insert_param</span><span class="o">.</span><span class="n">orientation</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;TargetAreaSplitter.orientation() == insert_orientation&#39;</span><span class="p">)</span>
+            <span class="n">target_area_splitter</span><span class="o">.</span><span class="n">insertWidget</span><span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="n">insert_param</span><span class="o">.</span><span class="n">insert_offset</span><span class="p">,</span> <span class="n">new_dock_area</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;TargetAreaSplitter.orientation() != insert_orientation&#39;</span><span class="p">)</span>
+            <span class="n">new_splitter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">new_splitter</span><span class="p">(</span><span class="n">insert_param</span><span class="o">.</span><span class="n">orientation</span><span class="p">)</span>
+            <span class="n">new_splitter</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">target_dock_area</span><span class="p">)</span>
+            <span class="n">insert_widget_into_splitter</span><span class="p">(</span><span class="n">new_splitter</span><span class="p">,</span> <span class="n">new_dock_area</span><span class="p">,</span>
+                                        <span class="n">insert_param</span><span class="o">.</span><span class="n">append</span><span class="p">)</span>
+            <span class="n">target_area_splitter</span><span class="o">.</span><span class="n">insertWidget</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">new_splitter</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">append_dock_areas</span><span class="p">(</span><span class="n">new_dock_area</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">emit_dock_areas_added</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">new_dock_area</span>
+
+    <span class="k">def</span> <span class="nf">add_dock_area</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_dock_area</span><span class="p">:</span> <span class="n">DockAreaWidget</span><span class="p">,</span> <span class="n">area</span><span class="p">:</span> <span class="n">DockWidgetArea</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Add dock area to this container</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        new_dock_widget : DockAreaWidget</span>
+<span class="sd">        area : DockWidgetArea</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">insert_param</span> <span class="o">=</span> <span class="n">dock_area_insert_parameters</span><span class="p">(</span><span class="n">area</span><span class="p">)</span>
+
+        <span class="c1"># As long as we have only one dock area in the splitter we can adjust</span>
+        <span class="c1"># its orientation</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dock_areas</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">root_splitter</span><span class="o">.</span><span class="n">setOrientation</span><span class="p">(</span><span class="n">insert_param</span><span class="o">.</span><span class="n">orientation</span><span class="p">)</span>
+
+        <span class="n">splitter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">root_splitter</span>
+        <span class="k">if</span> <span class="n">splitter</span><span class="o">.</span><span class="n">orientation</span><span class="p">()</span> <span class="o">==</span> <span class="n">insert_param</span><span class="o">.</span><span class="n">orientation</span><span class="p">:</span>
+            <span class="n">insert_widget_into_splitter</span><span class="p">(</span><span class="n">splitter</span><span class="p">,</span> <span class="n">new_dock_area</span><span class="p">,</span> <span class="n">insert_param</span><span class="o">.</span><span class="n">append</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">new_splitter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">new_splitter</span><span class="p">(</span><span class="n">insert_param</span><span class="o">.</span><span class="n">orientation</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">insert_param</span><span class="o">.</span><span class="n">append</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">replaceWidget</span><span class="p">(</span><span class="n">splitter</span><span class="p">,</span> <span class="n">new_splitter</span><span class="p">)</span>
+                <span class="n">new_splitter</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">splitter</span><span class="p">)</span>
+                <span class="n">new_splitter</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">new_dock_area</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">new_splitter</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">new_dock_area</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">replaceWidget</span><span class="p">(</span><span class="n">splitter</span><span class="p">,</span> <span class="n">new_splitter</span><span class="p">)</span>
+                <span class="n">new_splitter</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">splitter</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">root_splitter</span> <span class="o">=</span> <span class="n">new_splitter</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">append_dock_areas</span><span class="p">(</span><span class="n">new_dock_area</span><span class="p">)</span>
+        <span class="n">new_dock_area</span><span class="o">.</span><span class="n">update_title_bar_visibility</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">emit_dock_areas_added</span><span class="p">()</span>
+
+        <span class="c1"># TODO not in ads - qtpydocking bug?</span>
+        <span class="n">new_dock_area</span><span class="o">.</span><span class="n">destroyed</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">remove_dock_area</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">drop_into_container</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                            <span class="n">floating_widget</span><span class="p">:</span> <span class="s1">&#39;FloatingDockContainer&#39;</span><span class="p">,</span>
+                            <span class="n">area</span><span class="p">:</span> <span class="n">DockWidgetArea</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Drop floating widget into container</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        floating_widget : FloatingDockContainer</span>
+<span class="sd">        area : DockWidgetArea</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">insert_param</span> <span class="o">=</span> <span class="n">dock_area_insert_parameters</span><span class="p">(</span><span class="n">area</span><span class="p">)</span>
+        <span class="n">floating_dock_container</span> <span class="o">=</span> <span class="n">floating_widget</span><span class="o">.</span><span class="n">dock_container</span><span class="p">()</span>
+
+        <span class="n">new_dock_areas</span> <span class="o">=</span> <span class="n">find_children</span><span class="p">(</span>
+            <span class="n">floating_dock_container</span><span class="p">,</span> <span class="n">DockAreaWidget</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">Qt</span><span class="o">.</span><span class="n">FindChildrenRecursively</span><span class="p">)</span>
+
+        <span class="n">single_dropped_dock_widget</span> <span class="o">=</span> <span class="n">floating_dock_container</span><span class="o">.</span><span class="n">top_level_dock_widget</span><span class="p">()</span>
+        <span class="n">single_dock_widget</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">top_level_dock_widget</span><span class="p">()</span>
+        <span class="n">splitter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">root_splitter</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dock_areas</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">splitter</span><span class="o">.</span><span class="n">setOrientation</span><span class="p">(</span><span class="n">insert_param</span><span class="o">.</span><span class="n">orientation</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">splitter</span><span class="o">.</span><span class="n">orientation</span><span class="p">()</span> <span class="o">!=</span> <span class="n">insert_param</span><span class="o">.</span><span class="n">orientation</span><span class="p">:</span>
+            <span class="n">new_splitter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">new_splitter</span><span class="p">(</span><span class="n">insert_param</span><span class="o">.</span><span class="n">orientation</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">replaceWidget</span><span class="p">(</span><span class="n">splitter</span><span class="p">,</span> <span class="n">new_splitter</span><span class="p">)</span>
+            <span class="n">new_splitter</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">splitter</span><span class="p">)</span>
+            <span class="n">splitter</span> <span class="o">=</span> <span class="n">new_splitter</span>
+
+        <span class="c1"># Now we can insert the floating widget content into this container</span>
+        <span class="n">floating_splitter</span> <span class="o">=</span> <span class="n">floating_dock_container</span><span class="o">.</span><span class="n">root_splitter</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">floating_splitter</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">insert_widget_into_splitter</span><span class="p">(</span><span class="n">splitter</span><span class="p">,</span> <span class="n">floating_splitter</span><span class="o">.</span><span class="n">widget</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+                                        <span class="n">insert_param</span><span class="o">.</span><span class="n">append</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">floating_splitter</span><span class="o">.</span><span class="n">orientation</span><span class="p">()</span> <span class="o">==</span> <span class="n">insert_param</span><span class="o">.</span><span class="n">orientation</span><span class="p">:</span>
+            <span class="k">while</span> <span class="n">floating_splitter</span><span class="o">.</span><span class="n">count</span><span class="p">():</span>
+                <span class="n">insert_widget_into_splitter</span><span class="p">(</span><span class="n">splitter</span><span class="p">,</span>
+                                            <span class="n">floating_splitter</span><span class="o">.</span><span class="n">widget</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+                                            <span class="n">insert_param</span><span class="o">.</span><span class="n">append</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">insert_widget_into_splitter</span><span class="p">(</span><span class="n">splitter</span><span class="p">,</span> <span class="n">floating_splitter</span><span class="p">,</span>
+                                        <span class="n">insert_param</span><span class="o">.</span><span class="n">append</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">root_splitter</span> <span class="o">=</span> <span class="n">splitter</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_dock_areas_to_list</span><span class="p">(</span><span class="n">new_dock_areas</span><span class="p">)</span>
+        <span class="n">floating_widget</span><span class="o">.</span><span class="n">deleteLater</span><span class="p">()</span>
+
+        <span class="n">emit_top_level_event_for_widget</span><span class="p">(</span><span class="n">single_dropped_dock_widget</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="n">emit_top_level_event_for_widget</span><span class="p">(</span><span class="n">single_dock_widget</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+        <span class="c1"># If we dropped the floating widget into the main dock container that does</span>
+        <span class="c1"># not contain any dock widgets, then splitter is invisible and we need to</span>
+        <span class="c1"># show it to display the docked widgets</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">splitter</span><span class="o">.</span><span class="n">isVisible</span><span class="p">():</span>
+            <span class="n">splitter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">dump_layout</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">drop_into_section</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">floating_widget</span><span class="p">:</span> <span class="s1">&#39;FloatingDockContainer&#39;</span><span class="p">,</span>
+                          <span class="n">target_area</span><span class="p">:</span> <span class="n">DockAreaWidget</span><span class="p">,</span> <span class="n">area</span><span class="p">:</span> <span class="n">DockWidgetArea</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Drop floating widget into dock area</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        floating_widget : FloatingDockContainer</span>
+<span class="sd">        target_area : DockAreaWidget</span>
+<span class="sd">        area : DockWidgetArea</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="c1"># Dropping into center means all dock widgets in the dropped floating</span>
+        <span class="c1"># widget will become tabs of the drop area</span>
+        <span class="k">if</span> <span class="n">area</span> <span class="o">==</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">center</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">drop_into_center_of_section</span><span class="p">(</span><span class="n">floating_widget</span><span class="p">,</span> <span class="n">target_area</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="n">insert_param</span> <span class="o">=</span> <span class="n">dock_area_insert_parameters</span><span class="p">(</span><span class="n">area</span><span class="p">)</span>
+
+        <span class="c1"># noinspection PyArgumentList</span>
+        <span class="n">new_dock_areas</span> <span class="o">=</span> <span class="n">find_children</span><span class="p">(</span>
+            <span class="n">floating_widget</span><span class="o">.</span><span class="n">dock_container</span><span class="p">(),</span> <span class="n">DockAreaWidget</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">Qt</span><span class="o">.</span><span class="n">FindChildrenRecursively</span><span class="p">)</span>
+
+        <span class="n">target_area_splitter</span> <span class="o">=</span> <span class="n">find_parent</span><span class="p">(</span><span class="n">QSplitter</span><span class="p">,</span> <span class="n">target_area</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">target_area_splitter</span><span class="p">:</span>
+            <span class="n">splitter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">new_splitter</span><span class="p">(</span><span class="n">insert_param</span><span class="o">.</span><span class="n">orientation</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">replaceWidget</span><span class="p">(</span><span class="n">target_area</span><span class="p">,</span> <span class="n">splitter</span><span class="p">)</span>
+            <span class="n">splitter</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">target_area</span><span class="p">)</span>
+            <span class="n">target_area_splitter</span> <span class="o">=</span> <span class="n">splitter</span>
+
+        <span class="n">area_index</span> <span class="o">=</span> <span class="n">target_area_splitter</span><span class="o">.</span><span class="n">indexOf</span><span class="p">(</span><span class="n">target_area</span><span class="p">)</span>
+
+        <span class="n">floating_splitter</span> <span class="o">=</span> <span class="n">find_child</span><span class="p">(</span>
+            <span class="n">floating_widget</span><span class="o">.</span><span class="n">dock_container</span><span class="p">(),</span> <span class="n">QWidget</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">Qt</span><span class="o">.</span><span class="n">FindDirectChildrenOnly</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">target_area_splitter</span><span class="o">.</span><span class="n">orientation</span><span class="p">()</span> <span class="o">==</span> <span class="n">insert_param</span><span class="o">.</span><span class="n">orientation</span><span class="p">:</span>
+            <span class="n">sizes</span> <span class="o">=</span> <span class="n">target_area_splitter</span><span class="o">.</span><span class="n">sizes</span><span class="p">()</span>
+            <span class="n">target_area_size</span> <span class="o">=</span> <span class="p">(</span><span class="n">target_area</span><span class="o">.</span><span class="n">width</span><span class="p">()</span>
+                                <span class="k">if</span> <span class="n">insert_param</span><span class="o">.</span><span class="n">orientation</span> <span class="o">==</span> <span class="n">Qt</span><span class="o">.</span><span class="n">Horizontal</span>
+                                <span class="k">else</span> <span class="n">target_area</span><span class="o">.</span><span class="n">height</span><span class="p">()</span>
+                                <span class="p">)</span>
+            <span class="n">adjust_splitter_sizes</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">floating_splitter</span><span class="o">.</span><span class="n">orientation</span><span class="p">()</span> <span class="o">!=</span> <span class="n">insert_param</span><span class="o">.</span><span class="n">orientation</span>
+                    <span class="ow">and</span> <span class="n">floating_splitter</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="n">target_area_splitter</span><span class="o">.</span><span class="n">insertWidget</span><span class="p">(</span>
+                    <span class="n">area_index</span> <span class="o">+</span> <span class="n">insert_param</span><span class="o">.</span><span class="n">insert_offset</span><span class="p">,</span>
+                    <span class="n">floating_splitter</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">adjust_splitter_sizes</span> <span class="o">=</span> <span class="p">(</span><span class="n">floating_splitter</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="n">insert_index</span> <span class="o">=</span> <span class="n">area_index</span> <span class="o">+</span> <span class="n">insert_param</span><span class="o">.</span><span class="n">insert_offset</span>
+                <span class="k">while</span> <span class="n">floating_splitter</span><span class="o">.</span><span class="n">count</span><span class="p">():</span>
+                    <span class="n">insert_index</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="n">target_area_splitter</span><span class="o">.</span><span class="n">insertWidget</span><span class="p">(</span><span class="n">insert_index</span><span class="p">,</span>
+                                                      <span class="n">floating_splitter</span><span class="o">.</span><span class="n">widget</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+
+
+            <span class="k">if</span> <span class="n">adjust_splitter_sizes</span><span class="p">:</span>
+                <span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="n">target_area_size</span><span class="o">-</span><span class="n">target_area_splitter</span><span class="o">.</span><span class="n">handleWidth</span><span class="p">())</span> <span class="o">/</span> <span class="mi">2</span>
+                <span class="n">sizes</span><span class="p">[</span><span class="n">area_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">size</span>
+                <span class="n">sizes</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">area_index</span><span class="p">,</span> <span class="n">size</span><span class="p">)</span>
+                <span class="n">target_area_splitter</span><span class="o">.</span><span class="n">setSizes</span><span class="p">(</span><span class="n">sizes</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">new_splitter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">new_splitter</span><span class="p">(</span><span class="n">insert_param</span><span class="o">.</span><span class="n">orientation</span><span class="p">)</span>
+            <span class="n">target_area_size</span> <span class="o">=</span> <span class="p">(</span><span class="n">target_area</span><span class="o">.</span><span class="n">width</span><span class="p">()</span>
+                                <span class="k">if</span> <span class="n">insert_param</span><span class="o">.</span><span class="n">orientation</span> <span class="o">==</span> <span class="n">Qt</span><span class="o">.</span><span class="n">Horizontal</span>
+                                <span class="k">else</span> <span class="n">target_area</span><span class="o">.</span><span class="n">height</span><span class="p">()</span>
+                                <span class="p">)</span>
+            <span class="n">adjust_splitter_sizes</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">floating_splitter</span><span class="o">.</span><span class="n">orientation</span><span class="p">()</span> <span class="o">!=</span> <span class="n">insert_param</span><span class="o">.</span><span class="n">orientation</span><span class="p">)</span> <span class="ow">and</span> <span class="n">floating_splitter</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">new_splitter</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">floating_splitter</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">adjust_splitter_sizes</span> <span class="o">=</span> <span class="p">(</span><span class="n">floating_splitter</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="k">while</span> <span class="n">floating_splitter</span><span class="o">.</span><span class="n">count</span><span class="p">():</span>
+                    <span class="n">new_splitter</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">floating_splitter</span><span class="o">.</span><span class="n">widget</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+
+            <span class="c1"># Save the sizes before insertion and restore it later to prevent</span>
+            <span class="c1"># shrinking of existing area</span>
+            <span class="n">sizes</span> <span class="o">=</span> <span class="n">target_area_splitter</span><span class="o">.</span><span class="n">sizes</span><span class="p">()</span>
+            <span class="n">insert_widget_into_splitter</span><span class="p">(</span><span class="n">new_splitter</span><span class="p">,</span> <span class="n">target_area</span><span class="p">,</span> <span class="ow">not</span> <span class="n">insert_param</span><span class="o">.</span><span class="n">append</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">adjust_splitter_sizes</span><span class="p">:</span>
+                <span class="n">size</span> <span class="o">=</span> <span class="n">target_area_size</span><span class="o">/</span><span class="mi">2</span>
+                <span class="n">new_splitter</span><span class="o">.</span><span class="n">setSizes</span><span class="p">((</span><span class="n">size</span><span class="p">,</span> <span class="n">size</span><span class="p">))</span>
+
+            <span class="n">target_area_splitter</span><span class="o">.</span><span class="n">insertWidget</span><span class="p">(</span><span class="n">area_index</span><span class="p">,</span> <span class="n">new_splitter</span><span class="p">)</span>
+            <span class="n">target_area_splitter</span><span class="o">.</span><span class="n">setSizes</span><span class="p">(</span><span class="n">sizes</span><span class="p">)</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Deleting floating_widget </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">floating_widget</span><span class="p">)</span>
+        <span class="n">floating_widget</span><span class="o">.</span><span class="n">deleteLater</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_dock_areas_to_list</span><span class="p">(</span><span class="n">new_dock_areas</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">dump_layout</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">drop_into_center_of_section</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">floating_widget</span><span class="p">:</span> <span class="s1">&#39;FloatingDockContainer&#39;</span><span class="p">,</span>
+                                    <span class="n">target_area</span><span class="p">:</span> <span class="n">DockAreaWidget</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Creates a new tab for a widget dropped into the center of a section</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        floating_widget : FloatingDockContainer</span>
+<span class="sd">        target_area : DockAreaWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">floating_container</span> <span class="o">=</span> <span class="n">floating_widget</span><span class="o">.</span><span class="n">dock_container</span><span class="p">()</span>
+        <span class="n">new_dock_widgets</span> <span class="o">=</span> <span class="n">floating_container</span><span class="o">.</span><span class="n">dock_widgets</span><span class="p">()</span>
+        <span class="n">top_level_dock_area</span> <span class="o">=</span> <span class="n">floating_container</span><span class="o">.</span><span class="n">top_level_dock_area</span><span class="p">()</span>
+        <span class="n">new_current_index</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+        <span class="c1"># If the floating widget contains only one single dock are, then the</span>
+        <span class="c1"># current dock widget of the dock area will also be the future current</span>
+        <span class="c1"># dock widget in the drop area.</span>
+        <span class="k">if</span> <span class="n">top_level_dock_area</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">new_current_index</span> <span class="o">=</span> <span class="n">top_level_dock_area</span><span class="o">.</span><span class="n">current_index</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">dock_widget</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">new_dock_widgets</span><span class="p">):</span>
+            <span class="n">target_area</span><span class="o">.</span><span class="n">insert_dock_widget</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">dock_widget</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+            <span class="c1"># If the floating widget contains multiple visible dock areas, then we</span>
+            <span class="c1"># simply pick the first visible open dock widget and make it</span>
+            <span class="c1"># the current one.</span>
+            <span class="k">if</span> <span class="n">new_current_index</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">dock_widget</span><span class="o">.</span><span class="n">is_closed</span><span class="p">():</span>
+                <span class="n">new_current_index</span> <span class="o">=</span> <span class="n">i</span>
+
+        <span class="n">target_area</span><span class="o">.</span><span class="n">set_current_index</span><span class="p">(</span><span class="n">new_current_index</span><span class="p">)</span>
+        <span class="n">floating_widget</span><span class="o">.</span><span class="n">deleteLater</span><span class="p">()</span>
+        <span class="n">target_area</span><span class="o">.</span><span class="n">update_title_bar_visibility</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">add_dock_areas_to_list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_dock_areas</span><span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Adds new dock areas to the internal dock area list</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        new_dock_areas : list</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">count_before</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dock_areas</span><span class="p">)</span>
+        <span class="n">new_area_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">new_dock_areas</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">append_dock_areas</span><span class="p">(</span><span class="o">*</span><span class="n">new_dock_areas</span><span class="p">)</span>
+
+        <span class="c1"># If the user dropped a floating widget that contains only one single</span>
+        <span class="c1"># visible dock area, then its title bar button TitleBarButtonUndock is</span>
+        <span class="c1"># likely hidden. We need to ensure, that it is visible</span>
+        <span class="k">for</span> <span class="n">dock_area</span> <span class="ow">in</span> <span class="n">new_dock_areas</span><span class="p">:</span>
+            <span class="n">undock</span> <span class="o">=</span> <span class="n">dock_area</span><span class="o">.</span><span class="n">title_bar_button</span><span class="p">(</span><span class="n">TitleBarButton</span><span class="o">.</span><span class="n">undock</span><span class="p">)</span>
+            <span class="n">undock</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">close</span> <span class="o">=</span> <span class="n">dock_area</span><span class="o">.</span><span class="n">title_bar_button</span><span class="p">(</span><span class="n">TitleBarButton</span><span class="o">.</span><span class="n">close</span><span class="p">)</span>
+            <span class="n">close</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># We need to ensure, that the dock area title bar is visible. The title bar</span>
+        <span class="c1"># is invisible, if the dock are is a single dock area in a floating widget.</span>
+        <span class="k">if</span> <span class="n">count_before</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dock_areas</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">update_title_bar_visibility</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">new_area_count</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dock_areas</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">update_title_bar_visibility</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">emit_dock_areas_added</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">append_dock_areas</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">new_dock_areas</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Wrapper function for DockAreas append, that ensures that dock area</span>
+<span class="sd">        signals are properly connected to dock container slots</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        *new_dock_areas : DockAreaWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dock_areas</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">new_dock_areas</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">dock_area</span> <span class="ow">in</span> <span class="n">new_dock_areas</span><span class="p">:</span>
+            <span class="n">dock_area</span><span class="o">.</span><span class="n">view_toggled</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">on_dock_area_view_toggled</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">save_child_nodes_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stream</span><span class="p">:</span> <span class="n">QXmlStreamWriter</span><span class="p">,</span> <span class="n">widget</span><span class="p">:</span> <span class="n">QWidget</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Save state of child nodes</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        stream : QXmlStreamWriter</span>
+<span class="sd">        widget : QWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">widget</span><span class="p">,</span> <span class="n">QSplitter</span><span class="p">):</span>
+            <span class="n">splitter</span> <span class="o">=</span> <span class="n">widget</span>
+            <span class="n">stream</span><span class="o">.</span><span class="n">writeStartElement</span><span class="p">(</span><span class="s2">&quot;Splitter&quot;</span><span class="p">)</span>
+            <span class="n">orientation</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;-&#39;</span> <span class="k">if</span> <span class="n">splitter</span><span class="o">.</span><span class="n">orientation</span><span class="p">()</span> <span class="o">==</span> <span class="n">Qt</span><span class="o">.</span><span class="n">Horizontal</span>
+                           <span class="k">else</span> <span class="s2">&quot;|&quot;</span><span class="p">)</span>
+            <span class="n">stream</span><span class="o">.</span><span class="n">writeAttribute</span><span class="p">(</span><span class="s2">&quot;Orientation&quot;</span><span class="p">,</span> <span class="n">orientation</span><span class="p">)</span>
+            <span class="n">stream</span><span class="o">.</span><span class="n">writeAttribute</span><span class="p">(</span><span class="s2">&quot;Count&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">splitter</span><span class="o">.</span><span class="n">count</span><span class="p">()))</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;NodeSplitter orient: </span><span class="si">%s</span><span class="s1"> WidgetCount: </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span>
+                         <span class="n">orientation</span><span class="p">,</span> <span class="n">splitter</span><span class="o">.</span><span class="n">count</span><span class="p">())</span>
+
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">splitter</span><span class="o">.</span><span class="n">count</span><span class="p">()):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">save_child_nodes_state</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">splitter</span><span class="o">.</span><span class="n">widget</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+
+            <span class="n">stream</span><span class="o">.</span><span class="n">writeStartElement</span><span class="p">(</span><span class="s2">&quot;Sizes&quot;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">Size</span> <span class="ow">in</span> <span class="n">splitter</span><span class="o">.</span><span class="n">sizes</span><span class="p">():</span>
+                <span class="n">stream</span><span class="o">.</span><span class="n">writeCharacters</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">Size</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+
+            <span class="n">stream</span><span class="o">.</span><span class="n">writeEndElement</span><span class="p">()</span>
+            <span class="n">stream</span><span class="o">.</span><span class="n">writeEndElement</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">widget</span><span class="p">,</span> <span class="n">DockAreaWidget</span><span class="p">):</span>
+            <span class="n">widget</span><span class="o">.</span><span class="n">save_state</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">restore_child_nodes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stream</span><span class="p">:</span> <span class="n">QXmlStreamReader</span><span class="p">,</span>
+                            <span class="n">testing</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="n">QWidget</span><span class="p">]]:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Restore state of child nodes.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        stream : QXmlStreamReader</span>
+<span class="sd">        created_widget : QWidget</span>
+<span class="sd">        testing : bool</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : bool</span>
+<span class="sd">        widget : QWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">widget</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">while</span> <span class="n">stream</span><span class="o">.</span><span class="n">readNextStartElement</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">stream</span><span class="o">.</span><span class="n">name</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;Splitter&quot;</span><span class="p">:</span>
+                <span class="n">result</span><span class="p">,</span> <span class="n">widget</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">restore_splitter</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">testing</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">stream</span><span class="o">.</span><span class="n">name</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;Area&quot;</span><span class="p">:</span>
+                <span class="n">result</span><span class="p">,</span> <span class="n">widget</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">restore_dock_area</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">testing</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">stream</span><span class="o">.</span><span class="n">skipCurrentElement</span><span class="p">()</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;restored child node </span><span class="si">%s</span><span class="s1">: </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">stream</span><span class="o">.</span><span class="n">name</span><span class="p">(),</span> <span class="n">widget</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">result</span><span class="p">,</span> <span class="n">widget</span>
+
+    <span class="k">def</span> <span class="nf">restore_splitter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stream</span><span class="p">:</span> <span class="n">QXmlStreamReader</span><span class="p">,</span> <span class="n">testing</span><span class="p">:</span> <span class="nb">bool</span>
+                         <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="n">QWidget</span><span class="p">]]:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Restores a splitter.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        stream : QXmlStreamReader</span>
+<span class="sd">        created_widget : QWidget</span>
+<span class="sd">        testing : bool</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : bool</span>
+<span class="sd">        widget : QWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">orientation_str</span> <span class="o">=</span> <span class="n">stream</span><span class="o">.</span><span class="n">attributes</span><span class="p">()</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">&quot;Orientation&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">orientation_str</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">):</span>
+            <span class="n">orientation</span> <span class="o">=</span> <span class="n">Qt</span><span class="o">.</span><span class="n">Horizontal</span>
+        <span class="k">elif</span> <span class="n">orientation_str</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">):</span>
+            <span class="n">orientation</span> <span class="o">=</span> <span class="n">Qt</span><span class="o">.</span><span class="n">Vertical</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">None</span>
+
+        <span class="n">widget_count</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">stream</span><span class="o">.</span><span class="n">attributes</span><span class="p">()</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">&quot;Count&quot;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">widget_count</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">None</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Restore NodeSplitter Orientation: </span><span class="si">%s</span><span class="s1">  WidgetCount: </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span>
+                     <span class="n">orientation</span><span class="p">,</span> <span class="n">widget_count</span><span class="p">)</span>
+
+        <span class="n">splitter</span> <span class="o">=</span> <span class="p">(</span><span class="kc">None</span> <span class="k">if</span> <span class="n">testing</span>
+                    <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">new_splitter</span><span class="p">(</span><span class="n">orientation</span><span class="p">))</span>
+        <span class="n">visible</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">sizes</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">while</span> <span class="n">stream</span><span class="o">.</span><span class="n">readNextStartElement</span><span class="p">():</span>
+            <span class="n">child_node</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">if</span> <span class="n">stream</span><span class="o">.</span><span class="n">name</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;Splitter&quot;</span><span class="p">:</span>
+                <span class="n">result</span><span class="p">,</span> <span class="n">child_node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">restore_splitter</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">testing</span><span class="p">)</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">result</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">None</span>
+            <span class="k">elif</span> <span class="n">stream</span><span class="o">.</span><span class="n">name</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;Area&quot;</span><span class="p">:</span>
+                <span class="n">result</span><span class="p">,</span> <span class="n">child_node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">restore_dock_area</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">testing</span><span class="p">)</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">result</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">None</span>
+            <span class="k">elif</span> <span class="n">stream</span><span class="o">.</span><span class="n">name</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;Sizes&quot;</span><span class="p">:</span>
+                <span class="n">s_sizes</span> <span class="o">=</span> <span class="n">stream</span><span class="o">.</span><span class="n">readElementText</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                <span class="n">sizes</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">sz</span><span class="p">)</span> <span class="k">for</span> <span class="n">sz</span> <span class="ow">in</span> <span class="n">s_sizes</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)]</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Sizes: </span><span class="si">%s</span><span class="s1"> (from s_sizes: </span><span class="si">%s</span><span class="s1">)&#39;</span><span class="p">,</span> <span class="n">sizes</span><span class="p">,</span> <span class="n">s_sizes</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">stream</span><span class="o">.</span><span class="n">skipCurrentElement</span><span class="p">()</span>
+
+            <span class="k">if</span> <span class="n">splitter</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">child_node</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;ChildNode isVisible </span><span class="si">%s</span><span class="s1"> isVisibleTo </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span>
+                             <span class="n">child_node</span><span class="o">.</span><span class="n">isVisible</span><span class="p">(),</span>
+                             <span class="n">child_node</span><span class="o">.</span><span class="n">isVisibleTo</span><span class="p">(</span><span class="n">splitter</span><span class="p">))</span>
+                <span class="n">splitter</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">child_node</span><span class="p">)</span>
+                <span class="n">visible</span> <span class="o">|=</span> <span class="n">child_node</span><span class="o">.</span><span class="n">isVisibleTo</span><span class="p">(</span><span class="n">splitter</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sizes</span><span class="p">)</span> <span class="o">!=</span> <span class="n">widget_count</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="n">testing</span><span class="p">:</span>
+            <span class="n">splitter</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">splitter</span><span class="o">.</span><span class="n">count</span><span class="p">():</span>
+                <span class="n">splitter</span><span class="o">.</span><span class="n">deleteLater</span><span class="p">()</span>
+                <span class="n">splitter</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">splitter</span><span class="o">.</span><span class="n">setSizes</span><span class="p">(</span><span class="n">sizes</span><span class="p">)</span>
+                <span class="n">splitter</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="n">visible</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="kc">True</span><span class="p">,</span> <span class="n">splitter</span>
+
+    <span class="k">def</span> <span class="nf">restore_dock_area</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stream</span><span class="p">:</span> <span class="n">QXmlStreamReader</span><span class="p">,</span> <span class="n">testing</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">QWidget</span><span class="p">]:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Restores a dock area.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        stream : QXmlStreamReader</span>
+<span class="sd">        created_widget : QWidget</span>
+<span class="sd">        testing : bool</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : bool</span>
+<span class="sd">        widget : QWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">tabs</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">stream</span><span class="o">.</span><span class="n">attributes</span><span class="p">()</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">&quot;Tabs&quot;</span><span class="p">))</span>
+        <span class="n">current_dock_widget</span> <span class="o">=</span> <span class="n">stream</span><span class="o">.</span><span class="n">attributes</span><span class="p">()</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">&quot;Current&quot;</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Restore NodeDockArea Tabs: </span><span class="si">%s</span><span class="s1"> current: </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span>
+                     <span class="n">tabs</span><span class="p">,</span> <span class="n">current_dock_widget</span><span class="p">)</span>
+        <span class="n">dock_area</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">testing</span><span class="p">:</span>
+            <span class="n">dock_area</span> <span class="o">=</span> <span class="n">DockAreaWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dock_manager</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="p">)</span>
+
+        <span class="k">while</span> <span class="n">stream</span><span class="o">.</span><span class="n">readNextStartElement</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">stream</span><span class="o">.</span><span class="n">name</span><span class="p">()</span> <span class="o">!=</span> <span class="s2">&quot;Widget&quot;</span><span class="p">:</span>
+                <span class="k">continue</span>
+
+            <span class="n">object_name</span> <span class="o">=</span> <span class="n">stream</span><span class="o">.</span><span class="n">attributes</span><span class="p">()</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">object_name</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">None</span>
+
+            <span class="n">closed</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">stream</span><span class="o">.</span><span class="n">attributes</span><span class="p">()</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">&quot;Closed&quot;</span><span class="p">)))</span>
+
+            <span class="n">stream</span><span class="o">.</span><span class="n">skipCurrentElement</span><span class="p">()</span>
+            <span class="n">dock_widget</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dock_manager</span><span class="o">.</span><span class="n">find_dock_widget</span><span class="p">(</span><span class="n">object_name</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">dock_widget</span> <span class="ow">and</span> <span class="n">dock_area</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Dock Widget found - parent </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">dock_widget</span><span class="o">.</span><span class="n">parent</span><span class="p">())</span>
+                <span class="c1"># We hide the DockArea here to prevent the short display (the flashing)</span>
+                <span class="c1"># of the dock areas during application startup</span>
+                <span class="n">dock_area</span><span class="o">.</span><span class="n">hide</span><span class="p">()</span>
+                <span class="n">dock_area</span><span class="o">.</span><span class="n">add_dock_widget</span><span class="p">(</span><span class="n">dock_widget</span><span class="p">)</span>
+                <span class="n">dock_widget</span><span class="o">.</span><span class="n">set_toggle_view_action_checked</span><span class="p">(</span><span class="ow">not</span> <span class="n">closed</span><span class="p">)</span>
+                <span class="n">dock_widget</span><span class="o">.</span><span class="n">set_closed_state</span><span class="p">(</span><span class="n">closed</span><span class="p">)</span>
+                <span class="n">dock_widget</span><span class="o">.</span><span class="n">setProperty</span><span class="p">(</span><span class="s2">&quot;closed&quot;</span><span class="p">,</span> <span class="n">closed</span><span class="p">)</span>
+                <span class="n">dock_widget</span><span class="o">.</span><span class="n">setProperty</span><span class="p">(</span><span class="s2">&quot;dirty&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">testing</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">dock_area</span><span class="o">.</span><span class="n">dock_widgets_count</span><span class="p">():</span>
+            <span class="n">dock_area</span><span class="o">.</span><span class="n">deleteLater</span><span class="p">()</span>
+            <span class="n">dock_area</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">dock_area</span><span class="o">.</span><span class="n">setProperty</span><span class="p">(</span><span class="s2">&quot;currentDockWidget&quot;</span><span class="p">,</span> <span class="n">current_dock_widget</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">append_dock_areas</span><span class="p">(</span><span class="n">dock_area</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="kc">True</span><span class="p">,</span> <span class="n">dock_area</span>
+
+    <span class="k">def</span> <span class="nf">dump_recursive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">widget</span><span class="p">:</span> <span class="n">QWidget</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Helper function for recursive dumping of layout</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        level : int</span>
+<span class="sd">        widget : QWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">indent</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span> <span class="o">*</span> <span class="n">level</span><span class="o">*</span><span class="mi">4</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">widget</span><span class="p">,</span> <span class="n">QSplitter</span><span class="p">):</span>
+            <span class="n">splitter</span> <span class="o">=</span> <span class="n">widget</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+                <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">Splitter </span><span class="si">%s</span><span class="s2"> v: </span><span class="si">%s</span><span class="s2"> c: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="n">indent</span><span class="p">,</span>
+                <span class="p">(</span><span class="s1">&#39;|&#39;</span> <span class="k">if</span> <span class="n">splitter</span><span class="o">.</span><span class="n">orientation</span><span class="p">()</span> <span class="o">==</span> <span class="n">Qt</span><span class="o">.</span><span class="n">Vertical</span> <span class="k">else</span> <span class="s1">&#39;--&#39;</span><span class="p">),</span>
+                <span class="p">(</span><span class="s1">&#39; &#39;</span> <span class="k">if</span> <span class="n">splitter</span><span class="o">.</span><span class="n">isHidden</span><span class="p">()</span> <span class="k">else</span> <span class="s1">&#39;v&#39;</span><span class="p">),</span>
+                <span class="n">splitter</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+            <span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">splitter</span><span class="o">.</span><span class="n">count</span><span class="p">()):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">dump_recursive</span><span class="p">(</span><span class="n">level</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">splitter</span><span class="o">.</span><span class="n">widget</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">widget</span><span class="p">,</span> <span class="n">DockAreaWidget</span><span class="p">):</span>
+            <span class="n">dock_area</span> <span class="o">=</span> <span class="n">widget</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">DockArea&#39;</span><span class="p">,</span> <span class="n">indent</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s%s</span><span class="s1"> </span><span class="si">%s</span><span class="s1"> DockArea&#39;</span><span class="p">,</span>
+                         <span class="n">indent</span><span class="p">,</span>
+                         <span class="s1">&#39; &#39;</span> <span class="k">if</span> <span class="n">dock_area</span><span class="o">.</span><span class="n">isHidden</span><span class="p">()</span> <span class="k">else</span> <span class="s1">&#39;v&#39;</span><span class="p">,</span>
+                         <span class="s1">&#39; &#39;</span> <span class="k">if</span> <span class="n">dock_area</span><span class="o">.</span><span class="n">open_dock_widgets_count</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span>
+                         <span class="p">)</span>
+
+            <span class="n">indent</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span> <span class="o">*</span> <span class="p">(</span><span class="n">level</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">4</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">dock_widget</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">dock_area</span><span class="o">.</span><span class="n">dock_widgets</span><span class="p">()):</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s%s%s%s</span><span class="s1"> </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">indent</span><span class="p">,</span>
+                             <span class="s1">&#39;*&#39;</span> <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">dock_area</span><span class="o">.</span><span class="n">current_index</span><span class="p">()</span> <span class="k">else</span> <span class="s1">&#39; &#39;</span><span class="p">,</span>
+                             <span class="s1">&#39; &#39;</span> <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">dock_widget</span><span class="o">.</span><span class="n">isHidden</span><span class="p">()</span> <span class="k">else</span> <span class="s1">&#39;v&#39;</span><span class="p">,</span>
+                             <span class="s1">&#39;c&#39;</span> <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">dock_widget</span><span class="o">.</span><span class="n">is_closed</span><span class="p">()</span> <span class="k">else</span> <span class="s1">&#39; &#39;</span><span class="p">,</span>
+                             <span class="n">dock_widget</span><span class="o">.</span><span class="n">windowTitle</span><span class="p">()</span>
+                             <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">visible_dock_area_count</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Access function for the visible dock area counter</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : int</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="c1"># Lazy initialisation - we initialize the VisibleDockAreaCount variable</span>
+        <span class="c1"># on first use</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_visible_dock_area_count</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_visible_dock_area_count</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_visible_dock_area_count</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">dock_area</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dock_areas</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">dock_area</span><span class="o">.</span><span class="n">isHidden</span><span class="p">():</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_visible_dock_area_count</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_visible_dock_area_count</span>
+
+    <span class="k">def</span> <span class="nf">on_visible_dock_area_count_changed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        The visible dock area count changes, if dock areas are remove, added or when its view is toggled</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">top_level_dock_area</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">top_level_dock_area</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">top_level_dock_area</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">top_level_dock_area</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">top_level_dock_area</span>
+            <span class="n">top_level_dock_area</span><span class="o">.</span><span class="n">title_bar_button</span><span class="p">(</span>
+                <span class="n">TitleBarButton</span><span class="o">.</span><span class="n">undock</span><span class="p">)</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="kc">False</span> <span class="ow">or</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">is_floating</span><span class="p">())</span>
+            <span class="n">top_level_dock_area</span><span class="o">.</span><span class="n">title_bar_button</span><span class="p">(</span>
+                <span class="n">TitleBarButton</span><span class="o">.</span><span class="n">close</span><span class="p">)</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="kc">False</span> <span class="ow">or</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">is_floating</span><span class="p">())</span>
+
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">top_level_dock_area</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">top_level_dock_area</span><span class="o">.</span><span class="n">title_bar_button</span><span class="p">(</span>
+                <span class="n">TitleBarButton</span><span class="o">.</span><span class="n">undock</span><span class="p">)</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">top_level_dock_area</span><span class="o">.</span><span class="n">title_bar_button</span><span class="p">(</span>
+                <span class="n">TitleBarButton</span><span class="o">.</span><span class="n">close</span><span class="p">)</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">top_level_dock_area</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">emit_dock_areas_removed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">on_visible_dock_area_count_changed</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">dock_areas_removed</span><span class="o">.</span><span class="n">emit</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">emit_dock_areas_added</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">on_visible_dock_area_count_changed</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">dock_areas_added</span><span class="o">.</span><span class="n">emit</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">new_splitter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">orientation</span><span class="p">:</span> <span class="n">Qt</span><span class="o">.</span><span class="n">Orientation</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="n">QWidget</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DockSplitter</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Helper function for creation of new splitter</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        orientation : Qt.Orientation</span>
+<span class="sd">        parent : QWidget, optional</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : DockSplitter</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">splitter</span> <span class="o">=</span> <span class="n">DockSplitter</span><span class="p">(</span><span class="n">orientation</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span>
+        <span class="n">opaque_resize</span> <span class="o">=</span> <span class="p">(</span><span class="n">DockFlags</span><span class="o">.</span><span class="n">opaque_splitter_resize</span> <span class="ow">in</span>
+                         <span class="bp">self</span><span class="o">.</span><span class="n">dock_manager</span><span class="o">.</span><span class="n">config_flags</span><span class="p">())</span>
+        <span class="n">splitter</span><span class="o">.</span><span class="n">setOpaqueResize</span><span class="p">(</span><span class="n">opaque_resize</span><span class="p">)</span>
+        <span class="n">splitter</span><span class="o">.</span><span class="n">setChildrenCollapsible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">splitter</span>
+
+    <span class="k">def</span> <span class="nf">on_dock_area_view_toggled</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">visible</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        On dock area view toggled</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        visible : bool</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">dock_area</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">sender</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">RuntimeError</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="s1">&#39;qtpydocking bug&#39;</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">visible_dock_area_count</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">visible</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_visible_dock_area_count</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_visible_dock_area_count</span> <span class="o">-=</span> <span class="mi">1</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">on_visible_dock_area_count_changed</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="o">.</span><span class="n">dock_area_view_toggled</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="n">dock_area</span><span class="p">,</span> <span class="n">visible</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="DockContainerWidget"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget">[docs]</a><span class="k">class</span> <span class="nc">DockContainerWidget</span><span class="p">(</span><span class="n">QFrame</span><span class="p">):</span>
+    <span class="c1"># This signal is emitted if one or multiple dock areas has been added to</span>
+    <span class="c1"># the internal list of dock areas. If multiple dock areas are inserted,</span>
+    <span class="c1"># this signal is emitted only once</span>
+    <span class="n">dock_areas_added</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">()</span>
+
+    <span class="c1"># This signal is emitted if one or multiple dock areas has been removed</span>
+    <span class="n">dock_areas_removed</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">()</span>
+
+    <span class="c1"># This signal is emitted if a dock area is opened or closed via</span>
+    <span class="c1"># toggleView() function</span>
+    <span class="n">dock_area_view_toggled</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="n">DockAreaWidget</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dock_manager</span><span class="p">:</span> <span class="s1">&#39;DockManager&#39;</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="n">QWidget</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Default Constructor</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        dock_manager : DockManager</span>
+<span class="sd">        parent : QWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span> <span class="o">=</span> <span class="n">DockContainerWidgetPrivate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_manager</span> <span class="o">=</span> <span class="n">dock_manager</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">is_floating</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">floating_widget</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">QGridLayout</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">layout</span><span class="p">)</span>
+
+        <span class="c1"># The function d.new_splitter() accesses the config flags from dock</span>
+        <span class="c1"># manager which in turn requires a properly constructed dock manager.</span>
+        <span class="c1"># If this dock container is the dock manager, then it is not properly</span>
+        <span class="c1"># constructed yet because this base class constructor is called before</span>
+        <span class="c1"># the constructor of the DockManager private class</span>
+        <span class="k">if</span> <span class="n">dock_manager</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">self</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_manager</span><span class="o">.</span><span class="n">register_dock_container</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">create_root_splitter</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">f</span><span class="s1">&#39;&lt;</span><span class="si">{self.__class__.__name__}</span><span class="s1"> is_floating=</span><span class="si">{self.d.is_floating}</span><span class="s1">&gt;&#39;</span>
+
+<div class="viewcode-block" id="DockContainerWidget.deleteLater"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget.deleteLater">[docs]</a>    <span class="k">def</span> <span class="nf">deleteLater</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_manager</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_manager</span><span class="o">.</span><span class="n">remove_dock_container</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">deleteLater</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="DockContainerWidget.event"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget.event">[docs]</a>    <span class="k">def</span> <span class="nf">event</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span> <span class="n">QEvent</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Handles activation events to update zOrderIndex</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        e : QEvent</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : bool</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">event</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+        <span class="k">global</span> <span class="n">_z_order_counter</span>  <span class="c1"># TODO</span>
+        <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">type</span><span class="p">()</span> <span class="o">==</span> <span class="n">QEvent</span><span class="o">.</span><span class="n">WindowActivate</span><span class="p">:</span>
+            <span class="n">_z_order_counter</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">z_order_index</span> <span class="o">=</span> <span class="n">_z_order_counter</span>
+        <span class="k">elif</span> <span class="n">e</span><span class="o">.</span><span class="n">type</span><span class="p">()</span> <span class="o">==</span> <span class="n">QEvent</span><span class="o">.</span><span class="n">Show</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">z_order_index</span><span class="p">:</span>
+            <span class="n">_z_order_counter</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">z_order_index</span> <span class="o">=</span> <span class="n">_z_order_counter</span>
+
+        <span class="k">return</span> <span class="n">result</span></div>
+
+<div class="viewcode-block" id="DockContainerWidget.root_splitter"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget.root_splitter">[docs]</a>    <span class="k">def</span> <span class="nf">root_splitter</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QSplitter</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Access function for the internal root splitter</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : QSplitter</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">root_splitter</span></div>
+
+<div class="viewcode-block" id="DockContainerWidget.create_root_splitter"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget.create_root_splitter">[docs]</a>    <span class="k">def</span> <span class="nf">create_root_splitter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Helper function for creation of the root splitter</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">root_splitter</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">root_splitter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">new_splitter</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">Horizontal</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">root_splitter</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockContainerWidget.drop_floating_widget"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget.drop_floating_widget">[docs]</a>    <span class="k">def</span> <span class="nf">drop_floating_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                             <span class="n">floating_widget</span><span class="p">:</span> <span class="s1">&#39;FloatingDockContainer&#39;</span><span class="p">,</span>
+                             <span class="n">target_pos</span><span class="p">:</span> <span class="n">QPoint</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Drop floating widget into the container</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        floating_widget : FloatingDockContainer</span>
+<span class="sd">        target_pos : QPoint</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;DockContainerWidget.dropFloatingWidget&#39;</span><span class="p">)</span>
+        <span class="n">dock_area</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dock_area_at</span><span class="p">(</span><span class="n">target_pos</span><span class="p">)</span>
+        <span class="n">drop_area</span> <span class="o">=</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">invalid</span>
+        <span class="n">container_drop_area</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_manager</span><span class="o">.</span><span class="n">container_overlay</span><span class="p">()</span><span class="o">.</span><span class="n">drop_area_under_cursor</span><span class="p">()</span>
+        <span class="n">floating_top_level_dock_widget</span> <span class="o">=</span> <span class="n">floating_widget</span><span class="o">.</span><span class="n">top_level_dock_widget</span><span class="p">()</span>
+        <span class="n">top_level_dock_widget</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">top_level_dock_widget</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">dock_area</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">drop_overlay</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_manager</span><span class="o">.</span><span class="n">dock_area_overlay</span><span class="p">()</span>
+            <span class="n">drop_overlay</span><span class="o">.</span><span class="n">set_allowed_areas</span><span class="p">(</span><span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">all_dock_areas</span><span class="p">)</span>
+            <span class="n">drop_area</span> <span class="o">=</span> <span class="n">drop_overlay</span><span class="o">.</span><span class="n">show_overlay</span><span class="p">(</span><span class="n">dock_area</span><span class="p">)</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">container_drop_area</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span>
+                    <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">invalid</span><span class="p">,</span> <span class="n">drop_area</span><span class="p">)):</span>
+                <span class="n">drop_area</span> <span class="o">=</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">invalid</span>
+
+            <span class="k">if</span> <span class="n">drop_area</span> <span class="o">!=</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">invalid</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Dock Area Drop Content: </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">drop_area</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">drop_into_section</span><span class="p">(</span><span class="n">floating_widget</span><span class="p">,</span> <span class="n">dock_area</span><span class="p">,</span> <span class="n">drop_area</span><span class="p">)</span>
+
+        <span class="c1"># mouse is over container</span>
+        <span class="k">if</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">invalid</span> <span class="o">==</span> <span class="n">drop_area</span><span class="p">:</span>
+            <span class="n">drop_area</span> <span class="o">=</span> <span class="n">container_drop_area</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Container Drop Content: </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">drop_area</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">drop_area</span> <span class="o">!=</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">invalid</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">drop_into_container</span><span class="p">(</span><span class="n">floating_widget</span><span class="p">,</span> <span class="n">drop_area</span><span class="p">)</span>
+
+        <span class="c1"># If there was a top level widget before the drop, then it is not top</span>
+        <span class="c1"># level widget anymore</span>
+        <span class="k">if</span> <span class="n">top_level_dock_widget</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">top_level_dock_widget</span><span class="o">.</span><span class="n">emit_top_level_changed</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="c1"># If we drop a floating widget with only one single dock widget, then we</span>
+        <span class="c1"># drop a top level widget that changes from floating to docked now</span>
+        <span class="k">if</span> <span class="n">floating_top_level_dock_widget</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">floating_top_level_dock_widget</span><span class="o">.</span><span class="n">emit_top_level_changed</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockContainerWidget.add_dock_area"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget.add_dock_area">[docs]</a>    <span class="k">def</span> <span class="nf">add_dock_area</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dock_area_widget</span><span class="p">:</span> <span class="n">DockAreaWidget</span><span class="p">,</span>
+                      <span class="n">area</span><span class="p">:</span> <span class="n">DockWidgetArea</span> <span class="o">=</span> <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">center</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Adds the given dock area to this container widget</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        dock_area_widget : DockAreaWidget</span>
+<span class="sd">        area : DockWidgetArea</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">container</span> <span class="o">=</span> <span class="n">dock_area_widget</span><span class="o">.</span><span class="n">dock_container</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">container</span> <span class="ow">and</span> <span class="n">container</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">self</span><span class="p">:</span>
+            <span class="n">container</span><span class="o">.</span><span class="n">remove_dock_area</span><span class="p">(</span><span class="n">dock_area_widget</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">add_dock_area</span><span class="p">(</span><span class="n">dock_area_widget</span><span class="p">,</span> <span class="n">area</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockContainerWidget.remove_dock_area"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget.remove_dock_area">[docs]</a>    <span class="k">def</span> <span class="nf">remove_dock_area</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">area</span><span class="p">:</span> <span class="n">DockAreaWidget</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Removes the given dock area from this container</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        area : DockAreaWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">def</span> <span class="nf">emit_and_exit</span><span class="p">():</span>
+            <span class="n">top_level_widget</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">top_level_dock_widget</span><span class="p">()</span>
+
+            <span class="c1"># Updated the title bar visibility of the dock widget if there is only</span>
+            <span class="c1"># one single visible dock widget</span>
+            <span class="n">emit_top_level_event_for_widget</span><span class="p">(</span><span class="n">top_level_widget</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dump_layout</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">emit_dock_areas_removed</span><span class="p">()</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;DockContainerWidget.removeDockArea&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">area</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_areas</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;Area </span><span class="si">%s</span><span class="s1"> not found in DockContainerWidget </span><span class="si">%s</span><span class="s1">?&#39;</span><span class="p">,</span>
+                         <span class="n">area</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="n">area</span><span class="o">.</span><span class="n">view_toggled</span><span class="o">.</span><span class="n">disconnect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">on_dock_area_view_toggled</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_areas</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">area</span><span class="p">)</span>
+        <span class="n">splitter</span> <span class="o">=</span> <span class="n">find_parent</span><span class="p">(</span><span class="n">DockSplitter</span><span class="p">,</span> <span class="n">area</span><span class="p">)</span>
+
+        <span class="c1"># Remove are from parent splitter and recursively hide tree of parent</span>
+        <span class="c1"># splitters if it has no visible content</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;area setParent </span><span class="si">%s</span><span class="s1"> None&#39;</span><span class="p">,</span> <span class="n">area</span><span class="p">)</span>
+        <span class="n">area</span><span class="o">.</span><span class="n">setParent</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+        <span class="n">hide_empty_parent_splitters</span><span class="p">(</span><span class="n">splitter</span><span class="p">)</span>
+
+        <span class="c1"># Remove this area from cached areas</span>
+        <span class="k">for</span> <span class="n">_area</span><span class="p">,</span> <span class="n">_widget</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">last_added_area_cache</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+            <span class="k">if</span> <span class="n">_widget</span> <span class="ow">is</span> <span class="n">splitter</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">last_added_area_cache</span><span class="p">[</span><span class="n">_area</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="c1"># If splitter has more than 1 widgets, we are finished and can leave</span>
+        <span class="k">if</span> <span class="n">splitter</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">emit_and_exit</span><span class="p">()</span>
+
+        <span class="c1"># If this is the RootSplitter we need to remove empty splitters to</span>
+        <span class="c1"># avoid too many empty splitters</span>
+        <span class="k">if</span> <span class="n">splitter</span> <span class="ow">is</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">root_splitter</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Removed from RootSplitter&#39;</span><span class="p">)</span>
+
+            <span class="c1"># If splitter is empty, we are finished</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">splitter</span><span class="o">.</span><span class="n">count</span><span class="p">():</span>
+                <span class="n">splitter</span><span class="o">.</span><span class="n">hide</span><span class="p">()</span>
+                <span class="k">return</span> <span class="n">emit_and_exit</span><span class="p">()</span>
+
+            <span class="n">child_splitter</span> <span class="o">=</span> <span class="n">splitter</span><span class="o">.</span><span class="n">widget</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+            <span class="c1"># If the one and only content widget of the splitter is not a splitter</span>
+            <span class="c1"># then we are finished</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">child_splitter</span><span class="p">,</span> <span class="n">QSplitter</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">emit_and_exit</span><span class="p">()</span>
+
+            <span class="c1"># We replace the superfluous RootSplitter with the ChildSplitter</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;child_splitter setParent </span><span class="si">%s</span><span class="s1"> None&#39;</span><span class="p">,</span> <span class="n">child_splitter</span><span class="p">)</span>
+            <span class="n">child_splitter</span><span class="o">.</span><span class="n">setParent</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">replaceWidget</span><span class="p">(</span><span class="n">splitter</span><span class="p">,</span> <span class="n">child_splitter</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">root_splitter</span> <span class="o">=</span> <span class="n">child_splitter</span>
+
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;RootSplitter replaced by child splitter&#39;</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">splitter</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Replacing splitter with content&#39;</span><span class="p">)</span>
+            <span class="n">parent_splitter</span> <span class="o">=</span> <span class="n">find_parent</span><span class="p">(</span><span class="n">QSplitter</span><span class="p">,</span> <span class="n">splitter</span><span class="p">)</span>
+            <span class="n">sizes</span> <span class="o">=</span> <span class="n">parent_splitter</span><span class="o">.</span><span class="n">sizes</span><span class="p">()</span>
+            <span class="n">widget</span> <span class="o">=</span> <span class="n">splitter</span><span class="o">.</span><span class="n">widget</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;widget setParent to dock container </span><span class="si">%s</span><span class="s1"> </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">widget</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+            <span class="n">widget</span><span class="o">.</span><span class="n">setParent</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+            <span class="n">replace_splitter_widget</span><span class="p">(</span><span class="n">parent_splitter</span><span class="p">,</span> <span class="n">splitter</span><span class="p">,</span> <span class="n">widget</span><span class="p">)</span>
+            <span class="n">parent_splitter</span><span class="o">.</span><span class="n">setSizes</span><span class="p">(</span><span class="n">sizes</span><span class="p">)</span>
+
+        <span class="n">splitter</span><span class="o">.</span><span class="n">deleteLater</span><span class="p">()</span>
+        <span class="n">splitter</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">return</span> <span class="n">emit_and_exit</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="DockContainerWidget.save_state"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget.save_state">[docs]</a>    <span class="k">def</span> <span class="nf">save_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stream</span><span class="p">:</span> <span class="n">QXmlStreamWriter</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Saves the state into the given stream</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        stream : QXmlStreamWriter</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;DockContainerWidget.saveState isFloating </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span>
+                     <span class="bp">self</span><span class="o">.</span><span class="n">is_floating</span><span class="p">())</span>
+        <span class="n">stream</span><span class="o">.</span><span class="n">writeStartElement</span><span class="p">(</span><span class="s2">&quot;Container&quot;</span><span class="p">)</span>
+        <span class="n">stream</span><span class="o">.</span><span class="n">writeAttribute</span><span class="p">(</span><span class="s2">&quot;Floating&quot;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_floating</span><span class="p">()</span> <span class="k">else</span> <span class="s1">&#39;0&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_floating</span><span class="p">():</span>
+            <span class="n">floating_widget</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">floating_widget</span><span class="p">()</span>
+            <span class="n">geometry</span> <span class="o">=</span> <span class="n">floating_widget</span><span class="o">.</span><span class="n">saveGeometry</span><span class="p">()</span>
+            <span class="n">stream</span><span class="o">.</span><span class="n">writeTextElement</span><span class="p">(</span><span class="s2">&quot;Geometry&quot;</span><span class="p">,</span> <span class="n">geometry</span><span class="o">.</span><span class="n">toHex</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">save_child_nodes_state</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">root_splitter</span><span class="p">)</span>
+        <span class="n">stream</span><span class="o">.</span><span class="n">writeEndElement</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="DockContainerWidget.restore_state"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget.restore_state">[docs]</a>    <span class="k">def</span> <span class="nf">restore_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stream</span><span class="p">:</span> <span class="n">QXmlStreamReader</span><span class="p">,</span> <span class="n">testing</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Restores the state from given stream.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        stream : QXmlStreamReader</span>
+<span class="sd">        testing : bool</span>
+<span class="sd">            If Testing is true, the function only parses the data from the</span>
+<span class="sd">            given stream but does not restore anything. You can use this check</span>
+<span class="sd">            for faulty files before you start restoring the state</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : bool</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">is_floating</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">stream</span><span class="o">.</span><span class="n">attributes</span><span class="p">()</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">&quot;Floating&quot;</span><span class="p">)))</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Restore DockContainerWidget Floating </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">is_floating</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">testing</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">_visible_dock_area_count</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+            <span class="c1"># invalidate the dock area count and clear the area cache</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_areas</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">last_added_area_cache</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">is_floating</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Restore floating widget&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">stream</span><span class="o">.</span><span class="n">readNextStartElement</span><span class="p">()</span> <span class="ow">or</span> <span class="n">stream</span><span class="o">.</span><span class="n">name</span><span class="p">()</span> <span class="o">!=</span> <span class="s2">&quot;Geometry&quot;</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+
+            <span class="n">geometry_string</span> <span class="o">=</span> <span class="n">stream</span><span class="o">.</span><span class="n">readElementText</span><span class="p">(</span>
+                <span class="n">QXmlStreamReader</span><span class="o">.</span><span class="n">ErrorOnUnexpectedElement</span><span class="p">)</span>
+
+            <span class="n">geometry</span> <span class="o">=</span> <span class="n">QByteArray</span><span class="o">.</span><span class="n">fromHex</span><span class="p">(</span><span class="n">geometry_string</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">geometry</span><span class="o">.</span><span class="n">isEmpty</span><span class="p">():</span>
+                <span class="k">return</span> <span class="kc">False</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">testing</span><span class="p">:</span>
+                <span class="n">floating_widget</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">floating_widget</span><span class="p">()</span>
+                <span class="n">floating_widget</span><span class="o">.</span><span class="n">restoreGeometry</span><span class="p">(</span><span class="n">geometry</span><span class="p">)</span>
+
+        <span class="n">res</span><span class="p">,</span> <span class="n">new_root_splitter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">restore_child_nodes</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">testing</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">res</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">if</span> <span class="n">testing</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+
+        <span class="c1"># If the root splitter is empty, rostoreChildNodes returns a 0 pointer</span>
+        <span class="c1"># and we need to create a new empty root splitter</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">new_root_splitter</span><span class="p">:</span>
+            <span class="n">new_root_splitter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">new_splitter</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">Horizontal</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">replaceWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">root_splitter</span><span class="p">,</span> <span class="n">new_root_splitter</span><span class="p">)</span>
+        <span class="n">old_root</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">root_splitter</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">root_splitter</span> <span class="o">=</span> <span class="n">new_root_splitter</span>
+        <span class="n">old_root</span><span class="o">.</span><span class="n">deleteLater</span><span class="p">()</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="DockContainerWidget.last_added_dock_area_widget"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget.last_added_dock_area_widget">[docs]</a>    <span class="k">def</span> <span class="nf">last_added_dock_area_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">area</span><span class="p">:</span> <span class="n">DockWidgetArea</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DockAreaWidget</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        This function returns the last added dock area widget for the given</span>
+<span class="sd">        area identifier or 0 if no dock area widget has been added for the</span>
+<span class="sd">        given area</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        area : DockWidgetArea</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : DockAreaWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">last_added_area_cache</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">area</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockContainerWidget.has_top_level_dock_widget"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget.has_top_level_dock_widget">[docs]</a>    <span class="k">def</span> <span class="nf">has_top_level_dock_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        This function returns true if this dock area has only one single</span>
+<span class="sd">        visible dock widget. A top level widget is a real floating widget. Only</span>
+<span class="sd">        the isFloating() function of top level widgets may returns true.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : bool</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_floating</span><span class="p">():</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="n">dock_areas</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">opened_dock_areas</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">dock_areas</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">return</span> <span class="n">dock_areas</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">open_dock_widgets_count</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span></div>
+
+<div class="viewcode-block" id="DockContainerWidget.top_level_dock_widget"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget.top_level_dock_widget">[docs]</a>    <span class="k">def</span> <span class="nf">top_level_dock_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;DockWidget&#39;</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        If hasSingleVisibleDockWidget() returns true, this function returns the</span>
+<span class="sd">        one and only visible dock widget. Otherwise it returns a nullptr.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : DockWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">top_level_dock_area</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">top_level_dock_area</span><span class="p">()</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">top_level_dock_area</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+        <span class="n">dock_widgets</span> <span class="o">=</span> <span class="n">top_level_dock_area</span><span class="o">.</span><span class="n">opened_dock_widgets</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">dock_widgets</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+        <span class="k">return</span> <span class="n">dock_widgets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="DockContainerWidget.top_level_dock_area"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget.top_level_dock_area">[docs]</a>    <span class="k">def</span> <span class="nf">top_level_dock_area</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DockAreaWidget</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Returns the top level dock area.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : DockAreaWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_floating</span><span class="p">():</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+        <span class="n">dock_areas</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">opened_dock_areas</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">dock_areas</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+        <span class="k">return</span> <span class="n">dock_areas</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="DockContainerWidget.dock_widgets"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget.dock_widgets">[docs]</a>    <span class="k">def</span> <span class="nf">dock_widgets</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        This function returns a list of all dock widgets in this floating</span>
+<span class="sd">        widget. It may be possible, depending on the implementation, that dock</span>
+<span class="sd">        widgets, that are not visible to the user have no parent widget.</span>
+<span class="sd">        Therefore simply calling findChildren() would not work here. Therefore</span>
+<span class="sd">        this function iterates over all dock areas and creates a list that</span>
+<span class="sd">        contains all dock widgets returned from all dock areas.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : list</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">widget</span>
+                <span class="k">for</span> <span class="n">dock_area</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_areas</span>
+                <span class="k">for</span> <span class="n">widget</span> <span class="ow">in</span> <span class="n">dock_area</span><span class="o">.</span><span class="n">dock_widgets</span><span class="p">()</span>
+                <span class="p">]</span></div>
+
+<div class="viewcode-block" id="DockContainerWidget.add_dock_widget"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget.add_dock_widget">[docs]</a>    <span class="k">def</span> <span class="nf">add_dock_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">area</span><span class="p">:</span> <span class="n">DockWidgetArea</span><span class="p">,</span> <span class="n">dockwidget</span><span class="p">:</span> <span class="s1">&#39;DockWidget&#39;</span><span class="p">,</span>
+                        <span class="n">dock_area_widget</span><span class="p">:</span> <span class="n">DockAreaWidget</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DockAreaWidget</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Adds dockwidget into the given area. If DockAreaWidget is not null,</span>
+<span class="sd">        then the area parameter indicates the area into the DockAreaWidget. If</span>
+<span class="sd">        DockAreaWidget is null, the Dockwidget will be dropped into the</span>
+<span class="sd">        container.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        area : DockWidgetArea</span>
+<span class="sd">        dockwidget : DockWidget</span>
+<span class="sd">        dock_area_widget : DockAreaWidget</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : DockAreaWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">old_dock_area</span> <span class="o">=</span> <span class="n">dockwidget</span><span class="o">.</span><span class="n">dock_area_widget</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">old_dock_area</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">old_dock_area</span><span class="o">.</span><span class="n">remove_dock_widget</span><span class="p">(</span><span class="n">dockwidget</span><span class="p">)</span>
+
+        <span class="n">dockwidget</span><span class="o">.</span><span class="n">set_dock_manager</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_manager</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">dock_area_widget</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_widget_into_dock_area</span><span class="p">(</span><span class="n">area</span><span class="p">,</span> <span class="n">dockwidget</span><span class="p">,</span> <span class="n">dock_area_widget</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_widget_into_container</span><span class="p">(</span><span class="n">area</span><span class="p">,</span> <span class="n">dockwidget</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockContainerWidget.remove_dock_widget"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget.remove_dock_widget">[docs]</a>    <span class="k">def</span> <span class="nf">remove_dock_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">widget</span><span class="p">:</span> <span class="s1">&#39;DockWidget&#39;</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Removes a given DockWidget</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        widget : DockWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">area</span> <span class="o">=</span> <span class="n">widget</span><span class="o">.</span><span class="n">dock_area_widget</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">area</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">area</span><span class="o">.</span><span class="n">remove_dock_widget</span><span class="p">(</span><span class="n">widget</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockContainerWidget.z_order_index"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget.z_order_index">[docs]</a>    <span class="k">def</span> <span class="nf">z_order_index</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Returns the current zOrderIndex</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : unsigned int</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">z_order_index</span></div>
+
+<div class="viewcode-block" id="DockContainerWidget.is_in_front_of"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget.is_in_front_of">[docs]</a>    <span class="k">def</span> <span class="nf">is_in_front_of</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="s1">&#39;DockContainerWidget&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        This function returns true if this container widgets z order index is</span>
+<span class="sd">        higher than the index of the container widget given in Other parameter</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        other : DockContainerWidget</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : bool</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">z_order_index</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">other</span><span class="o">.</span><span class="n">z_order_index</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="DockContainerWidget.dock_area_at"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget.dock_area_at">[docs]</a>    <span class="k">def</span> <span class="nf">dock_area_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">global_pos</span><span class="p">:</span> <span class="n">QPoint</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DockAreaWidget</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Returns the dock area at teh given global position or 0 if there is no</span>
+<span class="sd">        dock area at this position</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        global_pos : QPoint</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : DockAreaWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">for</span> <span class="n">dock_area</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_areas</span><span class="p">:</span>
+            <span class="n">pos</span> <span class="o">=</span> <span class="n">dock_area</span><span class="o">.</span><span class="n">mapFromGlobal</span><span class="p">(</span><span class="n">global_pos</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">dock_area</span><span class="o">.</span><span class="n">isVisible</span><span class="p">()</span> <span class="ow">and</span> <span class="n">dock_area</span><span class="o">.</span><span class="n">rect</span><span class="p">()</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">dock_area</span>
+
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="DockContainerWidget.dock_area"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget.dock_area">[docs]</a>    <span class="k">def</span> <span class="nf">dock_area</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DockAreaWidget</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Returns the dock area at the given Index or 0 if the index is out of range</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        index : int</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : DockAreaWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_areas</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="DockContainerWidget.opened_dock_areas"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget.opened_dock_areas">[docs]</a>    <span class="k">def</span> <span class="nf">opened_dock_areas</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Returns the list of dock areas that are not closed If all dock widgets</span>
+<span class="sd">        in a dock area are closed, the dock area will be closed</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : list</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">dock_area</span>
+                <span class="k">for</span> <span class="n">dock_area</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_areas</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">dock_area</span><span class="o">.</span><span class="n">isHidden</span><span class="p">()</span>
+                <span class="p">]</span></div>
+
+<div class="viewcode-block" id="DockContainerWidget.dock_area_count"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget.dock_area_count">[docs]</a>    <span class="k">def</span> <span class="nf">dock_area_count</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Returns the number of dock areas in this container</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : int</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_areas</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockContainerWidget.visible_dock_area_count"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget.visible_dock_area_count">[docs]</a>    <span class="k">def</span> <span class="nf">visible_dock_area_count</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Returns the number of visible dock areas</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : int</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">([</span><span class="n">dock_area</span>
+                    <span class="k">for</span> <span class="n">dock_area</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_areas</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="n">dock_area</span><span class="o">.</span><span class="n">isHidden</span><span class="p">()</span>
+                    <span class="p">])</span></div>
+
+        <span class="c1"># TODO_UPSTREAM Cache or precalculate this to speed it up because it is used during</span>
+        <span class="c1"># movement of floating widget</span>
+        <span class="c1"># return d.visible_dock_area_count()</span>
+
+<div class="viewcode-block" id="DockContainerWidget.is_floating"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget.is_floating">[docs]</a>    <span class="k">def</span> <span class="nf">is_floating</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        This function returns true, if this container is in a floating widget</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : bool</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">is_floating</span></div>
+
+<div class="viewcode-block" id="DockContainerWidget.dump_layout"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget.dump_layout">[docs]</a>    <span class="k">def</span> <span class="nf">dump_layout</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Dumps the layout for debugging purposes</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">logger</span><span class="o">.</span><span class="n">isEnabledFor</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">):</span>
+            <span class="k">return</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;--------------------------&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dump_recursive</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">root_splitter</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;--------------------------</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockContainerWidget.features"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget.features">[docs]</a>    <span class="k">def</span> <span class="nf">features</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DockWidgetFeature</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        This functions returns the dock widget features of all dock widget in</span>
+<span class="sd">        this container. A bitwise and is used to combine the flags of all dock</span>
+<span class="sd">        widgets. That means, if only dock widget does not support a certain</span>
+<span class="sd">        flag, the whole dock are does not support the flag.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : DockWidgetFeature</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">features</span> <span class="o">=</span> <span class="n">DockWidgetFeature</span><span class="o">.</span><span class="n">all_features</span>
+        <span class="k">for</span> <span class="n">dock_area</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_areas</span><span class="p">:</span>
+            <span class="n">features</span> <span class="o">&amp;=</span> <span class="n">dock_area</span><span class="o">.</span><span class="n">features</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">features</span></div>
+
+<div class="viewcode-block" id="DockContainerWidget.floating_widget"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget.floating_widget">[docs]</a>    <span class="k">def</span> <span class="nf">floating_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;FloatingDockContainer&#39;</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        If this dock container is in a floating widget, this function returns</span>
+<span class="sd">        the floating widget. Else, it returns a nullptr.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value : FloatingDockContainer</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="kn">from</span> <span class="nn">.floating_dock_container</span> <span class="k">import</span> <span class="n">FloatingDockContainer</span>
+        <span class="k">return</span> <span class="n">find_parent</span><span class="p">(</span><span class="n">FloatingDockContainer</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DockContainerWidget.close_other_areas"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_container_widget.DockContainerWidget.close_other_areas">[docs]</a>    <span class="k">def</span> <span class="nf">close_other_areas</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">keep_open_area</span><span class="p">:</span> <span class="n">DockAreaWidget</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Call this function to close all dock areas except the KeepOpenArea</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        keep_open_area : DockAreaWidget</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">for</span> <span class="n">dock_area</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">dock_areas</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">dock_area</span> <span class="o">!=</span> <span class="n">keep_open_area</span> <span class="ow">and</span> <span class="n">DockWidgetFeature</span><span class="o">.</span><span class="n">closable</span> <span class="ow">in</span> <span class="n">dock_area</span><span class="o">.</span><span class="n">features</span><span class="p">():</span>
+                <span class="n">dock_area</span><span class="o">.</span><span class="n">close_area</span><span class="p">()</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Ken Lauer
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
