@@ -1,0 +1,37 @@
+{% set data = load_setup_py_data() %}
+
+build:
+    noarch: python
+
+package:
+    name: qtpydocking
+    version: {{ data.get('version') }}
+
+
+source:
+    path: ..
+
+requirements:
+    build:
+      - python >=3.6
+      - setuptools
+
+    run:
+      - python >=3.6
+      - pyqt >=5
+      - qtpy
+
+test:
+    imports:
+      - qtpydocking
+
+    requires:
+      - pytest
+      - pyside2
+      - pyqt
+
+
+about:
+  home: https://github.com/klauer/qtpydocking
+  license: BSD 3-clause
+  summary: Pure Python port of the Qt-Advanced-Docking-System

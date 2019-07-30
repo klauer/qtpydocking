@@ -1,10 +1,22 @@
 language: python
 dist: xenial
-sudo: true
+sudo: false
+
+services:
+  - xvfb
+
+addons:
+    apt:
+      packages:
+        - herbstluftwm
+        - libxkbcommon-x11-0
+        - qt5-default
 
 env: 
-   global:
-      - OFFICIAL_REPO="klauer/qtpydocking"
+  global:
+    - OFFICIAL_REPO="klauer/qtpydocking"
+    # Doctr deploy key for klauer/qtpydocking
+    - secure: "qqYfoPOJWnlAEhLfXUiQqHxMFTuo4WibiTy1HiBpyImkhyLXeb7nP0bHn1AzhXcnYAYV7p8IjsIqyqkeklgGqufNfmwrz9kPoN1IZW53GxPYoVcThGpWOEeUavXsNUlT+ixHV245Y2DTFQ3B+44uH9SHW6r5EdGGYXTmqo6TZfLGlKcexeqEyhuaFww0b93THHxIyGdyhJ1SdmOOLHzswSrW/aUR8JbZhYl/j23Ou+g1uFIwv5iVx2pnWJibIyD80oQONMNqO+0gP4EfAy9XMMSABllojidK4So1oyyeLjUcNPyDSzvnrQVyEaptwc//eS55MFxn21oL4pUSH1cXprJpZAJUOMZzsNIGJNcIl+iG29ISha41Vn9bJy18lZqpeNe5jNKqNVO9tL3Vh2jplOK2E0tqa4HJx9n9aVizBh1j1M/RvH0XHaLqaQ+eg1Nl0owqG9nhPRCkV43LLnH3o8mmoqSQ+Qn2NgtAIqx1DjyUe/3PVhFZClnyFfXFgO8o+NYSsfyAr99H89tCh/l6Sry9Awk1VOy+HGgMtq/BAfTNB7gR97s0mNTnYetgYymdJncnI3f7I09IT448hHEX+dpRfNeRBtx9U1aErTEGgZexCTI2Lf1D88vRkoBaHr0NFTnKYHap9vOUsLb8O7j0VpdaKZfhjXg9HLw62E82fb0="
 
 cache:
   directories:
@@ -12,12 +24,29 @@ cache:
     - $HOME/.ccache  # https://github.com/travis-ci/travis-ci/issues/5853
 
 matrix:
+  fast_finish: true
   include:
     - python: 3.6
       env:
         - CONDA_UPLOAD=1
         - BUILD_DOCS=1
+        - QT_API=pyqt5
     - python: 3.7
+      env:
+        - QT_API=pyqt5
+    - python: 3.6
+      env:
+        - QT_API=PySide2
+    - python: 3.7
+      env:
+        - QT_API=PySide2
+  allow_failures:
+  - python: 3.6
+    env:
+      - QT_API=PySide2
+  - python: 3.7
+    env:
+      - QT_API=PySide2
 
 
 install:
@@ -45,19 +74,16 @@ install:
 
   # Install additional development requirements
   - pip install -Ur dev-requirements.txt
+
   # Install the package
   - pip install -e .
 
+  # Install the specific binding we're testing against
+  - pip install "${QT_API}"
+
 
 before_script:
-  - sudo apt-get update
-  # Install window manager
-  - sudo apt-get install -y xvfb herbstluftwm
-  # Taken from docs.travis-ci.com/user/gui-and-headless-browsers
-  - "export DISPLAY=:99.0"
-  - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -screen 0 1920x1200x24 -ac +extension GLX +render -noreset"
-  - sleep 3 # give xvfb some time to start
-  # Run windows manager
+  # Run the window manager
   - "herbstluftwm &"
   - sleep 1
 

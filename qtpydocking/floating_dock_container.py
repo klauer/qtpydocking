@@ -6,7 +6,7 @@ from qtpy.QtGui import QCloseEvent, QCursor, QGuiApplication, QHideEvent, QMoveE
 from qtpy.QtWidgets import QApplication, QBoxLayout, QWidget
 
 from .enums import DockWidgetFeature, DragState, DockWidgetArea
-from .util import QT_VERSION_TUPLE
+from .util import QT_VERSION_TUPLE, event_filter_decorator
 from .dock_container_widget import DockContainerWidget
 
 if TYPE_CHECKING:
@@ -473,6 +473,7 @@ class FloatingDockContainer(QWidget):
     #     '''
     #     super().showEvent(event)
 
+    @event_filter_decorator
     def eventFilter(self, watched: QObject, event: QEvent) -> bool:
         '''
         Eventfilter
@@ -497,6 +498,7 @@ class FloatingDockContainer(QWidget):
                 self.d.title_mouse_release_event()
 
         return False
+
 
     def dock_container(self) -> 'DockContainerWidget':
         '''

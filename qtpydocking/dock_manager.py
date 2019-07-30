@@ -4,7 +4,7 @@ import pathlib
 from typing import TYPE_CHECKING, Dict, List
 
 from qtpy.QtCore import (QByteArray, QSettings, QXmlStreamReader,
-                         QXmlStreamWriter, Signal, qCompress, qUncompress)
+                         QXmlStreamWriter, Signal)
 from qtpy.QtGui import QIcon
 from qtpy.QtWidgets import QAction, QMainWindow, QMenu, QWidget
 
@@ -13,6 +13,13 @@ from .enums import InsertionOrder, DockFlags, DockWidgetArea, OverlayMode
 from .dock_container_widget import DockContainerWidget
 from .dock_overlay import DockOverlay
 from .floating_dock_container import FloatingDockContainer
+
+try:
+    from qtpy.QtCore import qCompress, qUncompress
+except ImportError:
+    qCompress = None
+    qUncompress = None
+
 
 if TYPE_CHECKING:
     from .dock_area_widget import DockAreaWidget
@@ -610,6 +617,7 @@ class DockManager(DockContainerWidget):
 
         return (qCompress(xmldata, 9)
                 if DockFlags.xml_compression in self._mgr.config_flags
+                and qCompress is not None
                 else xmldata)
 
     def restore_state(self, state: QByteArray, version: int = 0) -> bool:
@@ -629,6 +637,10 @@ class DockManager(DockContainerWidget):
         value : bool
         '''
         if not state.startsWith(b'<?xml'):
+            if qUncompress is None:
+                raise RuntimeError(
+                        'Compression utilities unavailable with the '
+                        'current qt bindings')
             state = qUncompress(state)
 
         # Prevent multiple calls as long as state is not restore. This may
