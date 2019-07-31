@@ -90,6 +90,7 @@ before_script:
 
 script:
   - flake8 qtpydocking
+  - export PYTEST_QT_API="${QT_API}"
   - coverage run run_tests.py
   - set -e
   
