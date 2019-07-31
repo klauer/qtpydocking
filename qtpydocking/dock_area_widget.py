@@ -22,7 +22,7 @@ class DockAreaWidgetPrivate:
     contents_layout: DockAreaLayout
     title_bar: 'DockAreaTitleBar'
     dock_manager: 'DockManager'
-    update_close_button: bool
+    update_title_bar_buttons: bool
 
     def __init__(self, public):
         '''
@@ -37,7 +37,7 @@ class DockAreaWidgetPrivate:
         self.contents_layout = None
         self.title_bar = None
         self.dock_manager = None
-        self.update_close_button = False
+        self.update_title_bar_buttons = False
 
     def create_title_bar(self):
         '''
@@ -119,19 +119,35 @@ class DockAreaWidgetPrivate:
         '''
         return self.title_bar.tab_bar()
 
-    def update_close_button_state(self):
+    def update_title_bar_button_states(self):
         '''
-        Udpates the enable state of the close button
+        Udpates the enable state of the close/detach buttons
         '''
         if self.public.isHidden():
-            self.update_close_button = True
+            self.update_title_bar_buttons = True
             return
 
-        button = self.title_bar.button(
-            TitleBarButton.close)
-        enabled = DockWidgetFeature.closable in self.public.features()
-        button.setEnabled(enabled)
-        self.update_close_button = False
+        close_button = self.title_bar.button(TitleBarButton.close)
+        close_button.setEnabled(self.closable)
+
+        undock_button = self.title_bar.button(TitleBarButton.undock)
+        undock_button.setEnabled(self.floatable)
+
+        self.update_title_bar_buttons = False
+
+    @property
+    def closable(self):
+        '''
+        Is the dock area widget closable?
+        '''
+        return DockWidgetFeature.closable in self.public.features()
+
+    @property
+    def floatable(self):
+        '''
+        Is the dock area widget floatable?
+        '''
+        return DockWidgetFeature.floatable in self.public.features()
 
 
 class DockAreaWidget(QFrame):
@@ -241,7 +257,7 @@ class DockAreaWidget(QFrame):
             self.set_current_index(index)
 
         dock_widget.set_dock_area(self)
-        self.d.update_close_button_state()
+        self.d.update_title_bar_button_states()
 
     def add_dock_widget(self, dock_widget: 'DockWidget'):
         '''
@@ -281,7 +297,7 @@ class DockAreaWidget(QFrame):
             # contain any visible content
             self.hide_area_with_no_visible_content()
 
-        self.d.update_close_button_state()
+        self.d.update_title_bar_button_states()
         self.update_title_bar_visibility()
         top_level_dock_widget = dock_container.top_level_dock_widget()
         if top_level_dock_widget is not None:
@@ -640,8 +656,8 @@ class DockAreaWidget(QFrame):
         visible : bool
         '''
         super().setVisible(visible)
-        if self.d.update_close_button:
-            self.d.update_close_button_state()
+        if self.d.update_title_bar_buttons:
+            self.d.update_title_bar_button_states()
 
     def set_current_index(self, index: int):
         '''

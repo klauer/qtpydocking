@@ -6,7 +6,7 @@ from qtpy.QtGui import QMouseEvent, QWheelEvent
 from qtpy.QtWidgets import QBoxLayout, QFrame, QScrollArea, QSizePolicy, QWidget
 
 from .util import start_drag_distance, event_filter_decorator
-from .enums import DragState, DockWidgetArea
+from .enums import DragState, DockWidgetArea, DockWidgetFeature
 from .dock_widget_tab import DockWidgetTab
 from .floating_dock_container import FloatingDockContainer
 
@@ -279,6 +279,11 @@ class DockAreaTabBar(QScrollArea):
         if container.is_floating() and container.visible_dock_area_count() == 1:
             return
 
+        # If one single dock widget in this area is not floatable, then the
+        # whole area isn't floatable
+        if DockWidgetFeature.floatable not in self.d.dock_area.features():
+            return
+
         drag_distance = (self.d.drag_start_mouse_pos -
                          ev.pos()).manhattanLength()
         if drag_distance >= start_drag_distance():
@@ -299,6 +304,8 @@ class DockAreaTabBar(QScrollArea):
         # sense to move it to a new floating widget and leave this one empty
         container = self.d.dock_area.dock_container()
         if container.is_floating() and container.dock_area_count() == 1:
+            return
+        if DockWidgetFeature.floatable not in self.d.dock_area.features():
             return
 
         self.make_area_floating(event.pos(), DragState.inactive)

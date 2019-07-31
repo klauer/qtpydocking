@@ -15,7 +15,7 @@ from .dock_area_widget import DockAreaWidget
 
 if TYPE_CHECKING:
     from . import (DockManager, DockWidget, DockWidgetTab, DockAreaTabBar,
-                   FloatingDockContainer, DockAreaWidget)
+                   FloatingDockContainer)
 
 
 logger = logging.getLogger(__name__)

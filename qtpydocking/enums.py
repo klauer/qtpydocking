@@ -103,7 +103,7 @@ class IconColor(enum.Enum):
 
 class DockWidgetFeature(enum.IntFlag):
     closable = 0x01
-    movable = 0x02
+    movable = 0x02  # not yet implemented
     floatable = 0x04
     all_features = (closable | movable | floatable)
     no_features = 0

@@ -206,8 +206,9 @@ class DockAreaTitleBar(QFrame):
             self.d.dock_area.close_area()
 
     def on_undock_button_clicked(self):
-        self.d.tab_bar.make_area_floating(self.mapFromGlobal(QCursor.pos()),
-                                          DragState.inactive)
+        if DockWidgetFeature.floatable in self.d.dock_area.features():
+            self.d.tab_bar.make_area_floating(
+                self.mapFromGlobal(QCursor.pos()), DragState.inactive)
 
     def on_tabs_menu_action_triggered(self, action: QAction):
         '''
