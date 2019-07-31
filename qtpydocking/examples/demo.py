@@ -123,13 +123,12 @@ class MainWindow(QtWidgets.QMainWindow):
         self.dock_manager = DockManager(self)
         self.perspective_combo_box.activated.connect(self.dock_manager.open_perspective)
         self.create_content()
-        self.resize(800, 600)
+        self.resize(1280, 720)
         self.restore_state()
         self.restore_perspectives()
 
     def setup_ui(self):
         self.setObjectName("MainWindow")
-        self.resize(400, 300)
         self.setDockOptions(QtWidgets.QMainWindow.AllowTabbedDocks)
         self.centralWidget = QtWidgets.QWidget(self)
         self.centralWidget.setObjectName("centralWidget")

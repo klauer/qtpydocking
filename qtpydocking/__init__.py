@@ -61,5 +61,6 @@ __all__ = [
     'WidgetState',
     'ToggleViewActionMode',
     'InsertionOrder',
-    'examples'
+    'examples',
+    'util',
 ]

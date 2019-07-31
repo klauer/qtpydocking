@@ -14,8 +14,7 @@ from .dock_area_widget import DockAreaWidget
 
 
 if TYPE_CHECKING:
-    from . import (DockManager, DockWidget, DockWidgetTab, DockAreaTabBar,
-                   FloatingDockContainer)
+    from . import DockManager, DockWidget, FloatingDockContainer
 
 
 logger = logging.getLogger(__name__)
@@ -778,7 +777,6 @@ class DockContainerWidget(QFrame):
 
     def __init__(self, dock_manager: 'DockManager', parent: QWidget):
         '''
-        Default Constructor
 
         Parameters
         ----------
@@ -952,7 +950,7 @@ class DockContainerWidget(QFrame):
         hide_empty_parent_splitters(splitter)
 
         # Remove this area from cached areas
-        for _area, _widget in list(self.d.last_added_area_cache.items()):
+        for _area, _widget in self.d.last_added_area_cache.items():
             if _widget is splitter:
                 self.d.last_added_area_cache[_area] = None
 

@@ -2,13 +2,14 @@ from typing import TYPE_CHECKING, Optional
 import logging
 
 from qtpy.QtCore import QPoint, Qt, Signal, QSize
-from qtpy.QtGui import QCursor, QIcon
+from qtpy.QtGui import QCursor
 from qtpy.QtWidgets import (QAbstractButton, QAction, QBoxLayout, QFrame,
                             QMenu, QSizePolicy, QStyle, QToolButton)
 
 
 from .enums import DockFlags, DragState, DockWidgetFeature, TitleBarButton
-from .util import make_icon_pair
+from .util import set_button_icon
+
 
 if TYPE_CHECKING:
     from . import DockAreaWidget, DockAreaTabBar, DockManager
@@ -48,10 +49,8 @@ class DockAreaTitleBarPrivate:
         self.tabs_menu_button.setAutoRaise(True)
         self.tabs_menu_button.setPopupMode(QToolButton.InstantPopup)
 
-        make_icon_pair(self.public.style(),
-                       parent=self.tabs_menu_button,
-                       standard_pixmap=QStyle.SP_TitleBarUnshadeButton,
-                       transparent_role=QIcon.Disabled)
+        style = self.public.style()
+        set_button_icon(style, self.tabs_menu_button, QStyle.SP_TitleBarUnshadeButton)
 
         self.tabs_menu = QMenu(self.tabs_menu_button)
         self.tabs_menu.setToolTipsVisible(True)
@@ -72,10 +71,8 @@ class DockAreaTitleBarPrivate:
         self.undock_button.setAutoRaise(True)
         self.undock_button.setToolTip("Detach Group")
 
-        make_icon_pair(self.public.style(),
-                       parent=self.undock_button,
-                       standard_pixmap=QStyle.SP_TitleBarNormalButton,
-                       transparent_role=QIcon.Disabled)
+        set_button_icon(style, self.undock_button,
+                        QStyle.SP_TitleBarNormalButton)
 
         self.undock_button.setSizePolicy(
             QSizePolicy.Fixed, QSizePolicy.Expanding)
@@ -83,14 +80,12 @@ class DockAreaTitleBarPrivate:
         self.undock_button.clicked.connect(
             self.public.on_undock_button_clicked)
 
+        # Close button
         self.close_button = QToolButton()
         self.close_button.setObjectName("closeButton")
         self.close_button.setAutoRaise(True)
 
-        make_icon_pair(self.public.style(),
-                       parent=self.close_button,
-                       standard_pixmap=QStyle.SP_TitleBarCloseButton,
-                       transparent_role=QIcon.Disabled)
+        set_button_icon(style, self.close_button, QStyle.SP_TitleBarCloseButton)
 
         if self.test_config_flag(DockFlags.dock_area_close_button_closes_tab):
             self.close_button.setToolTip("Close Active Tab")
@@ -206,7 +201,7 @@ class DockAreaTitleBar(QFrame):
             self.d.dock_area.close_area()
 
     def on_undock_button_clicked(self):
-        if DockWidgetFeature.floatable in self.d.dock_area.features():
+        if self.d.dock_area.floatable:
             self.d.tab_bar.make_area_floating(
                 self.mapFromGlobal(QCursor.pos()), DragState.inactive)
 
@@ -247,16 +242,12 @@ class DockAreaTitleBar(QFrame):
         pos : QPoint
         '''
         menu = QMenu(self)
-        menu.addAction("Detach Area",
-                       self.on_undock_button_clicked)
+        menu.addAction("Detach Area", self.on_undock_button_clicked)
         menu.addSeparator()
-        action = menu.addAction("Close Area",
-                                self.on_close_button_clicked)
-        enabled = DockWidgetFeature.closable in self.d.dock_area.features()
-        action.setEnabled(enabled)
+        action = menu.addAction("Close Area", self.on_close_button_clicked)
+        action.setEnabled(self.d.dock_area.closable)
 
-        menu.addAction("Close Other Areas",
-                       self.d.dock_area.close_other_areas)
+        menu.addAction("Close Other Areas", self.d.dock_area.close_other_areas)
         menu.exec_(self.mapToGlobal(pos))
 
     def mark_tabs_menu_outdated(self):

@@ -13,6 +13,7 @@ from .enums import InsertionOrder, DockFlags, DockWidgetArea, OverlayMode
 from .dock_container_widget import DockContainerWidget
 from .dock_overlay import DockOverlay
 from .floating_dock_container import FloatingDockContainer
+from .util import LINUX
 
 try:
     from qtpy.QtCore import qCompress, qUncompress
@@ -286,7 +287,8 @@ class DockManagerPrivate:
 
 
 class DockManager(DockContainerWidget):
-    default_style_sheet = pathlib.Path(__file__).parent / 'default.css'
+    default_style_sheet = pathlib.Path(__file__).parent / (
+            'default_linux.css' if LINUX else 'default.css')
 
     # This signal is emitted if the list of perspectives changed
     perspective_list_changed = Signal()
@@ -315,10 +317,13 @@ class DockManager(DockContainerWidget):
 
     def __init__(self, parent: QWidget):
         '''
-        Default Constructor. If the given parent is a QMainWindow, the dock
-        manager sets itself as the central widget. Before you create any dock
-        widgets, you should properly setup the configuration flags via
-        setConfigFlags()
+        The central dock manager that maintains the complete docking system.
+        With the configuration flags you can globally control the functionality
+        of the docking system.
+
+        If the given parent is a QMainWindow, the dock manager sets itself as
+        the central widget. Before you create any dock widgets, you should
+        properly setup the configuration flags via setConfigFlags()
 
         Parameters
         ----------

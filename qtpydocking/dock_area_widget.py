@@ -128,26 +128,12 @@ class DockAreaWidgetPrivate:
             return
 
         close_button = self.title_bar.button(TitleBarButton.close)
-        close_button.setEnabled(self.closable)
+        close_button.setEnabled(self.public.closable)
 
         undock_button = self.title_bar.button(TitleBarButton.undock)
-        undock_button.setEnabled(self.floatable)
+        undock_button.setEnabled(self.public.floatable)
 
         self.update_title_bar_buttons = False
-
-    @property
-    def closable(self):
-        '''
-        Is the dock area widget closable?
-        '''
-        return DockWidgetFeature.closable in self.public.features()
-
-    @property
-    def floatable(self):
-        '''
-        Is the dock area widget floatable?
-        '''
-        return DockWidgetFeature.floatable in self.public.features()
 
 
 class DockAreaWidget(QFrame):
@@ -615,6 +601,20 @@ class DockAreaWidget(QFrame):
             self.dock_widget(i).save_state(stream)
 
         stream.writeEndElement()
+
+    @property
+    def closable(self):
+        '''
+        Is the dock area widget closable?
+        '''
+        return DockWidgetFeature.closable in self.features()
+
+    @property
+    def floatable(self):
+        '''
+        Is the dock area widget floatable?
+        '''
+        return DockWidgetFeature.floatable in self.features()
 
     def features(self) -> DockWidgetFeature:
         '''

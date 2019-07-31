@@ -11,8 +11,7 @@ from .enums import (DockWidgetFeature, WidgetState, ToggleViewActionMode,
 from .util import find_parent, emit_top_level_event_for_widget
 
 if TYPE_CHECKING:
-    from . import (DockAreaWidget, DockContainerWidget, DockManager,
-                   DockWidgetTab)
+    from . import DockAreaWidget, DockManager, DockWidgetTab
 
 logger = logging.getLogger(__name__)
 
@@ -165,7 +164,7 @@ class DockWidget(QFrame):
 
         from .dock_widget_tab import DockWidgetTab
         self.d.tab_widget = DockWidgetTab(dock_widget=self, parent=None)  # TODO: parent?
-        self.d.toggle_view_action = QAction(title, None)
+        self.d.toggle_view_action = QAction(title, self)
         self.d.toggle_view_action.setCheckable(True)
         self.d.toggle_view_action.triggered.connect(self.toggle_view)
         self.set_toolbar_floating_style(False)

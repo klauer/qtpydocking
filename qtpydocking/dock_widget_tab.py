@@ -6,7 +6,7 @@ from qtpy.QtGui import QContextMenuEvent, QCursor, QFontMetrics, QIcon, QMouseEv
 from qtpy.QtWidgets import (QBoxLayout, QFrame, QLabel, QMenu, QSizePolicy,
                             QStyle, QWidget, QPushButton)
 
-from .util import make_icon_pair, start_drag_distance
+from .util import start_drag_distance, set_button_icon
 from .enums import DragState, DockFlags, DockWidgetArea, DockWidgetFeature
 from .eliding_label import ElidingLabel
 
@@ -61,10 +61,8 @@ class DockWidgetTabPrivate:
         self.close_button = QPushButton()
         self.close_button.setObjectName("tabCloseButton")
 
-        # The standard icons do does not look good on high DPI screens
-        make_icon_pair(self.public.style(), parent=self.close_button,
-                       standard_pixmap=QStyle.SP_TitleBarCloseButton,
-                       transparent_role=QIcon.Disabled)
+        set_button_icon(self.public.style(), self.close_button,
+                        QStyle.SP_TitleBarCloseButton)
 
         self.close_button.setSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
         self.close_button.setVisible(False)
@@ -182,7 +180,7 @@ class DockWidgetTabPrivate:
             self.floating_widget = FloatingDockContainer(dock_area=self.dock_area)
 
         if dragging_state == DragState.floating_widget:
-            self.floating_widget.start_dragging(self.drag_start_mouse_position, size)
+            self.floating_widget.start_dragging(self.drag_start_mouse_position, size, self)
             overlay = self.dock_widget.dock_manager().container_overlay()
             overlay.set_allowed_areas(DockWidgetArea.outer_dock_areas)
             self.floating_widget = self.floating_widget
