@@ -180,7 +180,8 @@ class DockWidgetTabPrivate:
             self.floating_widget = FloatingDockContainer(dock_area=self.dock_area)
 
         if dragging_state == DragState.floating_widget:
-            self.floating_widget.start_dragging(self.drag_start_mouse_position, size, self)
+            self.floating_widget.start_dragging(self.drag_start_mouse_position,
+                                                size, self.public)
             overlay = self.dock_widget.dock_manager().container_overlay()
             overlay.set_allowed_areas(DockWidgetArea.outer_dock_areas)
             self.floating_widget = self.floating_widget
