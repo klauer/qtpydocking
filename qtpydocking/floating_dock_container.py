@@ -59,6 +59,7 @@ class FloatingDockContainerPrivate:
     def title_mouse_release_event(self):
         self.set_state(DragState.inactive)
         if not self.drop_container:
+            logger.debug('title_mouse_release_event: no drop container?')
             return
 
         dock_manager = self.dock_manager
@@ -73,7 +74,12 @@ class FloatingDockContainerPrivate:
                 overlay = dock_area_overlay
 
             rect = overlay.drop_overlay_rect()
-            if rect.isValid():
+            if not rect.isValid():
+                logger.debug('title_mouse_release_event: invalid rect '
+                             'x %s y %s w %s h %s',
+                             rect.x(), rect.y(),
+                             rect.width(), rect.height())
+            else:
                 public = self.public
                 frame_width = (public.frameSize().width() -
                                public.rect().width()) // 2
@@ -341,6 +347,7 @@ class FloatingDockContainer(FloatingWidgetBase):
             self.setWindowOpacity(1)
             self.activateWindow()
             if self.d.mouse_event_handler is not None:
+                logger.debug('Mouse event handler releaseMouse')
                 self.d.mouse_event_handler.releaseMouse()
                 self.d.mouse_event_handler = None
 

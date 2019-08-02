@@ -1,3 +1,4 @@
+import logging
 from typing import TYPE_CHECKING
 import math
 
@@ -12,6 +13,9 @@ from .util import set_button_icon
 
 if TYPE_CHECKING:
     from . import FloatingDockContainer
+
+
+logger = logging.getLogger(__name__)
 
 
 class FloatingWidgetTitleBarPrivate:
@@ -94,6 +98,7 @@ class FloatingWidgetTitleBar(QWidget):
         super().mousePressEvent(ev)
 
     def mouseReleaseEvent(self, ev: QMouseEvent):
+        logger.debug('FloatingWidgetTitleBar.mouseReleaseEvent')
         self.d.drag_state = DragState.inactive
         super().mouseReleaseEvent(ev)
 
