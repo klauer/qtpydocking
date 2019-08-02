@@ -13,3 +13,4 @@ recursive-include docs *.rst conf.py Makefile make.bat
 include versioneer.py
 include qtpydocking/_version.py
 include qtpydocking/default.css
+include qtpydocking/default_linux.css
