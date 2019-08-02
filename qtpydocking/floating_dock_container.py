@@ -126,9 +126,13 @@ class FloatingDockContainerPrivate:
         container_overlay = self.dock_manager.container_overlay()
         dock_area_overlay = self.dock_manager.dock_area_overlay()
         if not top_container:
+            logger.debug('update_drop_overlays: No top container')
             container_overlay.hide_overlay()
             dock_area_overlay.hide_overlay()
             return
+
+        logger.debug('update_drop_overlays: top container=%s name=%s',
+                     self.drop_container, self.drop_container.objectName())
 
         visible_dock_areas = top_container.visible_dock_area_count()
         container_overlay.set_allowed_areas(
@@ -414,7 +418,7 @@ class FloatingDockContainer(FloatingWidgetBase):
         ----------
         event : QEvent
         '''
-        super().changeEvent(event)
+        QWidget.changeEvent(self, event)
         if (event.type() == QEvent.ActivationChange) and self.isActiveWindow():
             logger.debug('FloatingWidget.changeEvent QEvent.ActivationChange ')
             global _z_order_counter  # TODO
@@ -429,7 +433,7 @@ class FloatingDockContainer(FloatingWidgetBase):
         ----------
         event : QMoveEvent
         '''
-        super().moveEvent(event)
+        QWidget.moveEvent(self, event)
         state = self.d.dragging_state
         if state == DragState.mouse_pressed:
             self.d.set_state(DragState.floating_widget)
@@ -484,7 +488,7 @@ class FloatingDockContainer(FloatingWidgetBase):
                 logger.debug('FloatingWidget.event QEvent.NonClientAreaMouseButtonRelease')
                 self.d.title_mouse_release_event()
 
-        return super().event(e)
+        return QWidget.event(self, e)
 
     def closeEvent(self, event: QCloseEvent):
         '''
