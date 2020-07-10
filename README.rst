@@ -1,3 +1,13 @@
+**DEPRECATED** 
+
+Qt-Advanced-Docking-System provides a Python wrapper directly, implemented with sip.
+It's easily available through conda-forge, and you should use it instead of qtpydocking:
+
+https://github.com/conda-forge/pyqtads-feedstock/#installing-pyqtads
+
+**DEPRECATED** 
+
+
 .. image:: https://img.shields.io/travis/klauer/qtpydocking.svg
         :target: https://travis-ci.org/klauer/qtpydocking
 
