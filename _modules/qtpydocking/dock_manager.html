@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,27 +11,29 @@
   
 
   
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
 </head>
@@ -48,7 +49,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> qtpydocking
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> qtpydocking
           
 
           
@@ -71,6 +72,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -104,6 +106,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -142,7 +145,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../index.html">Docs</a> &raquo;</li>
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../index.html">Module code</a> &raquo;</li>
         
@@ -165,29 +168,29 @@
 <span></span><span class="kn">import</span> <span class="nn">logging</span>
 <span class="kn">import</span> <span class="nn">pathlib</span>
 
-<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">TYPE_CHECKING</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TYPE_CHECKING</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span>
 
-<span class="kn">from</span> <span class="nn">qtpy.QtCore</span> <span class="k">import</span> <span class="p">(</span><span class="n">QByteArray</span><span class="p">,</span> <span class="n">QSettings</span><span class="p">,</span> <span class="n">QXmlStreamReader</span><span class="p">,</span>
+<span class="kn">from</span> <span class="nn">qtpy.QtCore</span> <span class="kn">import</span> <span class="p">(</span><span class="n">QByteArray</span><span class="p">,</span> <span class="n">QSettings</span><span class="p">,</span> <span class="n">QXmlStreamReader</span><span class="p">,</span>
                          <span class="n">QXmlStreamWriter</span><span class="p">,</span> <span class="n">Signal</span><span class="p">)</span>
-<span class="kn">from</span> <span class="nn">qtpy.QtGui</span> <span class="k">import</span> <span class="n">QIcon</span>
-<span class="kn">from</span> <span class="nn">qtpy.QtWidgets</span> <span class="k">import</span> <span class="n">QAction</span><span class="p">,</span> <span class="n">QMainWindow</span><span class="p">,</span> <span class="n">QMenu</span><span class="p">,</span> <span class="n">QWidget</span>
+<span class="kn">from</span> <span class="nn">qtpy.QtGui</span> <span class="kn">import</span> <span class="n">QIcon</span>
+<span class="kn">from</span> <span class="nn">qtpy.QtWidgets</span> <span class="kn">import</span> <span class="n">QAction</span><span class="p">,</span> <span class="n">QMainWindow</span><span class="p">,</span> <span class="n">QMenu</span><span class="p">,</span> <span class="n">QWidget</span>
 
-<span class="kn">from</span> <span class="nn">.enums</span> <span class="k">import</span> <span class="n">InsertionOrder</span><span class="p">,</span> <span class="n">DockFlags</span><span class="p">,</span> <span class="n">DockWidgetArea</span><span class="p">,</span> <span class="n">OverlayMode</span>
+<span class="kn">from</span> <span class="nn">.enums</span> <span class="kn">import</span> <span class="n">InsertionOrder</span><span class="p">,</span> <span class="n">DockFlags</span><span class="p">,</span> <span class="n">DockWidgetArea</span><span class="p">,</span> <span class="n">OverlayMode</span>
 
-<span class="kn">from</span> <span class="nn">.dock_container_widget</span> <span class="k">import</span> <span class="n">DockContainerWidget</span>
-<span class="kn">from</span> <span class="nn">.dock_overlay</span> <span class="k">import</span> <span class="n">DockOverlay</span>
-<span class="kn">from</span> <span class="nn">.floating_dock_container</span> <span class="k">import</span> <span class="n">FloatingDockContainer</span>
+<span class="kn">from</span> <span class="nn">.dock_container_widget</span> <span class="kn">import</span> <span class="n">DockContainerWidget</span>
+<span class="kn">from</span> <span class="nn">.dock_overlay</span> <span class="kn">import</span> <span class="n">DockOverlay</span>
+<span class="kn">from</span> <span class="nn">.floating_dock_container</span> <span class="kn">import</span> <span class="n">FloatingDockContainer</span>
 
 <span class="k">try</span><span class="p">:</span>
-    <span class="kn">from</span> <span class="nn">qtpy.QtCore</span> <span class="k">import</span> <span class="n">qCompress</span><span class="p">,</span> <span class="n">qUncompress</span>
+    <span class="kn">from</span> <span class="nn">qtpy.QtCore</span> <span class="kn">import</span> <span class="n">qCompress</span><span class="p">,</span> <span class="n">qUncompress</span>
 <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
     <span class="n">qCompress</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">qUncompress</span> <span class="o">=</span> <span class="kc">None</span>
 
 
 <span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
-    <span class="kn">from</span> <span class="nn">.dock_area_widget</span> <span class="k">import</span> <span class="n">DockAreaWidget</span>
-    <span class="kn">from</span> <span class="nn">.dock_widget</span> <span class="k">import</span> <span class="n">DockWidget</span>
+    <span class="kn">from</span> <span class="nn">.dock_area_widget</span> <span class="kn">import</span> <span class="n">DockAreaWidget</span>
+    <span class="kn">from</span> <span class="nn">.dock_widget</span> <span class="kn">import</span> <span class="n">DockWidget</span>
 
 
 <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
@@ -207,7 +210,7 @@
     <span class="n">restoring_state</span><span class="p">:</span> <span class="nb">bool</span>
     <span class="n">config_flags</span><span class="p">:</span> <span class="n">DockFlags</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">public</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">public</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Private data constructor</span>
 
@@ -477,7 +480,7 @@
     <span class="c1"># This signal is emitted if the dock manager finished opening a perspective</span>
     <span class="n">perspective_opened</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="n">QWidget</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="n">QWidget</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Default Constructor. If the given parent is a QMainWindow, the dock</span>
 <span class="sd">        manager sets itself as the central widget. Before you create any dock</span>
@@ -1032,11 +1035,19 @@
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2019, Ken Lauer
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -1047,7 +1058,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

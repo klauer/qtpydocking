@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,27 +11,29 @@
   
 
   
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
 </head>
@@ -48,7 +49,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> qtpydocking
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> qtpydocking
           
 
           
@@ -71,6 +72,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -104,6 +106,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -142,7 +145,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../index.html">Docs</a> &raquo;</li>
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../index.html">Module code</a> &raquo;</li>
         
@@ -162,18 +165,18 @@
            <div itemprop="articleBody">
             
   <h1>Source code for qtpydocking.dock_overlay</h1><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">Dict</span>
+<span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span>
 
-<span class="kn">from</span> <span class="nn">qtpy.QtCore</span> <span class="k">import</span> <span class="p">(</span><span class="n">QEvent</span><span class="p">,</span> <span class="n">QPoint</span><span class="p">,</span> <span class="n">QPointF</span><span class="p">,</span> <span class="n">QRect</span><span class="p">,</span> <span class="n">Qt</span><span class="p">,</span> <span class="n">QSizeF</span><span class="p">,</span> <span class="n">QRectF</span><span class="p">,</span>
+<span class="kn">from</span> <span class="nn">qtpy.QtCore</span> <span class="kn">import</span> <span class="p">(</span><span class="n">QEvent</span><span class="p">,</span> <span class="n">QPoint</span><span class="p">,</span> <span class="n">QPointF</span><span class="p">,</span> <span class="n">QRect</span><span class="p">,</span> <span class="n">Qt</span><span class="p">,</span> <span class="n">QSizeF</span><span class="p">,</span> <span class="n">QRectF</span><span class="p">,</span>
                          <span class="n">QLineF</span><span class="p">)</span>
-<span class="kn">from</span> <span class="nn">qtpy.QtGui</span> <span class="k">import</span> <span class="p">(</span><span class="n">QColor</span><span class="p">,</span> <span class="n">QCursor</span><span class="p">,</span> <span class="n">QHideEvent</span><span class="p">,</span> <span class="n">QPaintEvent</span><span class="p">,</span> <span class="n">QPainter</span><span class="p">,</span>
+<span class="kn">from</span> <span class="nn">qtpy.QtGui</span> <span class="kn">import</span> <span class="p">(</span><span class="n">QColor</span><span class="p">,</span> <span class="n">QCursor</span><span class="p">,</span> <span class="n">QHideEvent</span><span class="p">,</span> <span class="n">QPaintEvent</span><span class="p">,</span> <span class="n">QPainter</span><span class="p">,</span>
                         <span class="n">QPalette</span><span class="p">,</span> <span class="n">QShowEvent</span><span class="p">,</span> <span class="n">QPixmap</span><span class="p">,</span> <span class="n">QPolygonF</span><span class="p">)</span>
-<span class="kn">from</span> <span class="nn">qtpy.QtWidgets</span> <span class="k">import</span> <span class="n">QFrame</span><span class="p">,</span> <span class="n">QWidget</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QGridLayout</span>
+<span class="kn">from</span> <span class="nn">qtpy.QtWidgets</span> <span class="kn">import</span> <span class="n">QFrame</span><span class="p">,</span> <span class="n">QWidget</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QGridLayout</span>
 
 
-<span class="kn">from</span> <span class="nn">.enums</span> <span class="k">import</span> <span class="n">OverlayMode</span><span class="p">,</span> <span class="n">DockWidgetArea</span><span class="p">,</span> <span class="n">IconColor</span><span class="p">,</span> <span class="n">area_alignment</span>
+<span class="kn">from</span> <span class="nn">.enums</span> <span class="kn">import</span> <span class="n">OverlayMode</span><span class="p">,</span> <span class="n">DockWidgetArea</span><span class="p">,</span> <span class="n">IconColor</span><span class="p">,</span> <span class="n">area_alignment</span>
 <span class="c1"># from .dock_area_widget import DockAreaWidget</span>
-<span class="kn">from</span> <span class="nn">.dock_container_widget</span> <span class="k">import</span> <span class="n">DockAreaWidget</span>
+<span class="kn">from</span> <span class="nn">.dock_container_widget</span> <span class="kn">import</span> <span class="n">DockAreaWidget</span>
 
 
 <span class="k">class</span> <span class="nc">DockOverlayPrivate</span><span class="p">:</span>
@@ -187,7 +190,7 @@
     <span class="n">mode</span><span class="p">:</span> <span class="n">OverlayMode</span>
     <span class="n">drop_area_rect</span><span class="p">:</span> <span class="n">QRect</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">public</span><span class="p">:</span> <span class="s1">&#39;DockOverlay&#39;</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">public</span><span class="p">:</span> <span class="s1">&#39;DockOverlay&#39;</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Private data constructor</span>
 
@@ -208,7 +211,7 @@
 
 <div class="viewcode-block" id="DockOverlay"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlay">[docs]</a><span class="k">class</span> <span class="nc">DockOverlay</span><span class="p">(</span><span class="n">QFrame</span><span class="p">):</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="n">QWidget</span><span class="p">,</span> <span class="n">mode</span><span class="p">:</span> <span class="n">OverlayMode</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="n">QWidget</span><span class="p">,</span> <span class="n">mode</span><span class="p">:</span> <span class="n">OverlayMode</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Creates a dock overlay</span>
 
@@ -230,8 +233,8 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">cross</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">f</span><span class="s1">&#39;&lt;DockOverlay mode=</span><span class="si">{self.d.mode}</span><span class="s1">&gt;&#39;</span>
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;&lt;DockOverlay mode=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">mode</span><span class="si">}</span><span class="s1">&gt;&#39;</span>
 
 <div class="viewcode-block" id="DockOverlay.set_allowed_areas"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_overlay.DockOverlay.set_allowed_areas">[docs]</a>    <span class="k">def</span> <span class="nf">set_allowed_areas</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">areas</span><span class="p">:</span> <span class="n">DockWidgetArea</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
@@ -458,7 +461,7 @@
         <span class="p">},</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">public</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">public</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Private data constructor</span>
 
@@ -739,7 +742,7 @@
         <span class="n">DockWidgetArea</span><span class="o">.</span><span class="n">center</span><span class="p">,</span>
     <span class="p">]</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">overlay</span><span class="p">:</span> <span class="n">DockOverlay</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">overlay</span><span class="p">:</span> <span class="n">DockOverlay</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Creates an overlay cross for the given overlay</span>
 
@@ -1008,11 +1011,19 @@
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2019, Ken Lauer
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -1023,7 +1034,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

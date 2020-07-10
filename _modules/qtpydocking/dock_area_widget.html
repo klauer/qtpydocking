@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,27 +11,29 @@
   
 
   
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
 </head>
@@ -48,7 +49,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> qtpydocking
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> qtpydocking
           
 
           
@@ -71,6 +72,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -104,6 +106,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -142,7 +145,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../index.html">Docs</a> &raquo;</li>
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../index.html">Module code</a> &raquo;</li>
         
@@ -163,18 +166,18 @@
             
   <h1>Source code for qtpydocking.dock_area_widget</h1><div class="highlight"><pre>
 <span></span><span class="kn">import</span> <span class="nn">logging</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">TYPE_CHECKING</span><span class="p">,</span> <span class="n">Optional</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TYPE_CHECKING</span><span class="p">,</span> <span class="n">Optional</span>
 
-<span class="kn">from</span> <span class="nn">qtpy.QtCore</span> <span class="k">import</span> <span class="n">QRect</span><span class="p">,</span> <span class="n">QXmlStreamWriter</span><span class="p">,</span> <span class="n">Signal</span>
-<span class="kn">from</span> <span class="nn">qtpy.QtWidgets</span> <span class="k">import</span> <span class="n">QAbstractButton</span><span class="p">,</span> <span class="n">QAction</span><span class="p">,</span> <span class="n">QBoxLayout</span><span class="p">,</span> <span class="n">QFrame</span>
+<span class="kn">from</span> <span class="nn">qtpy.QtCore</span> <span class="kn">import</span> <span class="n">QRect</span><span class="p">,</span> <span class="n">QXmlStreamWriter</span><span class="p">,</span> <span class="n">Signal</span>
+<span class="kn">from</span> <span class="nn">qtpy.QtWidgets</span> <span class="kn">import</span> <span class="n">QAbstractButton</span><span class="p">,</span> <span class="n">QAction</span><span class="p">,</span> <span class="n">QBoxLayout</span><span class="p">,</span> <span class="n">QFrame</span>
 
-<span class="kn">from</span> <span class="nn">.util</span> <span class="k">import</span> <span class="p">(</span><span class="n">find_parent</span><span class="p">,</span> <span class="n">DEBUG_LEVEL</span><span class="p">,</span> <span class="n">hide_empty_parent_splitters</span><span class="p">,</span>
+<span class="kn">from</span> <span class="nn">.util</span> <span class="kn">import</span> <span class="p">(</span><span class="n">find_parent</span><span class="p">,</span> <span class="n">DEBUG_LEVEL</span><span class="p">,</span> <span class="n">hide_empty_parent_splitters</span><span class="p">,</span>
                    <span class="n">emit_top_level_event_for_widget</span><span class="p">)</span>
-<span class="kn">from</span> <span class="nn">.enums</span> <span class="k">import</span> <span class="n">TitleBarButton</span><span class="p">,</span> <span class="n">DockWidgetFeature</span>
-<span class="kn">from</span> <span class="nn">.dock_area_layout</span> <span class="k">import</span> <span class="n">DockAreaLayout</span>
+<span class="kn">from</span> <span class="nn">.enums</span> <span class="kn">import</span> <span class="n">TitleBarButton</span><span class="p">,</span> <span class="n">DockWidgetFeature</span>
+<span class="kn">from</span> <span class="nn">.dock_area_layout</span> <span class="kn">import</span> <span class="n">DockAreaLayout</span>
 
 <span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
-    <span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="p">(</span><span class="n">DockContainerWidget</span><span class="p">,</span> <span class="n">DockManager</span><span class="p">,</span> <span class="n">DockWidget</span><span class="p">,</span> <span class="n">DockWidgetTab</span><span class="p">,</span>
+    <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="p">(</span><span class="n">DockContainerWidget</span><span class="p">,</span> <span class="n">DockManager</span><span class="p">,</span> <span class="n">DockWidget</span><span class="p">,</span> <span class="n">DockWidgetTab</span><span class="p">,</span>
                    <span class="n">DockAreaTabBar</span><span class="p">,</span> <span class="n">DockAreaTitleBar</span><span class="p">)</span>
 
 <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
@@ -188,7 +191,7 @@
     <span class="n">dock_manager</span><span class="p">:</span> <span class="s1">&#39;DockManager&#39;</span>
     <span class="n">update_close_button</span><span class="p">:</span> <span class="nb">bool</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">public</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">public</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Private data constructor</span>
 
@@ -207,7 +210,7 @@
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Creates the layout for top area with tabs and close button</span>
 <span class="sd">        &#39;&#39;&#39;</span>
-        <span class="kn">from</span> <span class="nn">.dock_area_title_bar</span> <span class="k">import</span> <span class="n">DockAreaTitleBar</span>
+        <span class="kn">from</span> <span class="nn">.dock_area_title_bar</span> <span class="kn">import</span> <span class="n">DockAreaTitleBar</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">title_bar</span> <span class="o">=</span> <span class="n">DockAreaTitleBar</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">public</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">title_bar</span><span class="p">)</span>
 
@@ -313,7 +316,7 @@
     <span class="c1"># toggle view function</span>
     <span class="n">view_toggled</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="nb">bool</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dock_manager</span><span class="p">:</span> <span class="s1">&#39;DockManager&#39;</span><span class="p">,</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dock_manager</span><span class="p">:</span> <span class="s1">&#39;DockManager&#39;</span><span class="p">,</span>
                  <span class="n">parent</span><span class="p">:</span> <span class="s1">&#39;DockContainerWidget&#39;</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Default Constructor</span>
@@ -333,8 +336,8 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">create_title_bar</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">contents_layout</span> <span class="o">=</span> <span class="n">DockAreaLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">layout</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">f</span><span class="s1">&#39;&lt;</span><span class="si">{self.__class__.__name__}</span><span class="s1">&gt;&#39;</span>
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;&lt;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s1">&gt;&#39;</span>
 
 <div class="viewcode-block" id="DockAreaWidget.on_tab_close_requested"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_area_widget.DockAreaWidget.on_tab_close_requested">[docs]</a>    <span class="k">def</span> <span class="nf">on_tab_close_requested</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;</span>
@@ -517,7 +520,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">toggle_view</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
 
         <span class="c1"># Hide empty parent splitters</span>
-        <span class="kn">from</span> <span class="nn">.dock_splitter</span> <span class="k">import</span> <span class="n">DockSplitter</span>
+        <span class="kn">from</span> <span class="nn">.dock_splitter</span> <span class="kn">import</span> <span class="n">DockSplitter</span>
         <span class="n">splitter</span> <span class="o">=</span> <span class="n">find_parent</span><span class="p">(</span><span class="n">DockSplitter</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
         <span class="n">hide_empty_parent_splitters</span><span class="p">(</span><span class="n">splitter</span><span class="p">)</span>
 
@@ -600,7 +603,7 @@
 <span class="sd">        -------</span>
 <span class="sd">        value : DockContainerWidget</span>
 <span class="sd">        &#39;&#39;&#39;</span>
-        <span class="kn">from</span> <span class="nn">.dock_container_widget</span> <span class="k">import</span> <span class="n">DockContainerWidget</span>
+        <span class="kn">from</span> <span class="nn">.dock_container_widget</span> <span class="kn">import</span> <span class="n">DockContainerWidget</span>
         <span class="k">return</span> <span class="n">find_parent</span><span class="p">(</span><span class="n">DockContainerWidget</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="DockAreaWidget.title_bar_geometry"><a class="viewcode-back" href="../../api.html#qtpydocking.dock_area_widget.DockAreaWidget.title_bar_geometry">[docs]</a>    <span class="k">def</span> <span class="nf">title_bar_geometry</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QRect</span><span class="p">:</span>
@@ -851,11 +854,19 @@
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2019, Ken Lauer
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -866,7 +877,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {
