@@ -6,7 +6,7 @@ from qtpy.QtGui import QContextMenuEvent, QCursor, QFontMetrics, QIcon, QMouseEv
 from qtpy.QtWidgets import (QBoxLayout, QFrame, QLabel, QMenu, QSizePolicy,
                             QStyle, QWidget, QPushButton)
 
-from .util import make_icon_pair, start_drag_distance
+from .util import start_drag_distance, set_button_icon
 from .enums import DragState, DockFlags, DockWidgetArea, DockWidgetFeature
 from .eliding_label import ElidingLabel
 
@@ -61,10 +61,8 @@ class DockWidgetTabPrivate:
         self.close_button = QPushButton()
         self.close_button.setObjectName("tabCloseButton")
 
-        # The standard icons do does not look good on high DPI screens
-        make_icon_pair(self.public.style(), parent=self.close_button,
-                       standard_pixmap=QStyle.SP_TitleBarCloseButton,
-                       transparent_role=QIcon.Disabled)
+        set_button_icon(self.public.style(), self.close_button,
+                        QStyle.SP_TitleBarCloseButton)
 
         self.close_button.setSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
         self.close_button.setVisible(False)
@@ -182,7 +180,8 @@ class DockWidgetTabPrivate:
             self.floating_widget = FloatingDockContainer(dock_area=self.dock_area)
 
         if dragging_state == DragState.floating_widget:
-            self.floating_widget.start_dragging(self.drag_start_mouse_position, size)
+            self.floating_widget.start_dragging(self.drag_start_mouse_position,
+                                                size, self.public)
             overlay = self.dock_widget.dock_manager().container_overlay()
             overlay.set_allowed_areas(DockWidgetArea.outer_dock_areas)
             self.floating_widget = self.floating_widget
@@ -205,6 +204,13 @@ class DockWidgetTabPrivate:
         value : bool
         '''
         return flag in self.dock_area.dock_manager().config_flags()
+
+    @property
+    def floatable(self):
+        '''
+        Is the dock widget floatable?
+        '''
+        return DockWidgetFeature.floatable in self.dock_widget.features()
 
 
 class DockWidgetTab(QFrame):
@@ -230,8 +236,9 @@ class DockWidgetTab(QFrame):
         self.d.create_layout()
 
     def on_detach_action_triggered(self):
-        self.d.drag_start_mouse_position = self.mapFromGlobal(QCursor.pos())
-        self.d.start_floating(DragState.inactive)
+        if self.d.floatable:
+            self.d.drag_start_mouse_position = self.mapFromGlobal(QCursor.pos())
+            self.d.start_floating(DragState.inactive)
 
     def mousePressEvent(self, ev: QMouseEvent):
         '''
@@ -304,7 +311,7 @@ class DockWidgetTab(QFrame):
 
 
             # Floating is only allowed for widgets that are movable
-            if DockWidgetFeature.movable in self.d.dock_widget.features():
+            if self.d.floatable:
                 self.d.start_floating()
         elif (self.d.dock_area.open_dock_widgets_count() > 1
               and (ev.pos()-self.d.drag_start_mouse_position).manhattanLength() >= start_dist):
@@ -315,7 +322,7 @@ class DockWidgetTab(QFrame):
 
     def contextMenuEvent(self, ev: QContextMenuEvent):
         '''
-        Contextmenuevent
+        Context menu event
 
         Parameters
         ----------
@@ -324,7 +331,9 @@ class DockWidgetTab(QFrame):
         ev.accept()
         self.d.drag_start_mouse_position = ev.pos()
         menu = QMenu(self)
-        menu.addAction("Detach", self.on_detach_action_triggered)
+        detach = menu.addAction("Detach", self.on_detach_action_triggered)
+        detach.setEnabled(self.d.floatable)
+
         menu.addSeparator()
 
         action = menu.addAction("Close", self.close_requested)
@@ -343,7 +352,9 @@ class DockWidgetTab(QFrame):
         # If this is the last dock area in a dock container it does not make
         # sense to move it to a new floating widget and leave this one
         # empty
-        if not self.d.dock_area.dock_container().is_floating() or self.d.dock_area.dock_widgets_count() > 1:
+        if (self.d.floatable and
+                (not self.d.dock_area.dock_container().is_floating()
+                 or self.d.dock_area.dock_widgets_count() > 1)):
             self.d.drag_start_mouse_position = event.pos()
             self.d.start_floating(DragState.inactive)
 

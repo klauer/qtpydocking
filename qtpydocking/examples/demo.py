@@ -123,13 +123,12 @@ class MainWindow(QtWidgets.QMainWindow):
         self.dock_manager = DockManager(self)
         self.perspective_combo_box.activated.connect(self.dock_manager.open_perspective)
         self.create_content()
-        self.resize(800, 600)
+        self.resize(1280, 720)
         self.restore_state()
         self.restore_perspectives()
 
     def setup_ui(self):
         self.setObjectName("MainWindow")
-        self.resize(400, 300)
         self.setDockOptions(QtWidgets.QMainWindow.AllowTabbedDocks)
         self.centralWidget = QtWidgets.QWidget(self)
         self.centralWidget.setObjectName("centralWidget")
@@ -208,16 +207,20 @@ class MainWindow(QtWidgets.QMainWindow):
         dock_widget.set_feature(DockWidgetFeature.closable, False)
         self.dock_manager.add_dock_widget(DockWidgetArea.left, dock_widget)
         self.dock_manager.add_dock_widget(DockWidgetArea.left, create_long_text_label_dock_widget(view_menu))
+
         file_system_widget = create_file_system_tree_dock_widget(view_menu)
         tool_bar = file_system_widget.create_default_tool_bar()
         tool_bar.addAction(self.action_save_state)
         tool_bar.addAction(self.action_restore_state)
         self.dock_manager.add_dock_widget(DockWidgetArea.bottom, file_system_widget)
+
         file_system_widget = create_file_system_tree_dock_widget(view_menu)
         tool_bar = file_system_widget.create_default_tool_bar()
         tool_bar.addAction(self.action_save_state)
         tool_bar.addAction(self.action_restore_state)
         file_system_widget.set_feature(DockWidgetFeature.movable, False)
+        file_system_widget.set_feature(DockWidgetFeature.floatable, False)
+
         top_dock_area = self.dock_manager.add_dock_widget(DockWidgetArea.top, file_system_widget)
         dock_widget = create_calendar_dock_widget(view_menu)
         dock_widget.set_feature(DockWidgetFeature.closable, False)

@@ -1,0 +1,112 @@
+/*
+ * This file was originally from:
+ *
+ * Qt Advanced Docking System
+ * Copyright (C) 2017 Uwe Kindler
+ * 
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ * 
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Default style sheet on Linux Platforms
+ */
+
+DockContainerWidget
+{
+    background: palette(dark);
+}
+
+DockContainerWidget QSplitter::handle
+{
+    background: palette(dark);
+}
+
+DockAreaWidget
+{
+    background: palette(window);
+    border: 1px solid white;
+}
+
+DockAreaWidget #tabsMenuButton::menu-indicator
+{
+    image: none;
+}
+
+
+DockWidgetTab
+{
+    background: palette(window);
+    border-color: palette(light);
+    border-style: solid;
+    border-width: 0 1px 0 0;
+    padding: 0 0px;
+}
+
+DockWidgetTab[activeTab="true"]
+{
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:0.5, stop:0 palette(window), stop:1 palette(light));
+    /*background: palette(highlight);*/
+}
+
+DockWidgetTab QLabel
+{
+    color: palette(dark);
+}
+
+DockWidgetTab[activeTab="true"] QLabel
+{
+    color: palette(foreground);
+}
+
+DockWidget
+{
+    background: palette(light);
+    border-color: palette(light);
+    border-style: solid;
+    border-width: 1px 0 0 0;
+}
+
+#tabsMenuButton,
+#closeButton,
+#undockButton
+{
+	padding: 0px -2px;
+}
+
+
+QScrollArea#dockWidgetScrollArea
+{
+	padding: 0px;
+	border: none;
+}
+
+
+#tabCloseButton
+{
+    margin-top: 2px;
+    background: none;
+    border: none;
+    padding: 0px -2px;
+}
+
+#tabCloseButton:hover
+{
+    border: 1px solid rgba(0, 0, 0, 32);
+    background: rgba(0, 0, 0, 16);
+}
+
+#tabCloseButton:pressed
+{
+    background: rgba(0, 0, 0, 32);
+}

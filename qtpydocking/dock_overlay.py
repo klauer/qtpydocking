@@ -10,6 +10,16 @@ from qtpy.QtWidgets import QFrame, QWidget, QLabel, QGridLayout
 from .enums import OverlayMode, DockWidgetArea, IconColor, area_alignment
 # from .dock_area_widget import DockAreaWidget
 from .dock_container_widget import DockAreaWidget
+from .util import LINUX
+
+
+def _drop_indicator_width(label: QLabel) -> float:
+    '''
+    Drop indicator width depending on the operating system for a given label
+    '''
+    if LINUX:
+        return 40.
+    return 3.0 * label.fontMetrics().height()
 
 
 class DockOverlayPrivate:
@@ -394,7 +404,7 @@ class DockOverlayCrossPrivate:
         l = QLabel()
         l.setObjectName("DockWidgetAreaLabel")
 
-        metric = 3.0 * l.fontMetrics().height()
+        metric = _drop_indicator_width(l)
         size = QSizeF(metric, metric)
         l.setPixmap(self.create_high_dpi_drop_indicator_pixmap(size, area, mode))
         l.setWindowFlags(Qt.Tool | Qt.FramelessWindowHint)
@@ -410,7 +420,7 @@ class DockOverlayCrossPrivate:
         ----------
         drop_indicator_widget : QLabel
         '''
-        metric = 3.0 * label.fontMetrics().height()
+        metric = _drop_indicator_width(label)
         size = QSizeF(metric, metric)
         area = label.property("dockWidgetArea")
         label.setPixmap(

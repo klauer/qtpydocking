@@ -3,11 +3,12 @@ import logging
 
 from qtpy.QtCore import (QEvent, QObject, QPoint, QRect, QSize, QXmlStreamReader, Qt)
 from qtpy.QtGui import QCloseEvent, QCursor, QGuiApplication, QHideEvent, QMoveEvent
-from qtpy.QtWidgets import QApplication, QBoxLayout, QWidget
+from qtpy.QtWidgets import QApplication, QBoxLayout, QWidget, QDockWidget
 
 from .enums import DockWidgetFeature, DragState, DockWidgetArea
-from .util import QT_VERSION_TUPLE, event_filter_decorator
+from .util import QT_VERSION_TUPLE, LINUX, event_filter_decorator
 from .dock_container_widget import DockContainerWidget
+from .floating_widget_title_bar import FloatingWidgetTitleBar
 
 if TYPE_CHECKING:
     from . import DockAreaWidget, DockWidget, DockManager
@@ -27,6 +28,8 @@ class FloatingDockContainerPrivate:
     drag_start_mouse_position: QPoint
     drop_container: DockContainerWidget
     single_dock_area: 'DockAreaWidget'
+    mouse_event_handler: QWidget
+    title_bar: FloatingWidgetTitleBar
 
     def __init__(self, public):
         '''
@@ -49,9 +52,14 @@ class FloatingDockContainerPrivate:
         self.drop_container = None
         self.single_dock_area = None
 
+        # For Linux, specifically (TODO - better split?)
+        self.mouse_event_handler = None
+        self.title_bar = None
+
     def title_mouse_release_event(self):
         self.set_state(DragState.inactive)
         if not self.drop_container:
+            logger.debug('title_mouse_release_event: no drop container?')
             return
 
         dock_manager = self.dock_manager
@@ -66,7 +74,12 @@ class FloatingDockContainerPrivate:
                 overlay = dock_area_overlay
 
             rect = overlay.drop_overlay_rect()
-            if rect.isValid():
+            if not rect.isValid():
+                logger.debug('title_mouse_release_event: invalid rect '
+                             'x %s y %s w %s h %s',
+                             rect.x(), rect.y(),
+                             rect.width(), rect.height())
+            else:
                 public = self.public
                 frame_width = (public.frameSize().width() -
                                public.rect().width()) // 2
@@ -113,9 +126,13 @@ class FloatingDockContainerPrivate:
         container_overlay = self.dock_manager.container_overlay()
         dock_area_overlay = self.dock_manager.dock_area_overlay()
         if not top_container:
+            logger.debug('update_drop_overlays: No top container')
             container_overlay.hide_overlay()
             dock_area_overlay.hide_overlay()
             return
+
+        logger.debug('update_drop_overlays: top container=%s name=%s',
+                     self.drop_container, self.drop_container.objectName())
 
         visible_dock_areas = top_container.visible_dock_area_count()
         container_overlay.set_allowed_areas(
@@ -159,8 +176,20 @@ class FloatingDockContainerPrivate:
         '''
         self.dragging_state = state_id
 
+    def set_window_title(self, text: str):
+        if LINUX:
+            self.title_bar.set_title(text)
+        else:
+            self.public.setWindowTitle(text)
 
-class FloatingDockContainer(QWidget):
+
+if LINUX:
+    FloatingWidgetBase = QDockWidget
+else:
+    FloatingWidgetBase = QWidget
+
+
+class FloatingDockContainer(FloatingWidgetBase):
     def __init__(self, *, dock_area: 'DockAreaWidget' = None,
                  dock_widget: 'DockWidget' = None,
                  dock_manager: 'DockManager' = None):
@@ -181,23 +210,31 @@ class FloatingDockContainer(QWidget):
         if dock_manager is None:
             raise ValueError('Must pass in either dock_area, dock_widget, or dock_manager')
 
-        super().__init__(dock_manager, Qt.Window)
+        super().__init__(dock_manager)
         self.d = FloatingDockContainerPrivate(self)
-        self.setWindowFlags(Qt.Window | Qt.WindowMaximizeButtonHint | Qt.WindowCloseButtonHint)
         self.d.dock_manager = dock_manager
-        layout = QBoxLayout(QBoxLayout.TopToBottom)
-        layout.setContentsMargins(0, 0, 0, 0)
-        layout.setSpacing(0)
-        self.setLayout(layout)
-
         dock_container = DockContainerWidget(dock_manager, self)
         self.d.dock_container = dock_container
-
         dock_container.destroyed.connect(self._destroyed)
-
         dock_container.dock_areas_added.connect(self.on_dock_areas_added_or_removed)
         dock_container.dock_areas_removed.connect(self.on_dock_areas_added_or_removed)
-        layout.addWidget(dock_container)
+
+        if LINUX:
+            self.d.title_bar = FloatingWidgetTitleBar(self)
+            self.setWindowFlags(super().windowFlags() | Qt.Tool)
+            self.setWidget(self.d.dock_container)
+            self.setFloating(True)
+            self.setFeatures(QDockWidget.AllDockWidgetFeatures)
+            self.setTitleBarWidget(self.d.title_bar)
+            self.d.title_bar.close_requested.connect(self.close)
+        else:
+            self.setWindowFlags(Qt.Window | Qt.WindowMaximizeButtonHint | Qt.WindowCloseButtonHint)
+            layout = QBoxLayout(QBoxLayout.TopToBottom)
+            layout.setContentsMargins(0, 0, 0, 0)
+            layout.setSpacing(0)
+            self.setLayout(layout)
+            layout.addWidget(dock_container)
+
         dock_manager.register_floating_widget(self)
 
         # We install an event filter to detect mouse release events because we
@@ -210,6 +247,8 @@ class FloatingDockContainer(QWidget):
         elif dock_widget is not None:
             dock_container.add_dock_widget(
                 DockWidgetArea.center, dock_widget)
+        if (dock_area or dock_widget) and LINUX:
+            self.d.title_bar.enable_close_button(self.is_closable())
 
     def __repr__(self):
         return f'<FloatingDockContainer container={self.d.dock_container}>'
@@ -234,14 +273,16 @@ class FloatingDockContainer(QWidget):
         top_level_dock_area = self.d.dock_container.top_level_dock_area()
         if top_level_dock_area is not None:
             self.d.single_dock_area = top_level_dock_area
-            self.setWindowTitle(self.d.single_dock_area.current_dock_widget().windowTitle())
+            title = self.d.single_dock_area.current_dock_widget().windowTitle()
             self.d.single_dock_area.current_changed.connect(self.on_dock_area_current_changed)
         else:
             if self.d.single_dock_area:
                 self.d.single_dock_area.current_changed.disconnect(self.on_dock_area_current_changed)
                 self.d.single_dock_area = None
 
-            self.setWindowTitle(QApplication.applicationDisplayName())
+            title = QApplication.applicationDisplayName()
+
+        self.d.set_window_title(title)
 
     def on_dock_area_current_changed(self, index: int):
         '''
@@ -255,10 +296,11 @@ class FloatingDockContainer(QWidget):
         #pylint: disable=unused-argument
         widget = self.d.single_dock_area.current_dock_widget()
         if widget:
-            self.setWindowTitle(widget.windowTitle())
+            self.d.set_window_title(widget.windowTitle())
 
     def start_floating(self, drag_start_mouse_pos: QPoint, size: QSize,
-                       drag_state: DragState):
+                       drag_state: DragState,
+                       mouse_event_handler: QWidget=None):
         '''
         Starts floating at the given global position. Use moveToGlobalPos() to
         move the widget to a new position depending on the start position given
@@ -269,14 +311,23 @@ class FloatingDockContainer(QWidget):
         drag_start_mouse_pos : QPoint
         size : QSize
         drag_state : DragState
+        mouse_event_handler : QWidget
         '''
         self.resize(size)
         self.d.set_state(drag_state)
         self.d.drag_start_mouse_position = drag_start_mouse_pos
+        if LINUX:
+            if drag_state == DragState.floating_widget:
+                self.setAttribute(Qt.WA_X11NetWmWindowTypeDock, True)
+                self.setWindowOpacity(0.6)
+                self.d.mouse_event_handler = mouse_event_handler
+                if mouse_event_handler:
+                    mouse_event_handler.grabMouse()
         self.move_floating()
         self.show()
 
-    def start_dragging(self, drag_start_mouse_pos: QPoint, size: QSize):
+    def start_dragging(self, drag_start_mouse_pos: QPoint, size: QSize,
+                       mouse_event_handler: QWidget=None):
         '''
         Call this function to start dragging the floating widget
 
@@ -284,9 +335,25 @@ class FloatingDockContainer(QWidget):
         ----------
         drag_start_mouse_pos : QPoint
         size : QSize
+        mouse_event_handler : QWidget
         '''
         self.start_floating(drag_start_mouse_pos, size,
-                            DragState.floating_widget)
+                            DragState.floating_widget, mouse_event_handler)
+
+    def finish_dragging(self):
+        '''
+        Call this function if you explecitely want to signal that dragging has
+        finished
+        '''
+        logger.debug('FloatingDockContainer.finish_dragging')
+        if LINUX:
+            self.setAttribute(Qt.WA_X11NetWmWindowTypeDock, False)
+            self.setWindowOpacity(1)
+            self.activateWindow()
+            if self.d.mouse_event_handler is not None:
+                logger.debug('Mouse event handler releaseMouse')
+                self.d.mouse_event_handler.releaseMouse()
+                self.d.mouse_event_handler = None
 
     def init_floating_geometry(self, drag_start_mouse_pos: QPoint, size: QSize):
         '''
@@ -337,9 +404,11 @@ class FloatingDockContainer(QWidget):
         '''
         top_level_dock_area = self.d.dock_container.top_level_dock_area()
         if top_level_dock_area is not None:
-            self.setWindowTitle(top_level_dock_area.current_dock_widget().windowTitle())
+            title = top_level_dock_area.current_dock_widget().windowTitle()
         else:
-            self.setWindowTitle(QApplication.applicationDisplayName())
+            title = QApplication.applicationDisplayName()
+
+        self.d.set_window_title(title)
 
     def changeEvent(self, event: QEvent):
         '''
@@ -349,7 +418,7 @@ class FloatingDockContainer(QWidget):
         ----------
         event : QEvent
         '''
-        super().changeEvent(event)
+        QWidget.changeEvent(self, event)
         if (event.type() == QEvent.ActivationChange) and self.isActiveWindow():
             logger.debug('FloatingWidget.changeEvent QEvent.ActivationChange ')
             global _z_order_counter  # TODO
@@ -364,7 +433,7 @@ class FloatingDockContainer(QWidget):
         ----------
         event : QMoveEvent
         '''
-        super().moveEvent(event)
+        QWidget.moveEvent(self, event)
         state = self.d.dragging_state
         if state == DragState.mouse_pressed:
             self.d.set_state(DragState.floating_widget)
@@ -419,7 +488,7 @@ class FloatingDockContainer(QWidget):
                 logger.debug('FloatingWidget.event QEvent.NonClientAreaMouseButtonRelease')
                 self.d.title_mouse_release_event()
 
-        return super().event(e)
+        return QWidget.event(self, e)
 
     def closeEvent(self, event: QCloseEvent):
         '''
@@ -444,7 +513,7 @@ class FloatingDockContainer(QWidget):
         # Starting from Qt version 5.12.2 this seems to work again. But
         # now the QEvent.NonClientAreaMouseButtonPress function returns always
         # Qt.RightButton even if the left button was pressed
-        if (5, 9, 2) < QT_VERSION_TUPLE < (5, 12, 2):
+        if not LINUX and (5, 9, 2) < QT_VERSION_TUPLE < (5, 12, 2):
             event.ignore()
             self.hide()
         else:
@@ -495,10 +564,10 @@ class FloatingDockContainer(QWidget):
                 qapp = QApplication.instance()
                 qapp.removeEventFilter(self)
                 logger.debug('FloatingWidget.eventFilter QEvent.MouseButtonRelease')
+                self.finish_dragging()
                 self.d.title_mouse_release_event()
 
         return False
-
 
     def dock_container(self) -> 'DockContainerWidget':
         '''

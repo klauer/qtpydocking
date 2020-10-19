@@ -12,7 +12,7 @@ from .floating_dock_container import FloatingDockContainer
 
 
 if TYPE_CHECKING:
-    from . import (DockAreaWidget, DockManager)
+    from . import DockAreaWidget
 
 
 logger = logging.getLogger(__name__)
@@ -279,6 +279,11 @@ class DockAreaTabBar(QScrollArea):
         if container.is_floating() and container.visible_dock_area_count() == 1:
             return
 
+        # If one single dock widget in this area is not floatable, then the
+        # whole area isn't floatable
+        if not self.d.dock_area.floatable:
+            return
+
         drag_distance = (self.d.drag_start_mouse_pos -
                          ev.pos()).manhattanLength()
         if drag_distance >= start_drag_distance():
@@ -299,6 +304,8 @@ class DockAreaTabBar(QScrollArea):
         # sense to move it to a new floating widget and leave this one empty
         container = self.d.dock_area.dock_container()
         if container.is_floating() and container.dock_area_count() == 1:
+            return
+        if not self.d.dock_area.floatable:
             return
 
         self.make_area_floating(event.pos(), DragState.inactive)

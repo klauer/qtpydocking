@@ -1,10 +1,11 @@
+import sys
 import functools
 
 from typing import Optional, Any, Union, Type
 
 from qtpy.QtCore import Qt, QEvent, QObject, QRegExp
 from qtpy.QtGui import QPainter, QPixmap, QIcon
-from qtpy.QtWidgets import QApplication
+from qtpy.QtWidgets import QApplication, QStyle, QAbstractButton
 from qtpy import QT_VERSION
 # if needed, you can import specific boolean API variables from this module
 # when implementing API code elsewhere
@@ -15,6 +16,9 @@ from .dock_splitter import DockSplitter
 DEBUG_LEVEL = 0
 QT_VERSION_TUPLE = tuple(int(i) for i in QT_VERSION.split('.')[:3])
 del QT_VERSION
+
+
+LINUX = sys.platform.startswith('linux')
 
 
 def emit_top_level_event_for_widget(widget: Optional['DockWidget'],
@@ -86,6 +90,31 @@ def make_icon_pair(style, parent, standard_pixmap,
     icon.addPixmap(normal_pixmap, QIcon.Normal)
     parent.setIcon(icon)
     return icon
+
+
+def set_button_icon(style: QStyle, button: QAbstractButton,
+                    standard_pixmap: QStyle.StandardPixmap) -> QIcon:
+    '''
+    Set a button icon
+
+    Parameters
+    ----------
+    style : QStyle
+    button : QAbstractButton
+    standard_pixmap: QStyle.StandardPixmap
+
+    Returns
+    -------
+    icon : QIcon
+    '''
+    if LINUX:
+        icon = style.standardIcon(standard_pixmap)
+        button.setIcon(icon)
+        return icon
+
+    return make_icon_pair(
+        style, parent=button, standard_pixmap=standard_pixmap,
+        transparent_role=QIcon.Disabled)
 
 
 def hide_empty_parent_splitters(splitter: DockSplitter):
